@@ -63,10 +63,10 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xht8350.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xht8350.github.io"></form>
       </div>
     </div>
   </div>
@@ -97,13 +97,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>这是阿玮的洛谷题目，我用C语言动态内存写了一下<br>我明天(2023-05-27)可能不会来学校，也可能来，所以发在这里</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n, xi, yi;</span><br><span class="line">    <span class="type">int</span> *i;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    i = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * n * <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n * <span class="number">4</span>; k++)&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, i + k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;xi, &amp;yi);</span><br><span class="line">    <span class="comment">//printf(&quot;%d &quot;,*(i + 1));</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = n - <span class="number">1</span>; k &gt;= <span class="number">0</span>; k--)&#123;</span><br><span class="line">	<span class="keyword">if</span>(xi &gt;= *(i + k*<span class="number">4</span> + <span class="number">0</span>) &amp;&amp; xi &lt;= *(i + k*<span class="number">4</span> + <span class="number">0</span>) + *(i + k*<span class="number">4</span> + <span class="number">2</span>) \</span><br><span class="line">	 &amp;&amp; yi &gt;= *(i + k*<span class="number">4</span> + <span class="number">1</span>) &amp;&amp; yi &lt;= *(i + k*<span class="number">4</span> + <span class="number">1</span>) + *(i + k*<span class="number">4</span> + <span class="number">3</span>))&#123;</span><br><span class="line">	    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, k+<span class="number">1</span>);</span><br><span class="line">	    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf(&quot;false&quot;);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p>这是阿玮的洛谷题目，我用C语言动态内存写了一下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n, xi, yi;</span><br><span class="line">    <span class="type">int</span> *i;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    i = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * n * <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = <span class="number">0</span>; k &lt; n * <span class="number">4</span>; k++)&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, i + k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;xi, &amp;yi);</span><br><span class="line">    <span class="comment">//printf(&quot;%d &quot;,*(i + 1));</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> k = n - <span class="number">1</span>; k &gt;= <span class="number">0</span>; k--)&#123;</span><br><span class="line">	<span class="keyword">if</span>(xi &gt;= *(i + k*<span class="number">4</span> + <span class="number">0</span>) &amp;&amp; xi &lt;= *(i + k*<span class="number">4</span> + <span class="number">0</span>) + *(i + k*<span class="number">4</span> + <span class="number">2</span>) \</span><br><span class="line">	 &amp;&amp; yi &gt;= *(i + k*<span class="number">4</span> + <span class="number">1</span>) &amp;&amp; yi &lt;= *(i + k*<span class="number">4</span> + <span class="number">1</span>) + *(i + k*<span class="number">4</span> + <span class="number">3</span>))&#123;</span><br><span class="line">	    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, k+<span class="number">1</span>);</span><br><span class="line">	    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//printf(&quot;false&quot;);</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xht8350.github.io/2023/05/26/%E5%9C%B0%E6%AF%AF%E9%97%AE%E9%A2%98/" data-id="cli4n1ls90000betb6d8nhou4" data-title="地毯问题" class="article-share-link">Share</a>
+      <a data-url="http://xht8350.github.io/2023/05/26/%E5%9C%B0%E6%AF%AF%E9%97%AE%E9%A2%98/" data-id="cli4n1ls90000betb6d8nhou4" data-title="地毯问题" class="article-share-link">Teilen</a>
       
       
       
@@ -256,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xht8350.github.io/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" data-id="clhup5tna0001ddtb70y0es0a" data-title="化学学考复习" class="article-share-link">Share</a>
+      <a data-url="http://xht8350.github.io/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" data-id="clhup5tna0001ddtb70y0es0a" data-title="化学学考复习" class="article-share-link">Teilen</a>
       
       
       
@@ -460,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xht8350.github.io/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" data-id="clhup5tne0003ddtbgcz9hn9d" data-title="历史学考复习" class="article-share-link">Share</a>
+      <a data-url="http://xht8350.github.io/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" data-id="clhup5tne0003ddtbgcz9hn9d" data-title="历史学考复习" class="article-share-link">Teilen</a>
       
       
       
@@ -513,7 +513,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xht8350.github.io/2023/03/10/hello-world/" data-id="clhup5tnd0002ddtbhidgf09c" data-title="Hexo - Hello World" class="article-share-link">Share</a>
+      <a data-url="http://xht8350.github.io/2023/03/10/hello-world/" data-id="clhup5tnd0002ddtbhidgf09c" data-title="Hexo - Hello World" class="article-share-link">Teilen</a>
       
       
       
@@ -555,7 +555,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xht8350.github.io/2023/03/05/Helloworld/" data-id="clhup5tn50000ddtbfctu7scs" data-title="Helloworld!" class="article-share-link">Share</a>
+      <a data-url="http://xht8350.github.io/2023/03/05/Helloworld/" data-id="clhup5tn50000ddtbfctu7scs" data-title="Helloworld!" class="article-share-link">Teilen</a>
       
       
       
@@ -599,7 +599,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
     </div>
@@ -609,7 +609,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
