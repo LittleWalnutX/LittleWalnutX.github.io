@@ -75,6 +75,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-计算尺的原理与制作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2023-06-06T13:06:58.000Z" itemprop="datePublished">2023-06-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">计算尺的原理与制作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="计算尺的原理与制作"><a href="#计算尺的原理与制作" class="headerlink" title="计算尺的原理与制作"></a>计算尺的原理与制作</h1><p>事情是这样的，我在b站看到了一个古董计算尺的视频，就想着自己能不能搞一把，但是奈何在网上逛了一圈没找到能用的图片，所以只好自己学习一下他的原理然后写写代码自动生成。</p>
+<p>本文是介绍简易计算尺的制作过程,目前只完成了乘除部分。</p>
+<h2 id="什么是计算尺"><a href="#什么是计算尺" class="headerlink" title="什么是计算尺"></a>什么是计算尺</h2><p>计算尺就是在没有电子计算工具的时代用来辅助计算的一种仪器。<br>详情可以在这个视频里面看到<br><a target="_blank" rel="noopener" href="https://b23.tv/Or8JpaS">【百元科技古董-01】被禁止带入考场的尺子与人类没有计算器之前的工程师帮手</a></p>
+<h2 id="计算尺的原理"><a href="#计算尺的原理" class="headerlink" title="计算尺的原理"></a>计算尺的原理</h2><p>计算尺的乘除部分使用的是<strong>对数原理</strong>，上个学期在数学书上看到的对数原理的应用终于在这里找到了铁证。</p>
+<p>计算尺的基本原理是把其他的运算变成<strong>加减运算</strong>，所以才可以用尺子的平行移动来计算。</p>
+<p>简单来说，$lg(x \cdot y) &#x3D; lg(x) + lg(y)$, 所以，我们可以制作出两把一样的尺子，这两把尺子的每一个刻度长度都是相应数字的$log_{10}$值，且这两把尺子的左端刻度起点都是1，那么我们把上尺的1对准下尺的第一个乘数，然后找到上尺上的另一个乘数的刻度，再把这个刻度啮合的下尺刻度读出，就可以得到结果。</p>
+<p>这个过程就是把两个乘数的$log_{10}$值相加，然后用这个$log$值再对应回原乘积</p>
+<p>除法是乘法的逆运算，所以计算与原理也很简单。原理就是$lg(\dfrac x y) &#x3D; lg(x) - lg(y)$.如果要计算除法，那么则需要把上尺的除数对准下尺的被除数刻度，然后读出上尺中的对准了下尺中的1刻度的刻度，这个刻度就是商数。</p>
+<p>具体的用法也可以在刚刚我提到的b站视频里面看到。</p>
+<h2 id="计算尺的图像生成"><a href="#计算尺的图像生成" class="headerlink" title="计算尺的图像生成"></a>计算尺的图像生成</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG"><strong>svg</strong></a><strong>: 可缩放矢量图形</strong>（<strong>Scalable Vector Graphics，SVG</strong>）基于 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/XML">XML</a> 标记语言，用于描述二维的矢量图形</p>
+<p>考虑到svg作为纯文本（代码）的图像格式比较好生成，所以我就选用svg生成。</p>
+<p>一张简单的svg图像的代码大概这样：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> standalone=<span class="string">&quot;no&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">&quot;2977.2px&quot;</span> <span class="attr">height</span>=<span class="string">&quot;4208.4px&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 2977.2 4208.4&quot;</span></span></span><br><span class="line"><span class="tag"> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">xmlns:xlink</span>=<span class="string">&quot;http://www.w3.org/1999/xlink&quot;</span> <span class="attr">version</span>=<span class="string">&quot;1.2&quot;</span> <span class="attr">baseProfile</span>=<span class="string">&quot;tiny&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;0&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;0&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;200&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;200&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">style</span>=<span class="string">&quot;stroke:rgb(255,0,0);stroke-width:2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用python语言进行开发，不导入第三方库了因为要学习很麻烦，我就用一点点功能，所以直接使用print的方法就好了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math <span class="keyword">as</span> m</span><br><span class="line"></span><br><span class="line"><span class="comment"># svg 前缀</span></span><br><span class="line">_svg = <span class="string">&quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;</span></span><br><span class="line"><span class="string">&lt;svg width=&quot;4208.4px&quot; height=&quot;2977.2px&quot; viewBox=&quot;0 0 2977.2 4208.4&quot;</span></span><br><span class="line"><span class="string"> xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#svg 后缀</span></span><br><span class="line">svg_ = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">&lt;/svg&gt;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(_svg)</span><br><span class="line"></span><br><span class="line"><span class="comment">#参数设置</span></span><br><span class="line">rate = <span class="number">2100</span></span><br><span class="line">end_num = <span class="number">500</span></span><br><span class="line">xMove = -<span class="number">1340</span></span><br><span class="line">yMove = <span class="number">60</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 画上尺！！</span></span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, end_num + <span class="number">1</span>):</span><br><span class="line">    <span class="comment"># 根据对数原理计算刻度的位置</span></span><br><span class="line">    lgi = m.log(a, <span class="number">10</span>) * rate</span><br><span class="line">    <span class="comment"># 划出有刻度数值的标识的较长的线和数字</span></span><br><span class="line">    <span class="keyword">if</span> ((a % <span class="number">5</span> == <span class="number">0</span> <span class="keyword">or</span> a &lt;= <span class="number">10</span>) <span class="keyword">and</span> a &lt;= end_num // <span class="number">2</span>) <span class="keyword">or</span> (a % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> a &gt; end_num // <span class="number">2</span>):</span><br><span class="line">        textY = yMove + <span class="number">16</span> <span class="keyword">if</span> (a &gt; end_num // <span class="number">2</span> <span class="keyword">and</span> a % <span class="number">20</span> == <span class="number">0</span>) <span class="keyword">or</span> (a &lt;= end_num // <span class="number">2</span> <span class="keyword">and</span> a % <span class="number">10</span> == <span class="number">0</span>) <span class="keyword">else</span> yMove + <span class="number">30</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#x27;</span> %(lgi + xMove, textY, a))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (lgi + xMove, yMove, lgi + xMove, yMove + <span class="number">80</span>))</span><br><span class="line">    <span class="comment"># 划出短标识</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (lgi + xMove, yMove + <span class="number">50</span>, lgi + xMove, yMove + <span class="number">80</span>))</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 划出尺子的上下边缘</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (m.log(<span class="number">1</span>, <span class="number">10</span>) * rate + xMove, yMove, m.log(end_num, <span class="number">10</span>) * rate + xMove, yMove))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (m.log(<span class="number">1</span>, <span class="number">10</span>) * rate + xMove, yMove + <span class="number">80</span>, m.log(end_num, <span class="number">10</span>) * rate + xMove, yMove + <span class="number">80</span>))</span><br><span class="line"><span class="comment"># 画上尺结束</span></span><br><span class="line"></span><br><span class="line">yMove += <span class="number">160</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 画下尺！！</span></span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, end_num + <span class="number">1</span>):</span><br><span class="line">    <span class="comment"># 根据对数原理计算刻度的位置</span></span><br><span class="line">    lgi = m.log(a, <span class="number">10</span>) * rate</span><br><span class="line">    <span class="comment"># 划出有刻度数值的标识的较长的线和数字</span></span><br><span class="line">    <span class="keyword">if</span> ((a % <span class="number">5</span> == <span class="number">0</span> <span class="keyword">or</span> a &lt;= <span class="number">10</span>) <span class="keyword">and</span> a &lt;= end_num // <span class="number">2</span>) <span class="keyword">or</span> (a % <span class="number">10</span> == <span class="number">0</span> <span class="keyword">and</span> a &gt; end_num // <span class="number">2</span>):</span><br><span class="line">        textY = yMove + <span class="number">64</span> <span class="keyword">if</span> (a &gt; end_num // <span class="number">2</span> <span class="keyword">and</span> a % <span class="number">20</span> == <span class="number">0</span>) <span class="keyword">or</span> (a &lt;= end_num // <span class="number">2</span> <span class="keyword">and</span> a % <span class="number">10</span> == <span class="number">0</span>) <span class="keyword">else</span> yMove + <span class="number">78</span> </span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#x27;</span> %(lgi + xMove, textY, a))</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (lgi + xMove, yMove, lgi + xMove, yMove + <span class="number">80</span>))</span><br><span class="line">    <span class="comment"># 划出短标识</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (lgi + xMove, yMove, lgi + xMove, yMove + <span class="number">50</span>))</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 划出尺子的上下边缘</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (m.log(<span class="number">1</span>, <span class="number">10</span>) * rate + xMove, yMove, m.log(end_num, <span class="number">10</span>) * rate + xMove, yMove))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#x27;</span> % (m.log(<span class="number">1</span>, <span class="number">10</span>) * rate + xMove, yMove + <span class="number">80</span>, m.log(end_num, <span class="number">10</span>) * rate + xMove, yMove + <span class="number">80</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 画下尺结束</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(svg_)</span><br></pre></td></tr></table></figure>
+
+<p>然后把这个svg文件打开做个微调就可以用来打印了😃</p>
+<p>程序的使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 calc_ruler.py &gt; output.svg</span><br></pre></td></tr></table></figure>
+
+<p>你也可以通过调整<strong>注释：参数设置</strong>下面的那几行代码中的值来更改你想要的尺子的范围、大小、缩放等等。</p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg.svg" alt="svg"></p>
+<p>其他的运算我以后可能也会做。</p>
+<p>2023-06-06 小核桃</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xht8350.github.io/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/" data-id="clikbus10000011tbd8ph3e23" data-title="计算尺的原理与制作" class="article-share-link">Teilen</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-化学学考复习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" class="article-date">
@@ -542,7 +607,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" rel="tag">博客介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" rel="tag">博客介绍</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
     </div>
   </div>
 
@@ -552,7 +617,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a>
+      <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a>
     </div>
   </div>
 
@@ -561,7 +626,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
     </div>
   </div>
 
@@ -572,6 +637,10 @@
     <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">计算尺的原理与制作</a>
+          </li>
         
           <li>
             <a href="/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">化学学考复习</a>
