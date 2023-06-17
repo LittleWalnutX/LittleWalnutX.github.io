@@ -75,6 +75,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-英语单词笔记生成器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-06-17T09:18:30.000Z" itemprop="datePublished">2023-06-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/">英语单词笔记生成器</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="英语单词笔记生成器"><a href="#英语单词笔记生成器" class="headerlink" title="英语单词笔记生成器"></a>英语单词笔记生成器</h2><p>必应爬虫</p>
+<p>写一个文本文件i.txt, 使得它的每一行都是一个要查的单词或者词组。</p>
+<p>然后把这段代码执行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">url = <span class="string">&quot;https://cn.bing.com/dict/search?q=%s&quot;</span></span><br><span class="line">user_agent = <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5666.197 Safari/537.36&quot;</span></span><br><span class="line"><span class="comment"># word = &quot;supply&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">search</span>(<span class="params">word</span>):</span><br><span class="line">    <span class="comment"># try:</span></span><br><span class="line">    response = requests.get(url % word, &#123;<span class="string">&quot;user-agent&quot;</span>:user_agent&#125;)</span><br><span class="line">    soup = BeautifulSoup(response.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    wordH1 = soup.find_all(<span class="string">&quot;h1&quot;</span>)[<span class="number">1</span>].text</span><br><span class="line">    音标 = soup.find_all(<span class="string">&quot;div&quot;</span>, class_=<span class="string">&quot;hd_prUS b_primtxt&quot;</span>) + soup.find_all(<span class="string">&quot;div&quot;</span>, class_=<span class="string">&quot;hd_pr b_primtxt&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(wordH1)</span><br><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> 音标:</span><br><span class="line">        <span class="built_in">print</span>(each.text)</span><br><span class="line">    ul = soup.find_all(<span class="string">&quot;ul&quot;</span>)[<span class="number">2</span>]</span><br><span class="line">    text = <span class="built_in">str</span>(ul)</span><br><span class="line">    soup1 = BeautifulSoup(text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line">    meaningLi = soup1.find_all(<span class="string">&quot;li&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> each <span class="keyword">in</span> meaningLi:</span><br><span class="line">        <span class="built_in">print</span>(each.text)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        forms = soup.find(<span class="string">&quot;div&quot;</span>, class_=<span class="string">&quot;hd_if&quot;</span>).text</span><br><span class="line">        <span class="built_in">print</span>(forms)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># using = soup.find(&quot;div&quot;, class_=&quot;wd_div&quot;).get_text(separator=&quot; &quot;).replace(&quot; ,&quot;, &quot;,&quot;)</span></span><br><span class="line">    <span class="comment"># print(using)</span></span><br><span class="line"><span class="comment">#     list1 = using.split(&quot;.&quot;)</span></span><br><span class="line"><span class="comment">#    for i in range(len(list1)):</span></span><br><span class="line"><span class="comment">#        list1.insert(i + 1, &quot;  &quot;)</span></span><br><span class="line"><span class="comment">#    using1 = &quot;.&quot;.join(list1)</span></span><br><span class="line"><span class="comment">#    list2 = using1.split(&quot;+&quot;)</span></span><br><span class="line"><span class="comment">#    for i in range(len(list2)):</span></span><br><span class="line"><span class="comment">#        if i != 0:</span></span><br><span class="line"><span class="comment">#            list2[i] = list2[i][2:]</span></span><br><span class="line"><span class="comment">#    using2 = &quot;+&quot;.join(list2)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"><span class="comment">#     for each in using.contents:</span></span><br><span class="line"><span class="comment">#         #print(each.text)</span></span><br><span class="line"><span class="comment">#         for eacheach in each.contents:</span></span><br><span class="line"><span class="comment">#             print(eacheach.text)</span></span><br><span class="line">    <span class="comment"># except:</span></span><br><span class="line">    <span class="comment">#     pass</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        word = <span class="built_in">input</span>()</span><br><span class="line">        <span class="keyword">if</span> word != <span class="string">&quot;&quot;</span>:</span><br><span class="line">            search(word)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>使用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 1.py &lt; i.txt &gt; o.txt</span><br></pre></td></tr></table></figure>
+
+<p>然后就生成了一份英语的单词笔记</p>
+<p>像这个</p>
+<blockquote>
+<p>bound<br>美 [baʊnd]<br>英 [baʊnd]<br>n.跳跃；蹦跳<br>adj.一定会；很可能会；受（法律、义务或情况）约束（必须做某事）<br>v.跳跃着跑；形成…的边界（或界限）<br>网络惊世狂花；范围；限制<br>第三人称单数：bounds  现在分词：bounding  过去式：bounded  <br>同义词 反义词 adj. unlikely, free adj. certain, sure, obliged, forced v. border, border on, be contiguous to, touch, be adjacent to n. jump, leap, spring, bounce, hop</p>
+<p>restore<br>美 [rɪˈstɔr]<br>英 [rɪˈstɔː(r)]<br>v.恢复；修复；恢复（某种情况或感受）；使复原<br>网络还原；重建；归还<br>第三人称单数：restores  现在分词：restoring  过去式：restored  <br>搭配 同义词 v.+n. restore confidence, restore order, restore system, restore service, restore reputation v. reinstate, re-establish, reestablish, bring back, return</p>
+</blockquote>
+<p>你也可以用这个脚本来便捷地查词，不加参数直接执行就好了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xht8350.github.io/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/" data-id="clizsj3km0000sytb0gxjbl95" data-title="英语单词笔记生成器" class="article-share-link">Teilen</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-孤独摇滚OP-青春症候群-扒谱-HalcyonMusic-ver" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/06/10/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9AOP-%E9%9D%92%E6%98%A5%E7%97%87%E5%80%99%E7%BE%A4-%E6%89%92%E8%B0%B1-HalcyonMusic-ver/" class="article-date">
@@ -686,7 +741,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">音乐</a>
+      <a href="/tags/%E5%8D%9A%E5%AE%A2%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">博客介绍</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 15px;">技术</a> <a href="/tags/%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">音乐</a>
     </div>
   </div>
 
@@ -708,6 +763,10 @@
       <ul>
         
           <li>
+            <a href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/">英语单词笔记生成器</a>
+          </li>
+        
+          <li>
             <a href="/2023/06/10/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9AOP-%E9%9D%92%E6%98%A5%E7%97%87%E5%80%99%E7%BE%A4-%E6%89%92%E8%B0%B1-HalcyonMusic-ver/">孤独摇滚OP-青春症候群-扒谱-HalcyonMusic ver</a>
           </li>
         
@@ -721,10 +780,6 @@
         
           <li>
             <a href="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">历史学考复习</a>
-          </li>
-        
-          <li>
-            <a href="/2023/03/10/hello-world/">Hexo - Hello World</a>
           </li>
         
       </ul>
