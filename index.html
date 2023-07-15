@@ -1,527 +1,1946 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>
-        xht - Hexo 
-    </title>
-     
-    
-<link rel="stylesheet" href="/css/grid.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"xht8350.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="xht - Hexo">
+<meta property="og:url" content="http://xht8350.github.io/index.html">
+<meta property="og:site_name" content="xht - Hexo">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="xht">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://xht8350.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>xht - Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">xht - Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">My Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
 
     
-<link rel="stylesheet" href="/css/custom.css">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-    
-<link rel="stylesheet" href="/css/ringo.css">
 
-     
-        <link rel="icon" type="image/x-icon" href="/img/favicon.ico " />
-     
-     
-     
-        <meta name=" " content="" />
-     
-        <meta name=" " content="" />
-     
- 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
 
-  <body>
-    <header id="header" class="clearfix" onclick="window.open('/', '_self')">
-    <div class="site-name">
-        <a href="/" id="logo" class="site-title">
-            xht - Hexo
-        </a>
-        <p class="description site-description">
-            <span style="padding-top:20px; font-size: 10px">
-                My Blog
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/07/13/dontsaylazy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/13/dontsaylazy/" class="post-title-link" itemprop="url">Don't say lazy：TV Anime K-ON ED1 Animenz钢琴扒谱</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-13 20:45:31" itemprop="dateCreated datePublished" datetime="2023-07-13T20:45:31+08:00">2023-07-13</time>
             </span>
-        </p>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-15 11:07:38" itemprop="dateModified" datetime="2023-07-15T11:07:38+08:00">2023-07-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Don’t-say-lazy-Animenz版-钢琴扒谱"><a href="#Don’t-say-lazy-Animenz版-钢琴扒谱" class="headerlink" title="Don’t say lazy  Animenz版 钢琴扒谱"></a>Don’t say lazy  Animenz版 钢琴扒谱</h1><p>说明：原谱用的是bilibili上这位老哥<a target="_blank" rel="noopener" href="https://space.bilibili.com/417273937?spm_id_from=333.337.0.0">きんりん星</a>的PDF文件逆向导入Musescore, 因为他的谱子有一些错误所以我手动改正。<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12t4y117PA/?spm_id_from=333.999.0.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频</a></p>
+<p>而他的视频里面说参考了这位<a target="_blank" rel="noopener" href="https://space.bilibili.com/44925790">夏乐です</a>的扒谱<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1tC4y1W7ib/?spm_id_from=333.788.recommend_more_video.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频：B站最速扒谱</a></p>
+<p>属于是套娃了</p>
+<p>下面是乐谱图片</p>
+<p><img src="/2023/07/13/dontsaylazy/1.svg" alt="1"><br><img src="/2023/07/13/dontsaylazy/2.svg" alt="2"><br><img src="/2023/07/13/dontsaylazy/3.svg" alt="3"><br><img src="/2023/07/13/dontsaylazy/4.svg" alt="4"><br><img src="/2023/07/13/dontsaylazy/5.svg" alt="5"><br><img src="/2023/07/13/dontsaylazy/6.svg" alt="6"></p>
+
+      
     </div>
-</header>
-<div id="sidebar" role="complementary">
-    <section class="widget">
-        <ul class="menu widget-list">
-            
-        </ul>
-    </section>
-    <section class="widget sidebar-foot">
-        <ul class="widget-list">
-            <li>Theme <a rel="nofollow" target="_blank" href="https://github.com/HeliumOI/hexo-theme-ringo">Ringo</a>
-                by <a target="_blank" href="/ "> xht  </a></li>
-            <li>Proudly powered by  <a rel="nofollow" target="_blank" href="https://hexo.io/">Hexo</a></li>
-        </ul>
-    </section>
-</div>
 
-<div id="helpbar">
-    <div class="back-to-top">
-        <button id="back2top">↑</button>
-        <script>
-            back2top.onclick = function() {
-                var movement = document.body.scrollTop || document.documentElement.scrollTop;
-                scrollBy(0, -movement);
-            }
-        </script>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">生物学考复习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-29 21:55:03" itemprop="dateCreated datePublished" datetime="2023-06-29T21:55:03+08:00">2023-06-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-09 21:53:10" itemprop="dateModified" datetime="2023-07-09T21:53:10+08:00">2023-07-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="生物学考复习"><a href="#生物学考复习" class="headerlink" title="生物学考复习"></a>生物学考复习</h1><h2 id="细胞呼吸模型图（自制）"><a href="#细胞呼吸模型图（自制）" class="headerlink" title="细胞呼吸模型图（自制）"></a>细胞呼吸模型图（自制）</h2><img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E7%BB%86%E8%83%9E%E5%91%BC%E5%90%B8%E6%A8%A1%E5%9E%8B%E5%9B%BE.svg" class="" title="细胞呼吸模型图">
+
+<h2 id="光合作用模型图"><a href="#光合作用模型图" class="headerlink" title="光合作用模型图"></a>光合作用模型图</h2><p>光反应将光能转化为化学能，并释放氧气</p>
+<p>碳反应将二氧化碳还原成糖</p>
+<p>碳反应过程名称：1. CO<sub>2</sub>的固定；2. 三碳酸的还原；3. 五碳糖的再生</p>
+<p>光反应的场所是类囊体膜；碳反应的场所是叶绿体的基粒</p>
+<img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E5%85%89%E5%90%88%E4%BD%9C%E7%94%A8%E6%A8%A1%E5%9E%8B%E5%9B%BE.png" class="" title="光合作用模型图">
+
+<h2 id="光合色素与提取与分离"><a href="#光合色素与提取与分离" class="headerlink" title="光合色素与提取与分离"></a>光合色素与提取与分离</h2><p>胡萝卜素扩散快的原因是在层析液中的溶解度大</p>
+<p>含量最多的是叶绿素a（色素带最宽）   </p>
+<p>叶绿素吸收红光和蓝紫光</p>
+<p>类胡萝卜素吸收蓝紫光</p>
+<h2 id="观察胞质环流实验"><a href="#观察胞质环流实验" class="headerlink" title="观察胞质环流实验"></a>观察胞质环流实验</h2><p>取黑藻幼叶的原因是：1. 黑藻幼叶<strong>薄</strong>，1~2层细胞，易于观察；2. 叶绿体<strong>少</strong>，易观察</p>
+<h2 id="检验糖类、油脂、蛋白质的实验中的注意点"><a href="#检验糖类、油脂、蛋白质的实验中的注意点" class="headerlink" title="检验糖类、油脂、蛋白质的实验中的注意点"></a>检验糖类、油脂、蛋白质的实验中的注意点</h2><p>脂肪检测中使用的染液是苏丹III染液，使用的酒精溶液是50%的用来洗去染料</p>
+<p>脂肪检测实验只能用作观察脂肪颗粒，溶液里面的脂肪是不能观察，因为这个是个染色，不是反应</p>
+<p>三个实验中只有检测还原糖用的本尼迪特试剂需要加热80摄氏度到100摄氏度水浴</p>
+<p>检测蛋白质时候用的双缩脲试剂是先加A再加B, A加的多，要加2mL, B加的少只有5滴</p>
+<h2 id="有关DNA的几个实验"><a href="#有关DNA的几个实验" class="headerlink" title="有关DNA的几个实验"></a>有关DNA的几个实验</h2><h3 id="活体肺炎链球菌转化实验（格里菲斯）-必修二P49-与-体外肺炎链球菌转化实验（艾弗里）（仍存疑）"><a href="#活体肺炎链球菌转化实验（格里菲斯）-必修二P49-与-体外肺炎链球菌转化实验（艾弗里）（仍存疑）" class="headerlink" title="活体肺炎链球菌转化实验（格里菲斯）:必修二P49 与 体外肺炎链球菌转化实验（艾弗里）（仍存疑）"></a>活体肺炎链球菌转化实验（格里菲斯）:必修二P49 与 体外肺炎链球菌转化实验（艾弗里）（仍存疑）</h3><p>S菌和P菌的对比</p>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>S菌</th>
+<th>P菌</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>菌落表面</td>
+<td>光滑</td>
+<td>粗糙</td>
+</tr>
+<tr>
+<td>致病性</td>
+<td>致病</td>
+<td>不致病</td>
+</tr>
+<tr>
+<td>荚膜</td>
+<td>有</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>活体肺炎链球菌转化实验发现了转化因子的存在并且猜想是DNA，因为加热杀死的S型菌也可以使R型菌转化为S型菌<br>活体肺炎链球菌转化实验不能证明DNA是噬菌体的遗传物质</p>
+<p>体外肺炎链球菌转化实验这个实验证明了：<br>DNA是转化因子（即遗传物质），赋予了生物的遗传特性</p>
+<h3 id="T2噬菌体侵染细菌实验-必修二P51"><a href="#T2噬菌体侵染细菌实验-必修二P51" class="headerlink" title="T2噬菌体侵染细菌实验:必修二P51"></a>T2噬菌体侵染细菌实验:必修二P51</h3><p>DNA注入到细菌中，蛋白质外壳留在外面，但是合成了完整的噬菌体</p>
+<p>结论是：DNA是遗传物质，蛋白质不是遗传物质</p>
+<h3 id="在一部分没有DNA的病毒中，RNA是遗传物质：烟草花叶病毒重组实验-必修二P53"><a href="#在一部分没有DNA的病毒中，RNA是遗传物质：烟草花叶病毒重组实验-必修二P53" class="headerlink" title="在一部分没有DNA的病毒中，RNA是遗传物质：烟草花叶病毒重组实验:必修二P53"></a>在一部分没有DNA的病毒中，RNA是遗传物质：烟草花叶病毒重组实验:必修二P53</h3><p>单独的RNA可以感染烟草，单独的蛋白质不能感染烟草，用RNA酶处理过的RNA也不能感染烟草</p>
+<p>不同病毒株系的RNA和蛋白质混合之后繁殖的病毒类型是提供RNA的株系</p>
+<p>实验证明了没有DNA只有RNA的生物的遗传物质是RNA</p>
+<h2 id="一些容易遗忘的细胞器功能"><a href="#一些容易遗忘的细胞器功能" class="headerlink" title="一些容易遗忘的细胞器功能"></a>一些容易遗忘的细胞器功能</h2><p>溶酶体来自高尔基体</p>
+<p>动物的高尔基体的功能是<strong>蛋白质</strong>的<strong>加工、分类、包装、运输</strong>；植物的高尔基体的功能是<strong>合成果胶</strong>，与细胞壁的合成与修复有关</p>
+<p>光面内质网的功能是<strong>运输蛋白质、合成脂质</strong>（磷脂、胆固醇和类固醇激素）、<strong>解毒</strong></p>
+<h2 id="细胞的有丝分裂的周期"><a href="#细胞的有丝分裂的周期" class="headerlink" title="细胞的有丝分裂的周期"></a>细胞的有丝分裂的周期</h2><img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/2023-06-30-21-40-45-image.png" class="">
+
+<img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/2023-06-30-21-41-08-image.png" class="">
+
+<img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/2023-06-30-21-41-18-image.png" class="">
+
+<h2 id="细胞的物质运输的物质举例"><a href="#细胞的物质运输的物质举例" class="headerlink" title="细胞的物质运输的物质举例"></a>细胞的物质运输的物质举例</h2><table>
+<thead>
+<tr>
+<th>转运方式</th>
+<th>实例</th>
+<th>方向</th>
+<th>载体</th>
+<th>能量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>简单扩散</td>
+<td>O2、CO2 甘油、脂溶性维生素</td>
+<td>高浓度→低浓度</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>渗透</td>
+<td>水、酒精</td>
+<td>高浓度→低浓度</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>易化扩散</td>
+<td>葡萄糖进入红细胞、某些离子</td>
+<td>高浓度→低浓度</td>
+<td><mark>T</mark></td>
+<td>F</td>
+</tr>
+<tr>
+<td>主动转运</td>
+<td>葡萄糖、氨基酸、离子</td>
+<td>低浓度→高浓度</td>
+<td><mark>T</mark></td>
+<td><mark>T</mark></td>
+</tr>
+<tr>
+<td>胞吞、胞吐</td>
+<td>蛋白质</td>
+<td>与浓度无关</td>
+<td>F</td>
+<td><mark>T</mark></td>
+</tr>
+</tbody></table>
+<h2 id="其他注意点"><a href="#其他注意点" class="headerlink" title="其他注意点"></a>其他注意点</h2><p>叶绿体纸层析法提取光合色素中使用的酒精是95%，且这是个溶剂不是层析液，层析液用的是石油醚或乙醚等</p>
+<p>检测油脂里面用的是50%酒精来洗去多余的染料细胞膜中</p>
+<p>胆固醇：位于脂双层中的疏水环境，有一个很小的亲水基团，与磷脂头部连接。<br>作用：双重调节：与磷脂脂肪酸链的相互作用，具有限制其运动、增加其有序性的作用；另一方面，也能将磷脂分子分隔开以增强其运动性。<br>作用与温度相关：环境温度较低时，胆固醇有助于保持细胞膜的柔韧性；细胞膜外侧磷脂分子中胆固醇的含量往往高于内侧，因此内侧的磷脂活动性比较弱。 </p>
+<p>密码子在<u><strong>mRNA</strong></u>上，启动子在<u><strong>DNA</strong></u>上，起始密码也在<u><strong>mRNA</strong></u>上</p>
+<p>使种群基因频率发生变动的因素有：**<u>突变、基因迁移、遗传漂变、非随机交配、自然选择</u>**</p>
+<h2 id="错题整理"><a href="#错题整理" class="headerlink" title="错题整理"></a>错题整理</h2><p>人类的卵细胞可以用肉眼直接看到 （T）</p>
+<p>细胞中的遗传物质都是DNA （T）</p>
+<p>病毒是非细胞生物，说明细胞不是生命活动的基本单位 （F）</p>
+<p>在环境温度较低时，胆固醇有助于保持细胞膜的柔韧性 （T）</p>
+<p>蓝细菌没有叶绿体，且可以进行光合作用 （T）</p>
+<p>蓝细菌不存在有膜的细胞器，因此不能作为独立的生命单位存在（F）</p>
+<p>液泡中的色素使得某些植物的花、叶、果实呈现不同的颜色（T）</p>
+<p>细胞液能调节细胞渗透压平衡、酸碱平衡、离子平衡（T）</p>
+<p>⭐液泡能合成大量水解酶，能吞噬衰老的细胞器（T）</p>
+<p>分泌蛋白质（胰岛素）先在<strong>核糖体</strong>合成，在经过<strong>内质网</strong>加工，随后由<strong>高尔基体</strong>加工，并形成包裹着胰岛素的<strong>囊泡</strong>，转运至细胞膜，并与之融合。</p>
+<p>母乳中含丰富的抗体（免疫球蛋白），可以增强婴儿的抵抗力。新生儿小肠上皮细胞通过消耗ATP可以直接吸收母乳中的抗体和半乳糖。这两种物质被吸收到血液中的方式分别是：<strong>胞吞、主动转运</strong>。</p>
+<img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/d1690a8b4101295dd8b51b9f62fa4b37005b6f7a.jpg" class="">
+
+<p>解答A</p>
+<p>A、渗透作用的条件是半透膜和浓度差,则甲细胞和丙细胞与外界溶液存在浓度差,能发生渗造作用,A正确;</p>
+<p>B、水分子既可以由细胞内到细胞外,也可以由细胞外到细胞内,因此水分子的运动方向不代表着它的扩散方向,B错误;</p>
+<p>C、光学显微镜无法观察到水分子运输,C错误;</p>
+<p>D、将甲、乙和丙细胞同时分别置于蒸馏水中,丙细胞由于开始时吸水膨胀,则放在蒸馏水中先破裂,D错误。</p>
+<p>渗透作用的定义：水分子（和其他溶剂分子）通过膜的扩散现象。水分子从低浓度溶液一侧（水的浓度较高）跨膜扩散到高浓度溶液一侧（水的浓度低）<br>特点：从高浓度向低浓度一侧运输  不消耗细胞的能源   受外界物质浓度限制 </p>
+<p>胞吞体现了细胞膜控制物质进出的功能（F）因为胞吞没有经过细胞膜</p>
+<p>丙酮酸先被氧化成乙醛再被还原为乳酸（F）</p>
+<p>癌细胞细胞呼吸产生的CO<sub>2</sub>都来自线粒体（T）因为无氧呼吸如果是乳酸发酵则不产生CO<sub>2</sub>，所以所有产生的CO<sub>2</sub>全都来自线粒体的有氧呼吸</p>
+<p>若呼吸产物中有水，则一定进行了需氧呼吸（T）</p>
+<p>线粒体内膜上存在酶<u><strong>葡萄糖运载体</strong></u>等多种蛋白质（F）因为线粒体进行需氧呼吸的第二三阶段，葡萄糖不进入线粒体</p>
+<p>丙酮酸产生二氧化碳的过程中可能生成[H]，也可能消耗[H]（T）因为可能是需氧呼吸产生还原氢，也可能是酒精发酵消耗[H]</p>
+<p>无氧呼吸产生的乳酸再生成葡萄糖的过程需要消耗能量（T）</p>
+<p>蛋白质可以通过核孔进入细胞核（T）</p>
+<p>⭐着丝粒的分裂不是纺锤丝的牵引导致的，而是自发发生的，所以“纺锤丝的牵引导致着丝粒分裂”是（F）</p>
+<p>⭐基因A与b最本质的差别是：碱基排列顺序不同（这题太鬼了吧）</p>
+<p>活体肺炎链球菌转化实验不能证明DNA是噬菌体的遗传物质</p>
+<p>高等植物细胞中每个染色体组中都含有常染色体和性染色体（F）因为雌雄同株的植物体内没有性染色体</p>
+
+      
     </div>
-</div>
-      <main class="main">
-        <div id="body">
-          <div class="container">
-            
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/07/13/Don-t-say-lazy-TV-Anime-K-ON-ED1-Animenz%E9%92%A2%E7%90%B4%E6%89%92%E8%B0%B1/">
-                Don&#39;t say lazy：TV Anime K-ON ED1 Animenz钢琴扒谱
-            </a>
+          
+            <a href="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">地理学考复习</a>
         </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-07-13
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    Don’t say lazy  Animenz版 钢琴扒谱说明：原谱用的是bilibili上这位老哥きんりん星的PDF文件逆向导入Musescore, 因为他的谱子有一些错误所以我手动改正。原视频
-而他的视频里面说参考了这位夏乐です的扒谱原视频：B站最速扒谱
-属于是套娃了
-下面是乐谱图片
 
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-                 
-             
-            <p class="more">
-                <a href="/2023/07/13/Don-t-say-lazy-TV-Anime-K-ON-ED1-Animenz%E9%92%A2%E7%90%B4%E6%89%92%E8%B0%B1/">READ MORE</a>
-            </p>
+              <time title="创建时间：2023-06-29 09:51:44" itemprop="dateCreated datePublished" datetime="2023-06-29T09:51:44+08:00">2023-06-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-09 21:53:10" itemprop="dateModified" datetime="2023-07-09T21:53:10+08:00">2023-07-09</time>
+              </span>
+
+          
+
         </div>
-    </article>
+      </header>
 
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="地理学考复习"><a href="#地理学考复习" class="headerlink" title="地理学考复习"></a>地理学考复习</h1><h2 id="太阳圈层"><a href="#太阳圈层" class="headerlink" title="太阳圈层"></a>太阳圈层</h2><img src="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E5%A4%AA%E9%98%B3%E5%9C%88%E5%B1%82.svg" class="" title="太阳圈层示意图">
+
+<h2 id="P33-地质年代简表"><a href="#P33-地质年代简表" class="headerlink" title="P33 地质年代简表"></a>P33 地质年代简表</h2><p>地质年代简表</p>
+<img src="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/32.jpg" class="" title="地质年代简表">
+
+<p>地球气质年代温度变化书P38</p>
+<p>地球产生生命的“**<u>金锁链条件</u>**”：液态水、适宜的温度和比较厚的大气层</p>
+<h2 id="地震波与圈层结构"><a href="#地震波与圈层结构" class="headerlink" title="地震波与圈层结构"></a>地震波与圈层结构</h2><p>纵波（S波）快，固液气都传播；横波（P波）速度慢，只能在固体传播</p>
+<p>P波是primary wave，S波是secondary wave P波也可以说是压力波pressure wave，S波也可以说是剪力波shear wave</p>
+<p>地震波的传播速度：</p>
+<img src="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/25.jpg" class="" title="地震波传播速度">
+
+<p>地壳中氧硅铝铁钙钠钾镁的含量依次最多</p>
+<p>上层硅铝层，不连续，密度小；<br>下层硅镁层，连续，密度大。</p>
+<p>水圈具有连续不规则的特点</p>
+<h2 id="风成地貌"><a href="#风成地貌" class="headerlink" title="风成地貌"></a>风成地貌</h2><p>风蚀作用包括吹蚀作用和磨蚀作用</p>
+<h2 id="冰川地貌"><a href="#冰川地貌" class="headerlink" title="冰川地貌"></a>冰川地貌</h2><h3 id="冰川侵蚀地貌"><a href="#冰川侵蚀地貌" class="headerlink" title="冰川侵蚀地貌"></a>冰川侵蚀地貌</h3><p>冰川侵蚀地貌包括冰斗、冰川槽谷（U型谷）、角峰、刃脊等</p>
+<p><strong>冰斗</strong>是三面岩壁陡峭，围椅状</p>
+<p><strong>冰川槽谷</strong>是在冰川流动时<strong>刨蚀</strong>作用形成的谷地，两壁陡立谷地开阔  举例：珠穆朗玛峰，西欧阿尔卑斯的勃朗峰</p>
+<p><strong>刃脊</strong>是仅有相邻的两个冰斗不断向内侵蚀，中间形成的一道较为尖锐的山脊</p>
+<p>角峰是多个冰斗在同一个地区的多个冰斗一起向中间侵蚀中央剩下的高耸尖锐的岩体</p>
+<p><strong>峡湾</strong>是U型谷地在冰川消融，海平面上升之时被海水淹没形成的，北欧地区非常常见</p>
+<h3 id="冰川堆积地貌"><a href="#冰川堆积地貌" class="headerlink" title="冰川堆积地貌"></a>冰川堆积地貌</h3><p>常见的是冰碛湖、冰斗湖</p>
+<p><strong>冰碛物</strong>是冰川融化时裹挟的物质被放下，无分选性，大小悬殊，分选性很差</p>
+<p>冰碛物不断堵塞河道、湖盆，水流不畅，不断汇集，形成<strong>冰斗湖</strong>、<strong>冰碛湖</strong></p>
+<h2 id="大气垂直分层"><a href="#大气垂直分层" class="headerlink" title="大气垂直分层"></a>大气垂直分层</h2><p>书P73</p>
+<p>对流层、平流层、高层大气的分界线分别是12km, 50km, 是在中纬度地区</p>
+<h2 id="洋流、海盐性质与海洋运动知识扩充：上升流"><a href="#洋流、海盐性质与海洋运动知识扩充：上升流" class="headerlink" title="洋流、海盐性质与海洋运动知识扩充：上升流"></a>洋流、海盐性质与海洋运动知识扩充：上升流</h2><p>寒流与暖流对海洋与气候的影响</p>
+<p>寒流减温减湿，暖流增温增湿</p>
+<p>⭐在同纬度地带，寒流经过的海区盐度偏低，暖流经过的海区盐度偏高</p>
+<p>海洋的温度随高度垂直变化是随深度变大，温度变低，深层海水随纬度的温度变化不大</p>
+<p>海水盐度深层的地方35不到一点，随纬度较平均</p>
+<p>密度是越深越大</p>
+<p>上升流  百度百科：</p>
+<p>上升流，又名涌升流，是从表层以下沿直线上升的洋流，是由表层流场产生水平辐散所造成。如风吹走表层水，由下面的水上升得以补充。因表层流场的水平辐散，使表层以下的海水铅直上升的流动。相反，因表层流场的水平辐合，使海水由海面铅直下降的流动，称为下降流。上升流和下降流合称为升降流，是海洋环流的重要组成部分。它和水平流动一起构成海洋（总）环流。</p>
+<p>上升流通常发生在沿岸地区，是一种垂直向上逆向运动的洋流。由于受风力吹送，将表层海水推离海岸，致使海面略有下降，为达到水压的均衡，深层海水就在这里补偿上升，形成上升流。</p>
+<p>海洋底部陆地与矿产资源</p>
+<img src="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E6%B5%B7%E6%B4%8B%E5%BA%95%E9%83%A8%E9%99%86%E5%9C%B0%E4%B8%8E%E7%9F%BF%E4%BA%A7.svg" class="" title="海洋底部陆地与矿产资源">
+
+<h2 id="土壤分层"><a href="#土壤分层" class="headerlink" title="土壤分层"></a>土壤分层</h2><p>淋溶层是淋溶作用下物质向下迁移和损失，有机质含量低，色泽较淡</p>
+<p>淀积层是土壤物质沉淀、积累的层次</p>
+<p>从上到下：有机层、腐殖质层、淋溶层、淀积层、母质层、母岩层</p>
+<h2 id="地理与化学：天然气的开采利用"><a href="#地理与化学：天然气的开采利用" class="headerlink" title="地理与化学：天然气的开采利用"></a>地理与化学：天然气的开采利用</h2><p>而我们日常生活中所说的“天然气”即<strong>狭义上</strong>的天然气含义，是指一种主要由<strong>甲烷</strong>组成的气态化石燃料，它主要存在于油田和天然气田，也有少量出于煤层。</p>
+<p>天然气主要由气态低分子烃和非烃气体混合组成，埋藏在地底的深层地质构造之中。一部分天然气与原油储存在同一层，对于这一类的天然气，会随着原油一起被开采出来；同时也有单独存在天然气。目前，我国天然气的主要用途为燃料，可制造炭黑、化学药品以及液化石油气，由天然气生产的丙烷、丁烷是现代工业生产的重要原料。</p>
+<h3 id="天然气来源"><a href="#天然气来源" class="headerlink" title="天然气来源"></a>天然气来源</h3><p>天然气来源于<strong>地下多孔隙岩层中</strong>，包括油田气、气田气、煤层气、泥火山气和生物生成气等，也有少量出于煤层。<a href="%5B%E5%A4%A9%E7%84%B6%E6%B0%94%E7%9A%84%E6%9D%A5%E6%BA%90_%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%5D(https://zhidao.baidu.com/question/17024072.html#:~:text=%E5%A4%A9%E7%84%B6%E6%B0%94%E6%9D%A5%E6%BA%90%E4%BA%8E%E5%9C%B0%E4%B8%8B%E5%A4%9A%E5%AD%94%E9%9A%99%E5%B2%A9%E5%B1%82%E4%B8%AD%EF%BC%8C%E5%8C%85%E6%8B%AC%E6%B2%B9%E7%94%B0%E6%B0%94%E3%80%81%E6%B0%94%E7%94%B0%E6%B0%94%E3%80%81%E7%85%A4%E5%B1%82%E6%B0%94%E3%80%81%E6%B3%A5%E7%81%AB%E5%B1%B1%E6%B0%94%E5%92%8C%E7%94%9F%E7%89%A9%E7%94%9F%E6%88%90%E6%B0%94%E7%AD%89%EF%BC%8C%E4%B9%9F%E6%9C%89%E5%B0%91%E9%87%8F%E5%87%BA%E4%BA%8E%E7%85%A4%E5%B1%82%E3%80%82,%E5%A4%A9%E7%84%B6%E6%B0%94%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94%E6%98%AF%E4%BD%9C%E7%87%83%E6%96%99%EF%BC%8C%E5%8F%AF%E5%88%B6%E9%80%A0%E7%82%AD%E9%BB%91%E3%80%81%E5%8C%96%E5%AD%A6%E8%8D%AF%E5%93%81%E5%92%8C%E6%B6%B2%E5%8C%96%E7%9F%B3%E6%B2%B9%E6%B0%94%EF%BC%8C%E7%94%B1%E5%A4%A9%E7%84%B6%E6%B0%94%E7%94%9F%E4%BA%A7%E7%9A%84%E4%B8%99%E7%83%B7%E3%80%81%E4%B8%81%E7%83%B7%E6%98%AF%E7%8E%B0%E4%BB%A3%E5%B7%A5%E4%B8%9A%E7%9A%84%E9%87%8D%E8%A6%81%E5%8E%9F%E6%96%99%E3%80%82%20%E5%A4%A9%E7%84%B6%E6%B0%94%E4%B8%BB%E8%A6%81%E7%94%B1%E6%B0%94%E6%80%81%E4%BD%8E%E5%88%86%E5%AD%90%E7%83%83%E5%92%8C%E9%9D%9E%E7%83%83%E6%B0%94%E4%BD%93%E6%B7%B7%E5%90%88%E7%BB%84%E6%88%90%E3%80%82)">原文</a></p>
+<h3 id="开采天然气的影响"><a href="#开采天然气的影响" class="headerlink" title="开采天然气的影响"></a>开采天然气的影响</h3><p>煤、石油的开采，对环境造成了恶劣影响。  </p>
+<p>一、对土地的毁坏<br>采煤、采油，都要占用、浪费大量的土地资源。  </p>
+<p>采煤的矿渣、煤矸石，采油的钻台、设备，占地是自身设备的几十倍，对土地的毁坏是不可逆的。  </p>
+<p>二、地下水的破坏<br>造成地下水位降低，水质变差，污染。  </p>
+<p>三、地面下沉<br>山体滑坡、地震的可能性大大增加。地面建筑倒塌的危险大大增加。  </p>
+<p>四、能源问题<br>煤和石油都是不可再生能源。<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/15640536.html">原文</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/18/%E9%92%A2%E7%90%B4AI%E6%89%92%E8%B0%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
-                生物学考复习
-            </a>
+          
+            <a href="/2023/06/18/%E9%92%A2%E7%90%B4AI%E6%89%92%E8%B0%B1/" class="post-title-link" itemprop="url">钢琴AI扒谱安装与体验</a>
         </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-29
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    生物学考复习细胞呼吸模型图（自制）
-光合作用模型图光反应将光能转化为化学能，并释放氧气
-碳反应将二氧化碳还原成糖
-碳反应过程名称：1. CO2的固定；2. 三碳酸的还原；3. 五碳糖的再生
-光反应的场所是类囊体膜；碳反应的场所是叶绿体的基粒
 
-光合色素与提取与分离胡萝卜素扩散快的原因是在层析液...
-                 
-             
-            <p class="more">
-                <a href="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">READ MORE</a>
-            </p>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-18 15:36:10" itemprop="dateCreated datePublished" datetime="2023-06-18T15:36:10+08:00">2023-06-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-23 11:13:01" itemprop="dateModified" datetime="2023-06-23T11:13:01+08:00">2023-06-23</time>
+              </span>
+
+          
+
         </div>
-    </article>
+      </header>
 
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="钢琴AI扒谱，软件安装与体验"><a href="#钢琴AI扒谱，软件安装与体验" class="headerlink" title="钢琴AI扒谱，软件安装与体验"></a>钢琴AI扒谱，软件安装与体验</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这个软件是一个github上开源的AI扒谱软件，效果极端优秀，可以把任何力度、节奏等等的扒到位。</p>
+<p>github地址<a target="_blank" rel="noopener" href="https://kgithub.com/qiuqiangkong/piano_transcription_inference">https://kgithub.com/qiuqiangkong/piano_transcription_inference</a></p>
+<p>这个软件是只能扒成midi, 也就是一个通用的音乐格式，但是这个midi是不会有任何谱面记号的，也正因为如此，midi可以做到很好的自由度和还原度。</p>
+<p>musescore软件可以直接打开midi。</p>
+<p>因为这个原因，所以如果你直接用musescore软件打开的话，虽然谱面的音符你是直接可以看到了，但是midi原本的还原度也丧失了很多，听起来怪怪的，而且谱面是很差劲的，很乱的。所以尽量安装一个其他的软件来读取midi文件。</p>
+<p>虽然不能直接制作成谱子，但是可以参考音符的位置，然后再人工添加记号，省下了很多听音的时间。</p>
+<p>archlinuxWiki上说，vlc在archlinux官方源里面没有支持midi, however, vlc-git in AUR是支持的，或者你也可以安装vlc-plugin-fluidsynth-bin来使vlc支持。</p>
+<p>就算支持了，midi也需要软音源来播放，可以理解为一个包括了很多乐器发出的声音的文件，然后midi就是乐谱，电脑就是演奏者，根据乐谱来实时演奏。</p>
+<p>这个软音源，比较流行的有Fluid-soundfont.tar.gz，在archlinux community源里面，可以直接使用yay或者pacman安装。其他的linux distrobutions我暂时不清楚可不可以。</p>
+<p>这个项目的要下载的东西不多的，不像stable-diffusion那样把我剩下了10多个GB的内存全部卡爆。</p>
+<pre><code class="bash">yay -S soundfont-fluid
+</code></pre>
+<p>安装好了以后要找到VLC的工具&#x2F;偏好设置（在左下角点显示设置-&gt;全部）&#x2F;输入、编解码器&#x2F;音频编解码器&#x2F;FluidSynth，把右边的SoundFont文件里面改为<code>/usr/share/soundfonts/FluidR3_GM.sf2</code>然后就可以播放了。</p>
+<p>顺带一提，这个音源好像不是很好听，但是凑合着用吧。</p>
+<p>「教程原视频」<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1e5411E7vA/?p=2&amp;vd_source=4663f9a4c778e1a074fa26b38bf7f76b">https://www.bilibili.com/video/BV1e5411E7vA/?p=2&amp;vd_source=4663f9a4c778e1a074fa26b38bf7f76b</a></p>
+<p>我几乎完全没有按照这个教程来。</p>
+<h2 id="亲自踩坑安装，和效果体验"><a href="#亲自踩坑安装，和效果体验" class="headerlink" title="亲自踩坑安装，和效果体验"></a>亲自踩坑安装，和效果体验</h2><p>在linux上应该会方便一点，因为我看了原视频，如果在windows上需要安装wget什么的</p>
+<ol>
+<li>安装torch</li>
+</ol>
+<pre><code class="bash">pip install torch
+</code></pre>
+<p>这个命令敲好之后基本上如果你有nvidia的显卡的话应该会把cuda安装好。</p>
+<p>如果慢的要记得换源，后面加-i再加清华源，可以自己去<a target="_blank" rel="noopener" href="https://tuna.moe/">https://tuna.moe</a>上查看教程。</p>
+<ol start="2">
+<li>把github上的项目克隆下来。</li>
+</ol>
+<pre><code class="bash">git clone https://github.com/qiuqiangkong/piano_transcription_inference
+</code></pre>
+<p>如果你网络不幸不行，可以在github前面加个k使用他的镜像站。</p>
+<p>github都上不去，中国的开源环境真是没救了。</p>
+<pre><code class="bash">git clone https://kgithub.com/qiuqiangkong/piano_transcription_inference
+</code></pre>
+<ol start="3">
+<li>运行项目</li>
+</ol>
+<pre><code class="bash">python3 example.py --audio_path=&#39;input.mp3&#39; --output_midi_path=&#39;output.mid&#39; --cuda
+</code></pre>
+<p>如果你没有nvidia显卡的话后面–cuda别往上加了。</p>
+<p>这个项目如果有显卡的话，是很快的，歌都放不完就扒好了，然后显卡的要求也没什么，我的MX350在linux下，很快就扒好了</p>
+<ol start="4">
+<li>自动脚本</li>
+</ol>
+<p>这个项目直接使用pip安装下来的有点奇怪，他没有<code>example.py</code>, 也没有<code>__init__.py</code>，所以不能直接运行，所以我使用克隆。<br>但是克隆的问题就是它不能在除了这个目录以外的地方运行，不然<code>no such file</code>。<br>所以我写了个自动的，可以少敲命令。</p>
+<pre><code class="bash">#!/bin/bash
+
+ex_path=&#39;/media/xht/Data/github/piano_transcription_inference&#39;
+pwd1=$PWD
+
+cd $ex_path
+
+python3 example.py --audio_path=&quot;$pwd1/$1&quot; --output_midi_path=&quot;$pwd1/$2&quot; --cuda
+</code></pre>
+<p>自行修改<code>ex_path</code></p>
+<h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><p>也许在<code>python3 example.py ……</code>的时候会出现<code>No librosa.core attribute audio</code>这样的错误提示，这样的提示大概说明了librosa的版本不兼容，所以要指定版本安装</p>
+<pre><code class="bash">pip install librosa==0.9.2
+</code></pre>
+<p>也许会提示什么<code>no such file</code>什么什么的error提示，那么这个时候你需要在运行example.py的时候当前目录PWD必须要在example.py那里，如果从其他的地方来运行的话，会报错。如果不在的花切换到那里。<br>对于这个问题，可以使用我之前提到过的脚本来运行。</p>
+<p>README里面的Installation里面说要pip安装这个项目，实测不装，只是git clone也可以。</p>
+<p>第一次运行的时候可能会大约200KB&#x2F;s地下载一个160多MB的文件，这是正常的，等待一会就可以了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
-                地理学考复习
-            </a>
+          
+            <a href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/" class="post-title-link" itemprop="url">英语单词笔记生成器</a>
         </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-29
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    地理学考复习太阳圈层
-P33 地质年代简表地质年代简表
-地球气质年代温度变化书P38
-地球产生生命的“金锁链条件”：液态水、适宜的温度和比较厚的大气层
-地震波与圈层结构纵波（S波）快，固液气都传播；横波（P波）速度慢，只能在固体传播
-P波是primary wave，S波是secondary w...
-                 
-             
-            <p class="more">
-                <a href="/2023/06/29/%E5%9C%B0%E7%90%86%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">READ MORE</a>
-            </p>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-17 17:18:30" itemprop="dateCreated datePublished" datetime="2023-06-17T17:18:30+08:00">2023-06-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-09 21:53:10" itemprop="dateModified" datetime="2023-07-09T21:53:10+08:00">2023-07-09</time>
+              </span>
+
+          
+
         </div>
-    </article>
+      </header>
 
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/18/%E9%92%A2%E7%90%B4AI%E6%89%92%E8%B0%B1/">
-                钢琴AI扒谱安装与体验
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-18
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    钢琴AI扒谱，软件安装与体验简介这个软件是一个github上开源的AI扒谱软件，效果极端优秀，可以把任何力度、节奏等等的扒到位。
-github地址https://kgithub.com/qiuqiangkong/piano_transcription_inference
-这个软件是只能扒成mi...
-                 
-             
-            <p class="more">
-                <a href="/2023/06/18/%E9%92%A2%E7%90%B4AI%E6%89%92%E8%B0%B1/">READ MORE</a>
-            </p>
-        </div>
-    </article>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/">
-                英语单词笔记生成器
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-17
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    英语单词笔记生成器必应爬虫
-写一个文本文件i.txt, 使得它的每一行都是一个要查的单词或者词组。
-然后把这段代码执行
-import requests
+      
+          <h2 id="英语单词笔记生成器"><a href="#英语单词笔记生成器" class="headerlink" title="英语单词笔记生成器"></a>英语单词笔记生成器</h2><p>必应爬虫</p>
+<p>写一个文本文件i.txt, 使得它的每一行都是一个要查的单词或者词组。</p>
+<p>然后把这段代码执行</p>
+<pre><code class="python">import requests
 from bs4 import BeautifulSoup
 
-url = &quot;https://cn.bing.com/dict/sea...
-                 
-             
-            <p class="more">
-                <a href="/2023/06/17/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%E7%AC%94%E8%AE%B0%E7%94%9F%E6%88%90%E5%99%A8/">READ MORE</a>
-            </p>
-        </div>
-    </article>
+url = &quot;https://cn.bing.com/dict/search?q=%s&quot;
+user_agent = &quot;Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.5666.197 Safari/537.36&quot;
+# word = &quot;supply&quot;
 
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/10/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9AOP-%E9%9D%92%E6%98%A5%E7%97%87%E5%80%99%E7%BE%A4-%E6%89%92%E8%B0%B1-HalcyonMusic-ver/">
-                孤独摇滚OP-青春症候群-扒谱-HalcyonMusic ver
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-10
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    纯人工扒谱！  
-已完成：2023-06-10 16:00
-我的谱面完成啦，啊哈哈哈哈，啊哈哈哈哈哈哈
-原视频 
- 
-
-图片是svg
-
-软件musescore 4
-
-                 
-             
-            <p class="more">
-                <a href="/2023/06/10/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9AOP-%E9%9D%92%E6%98%A5%E7%97%87%E5%80%99%E7%BE%A4-%E6%89%92%E8%B0%B1-HalcyonMusic-ver/">READ MORE</a>
-            </p>
-        </div>
-    </article>
-
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">
-                计算尺的原理与制作
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-06-06
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    计算尺的原理与制作事情是这样的，我在b站看到了一个古董计算尺的视频，就想着自己能不能搞一把，但是奈何在网上逛了一圈没找到能用的图片，所以只好自己考功名一下他的原理然后写写代码自动生成。
-本文是介绍简易计算尺的制作过程,目前只完成了乘除部分。
-什么是计算尺计算尺就是在没有电子计算工具的时代用来辅...
-                 
-             
-            <p class="more">
-                <a href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">READ MORE</a>
-            </p>
-        </div>
-    </article>
-
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
-                化学学考复习
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-05-20
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    化学学考复习同素异形体、同位素、同分异构体、同系物的概念区分同素异形体是由同种元素组成的不同单质的互称；同位素是质子数相同而中子数不同的同一元素的不同原子的互称；同分异构体是分子式相同而结构式不同的化合物的互称；同系物是结构相似，在分子组成上相差一个或若干个CH2原子团的物质。
-常见的盐类物质...
-                 
-             
-            <p class="more">
-                <a href="/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">READ MORE</a>
-            </p>
-        </div>
-    </article>
-
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
-                历史学考复习
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-05-20
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    历史学考复习中国古代民族关系：大一统中央政府设立的边疆的管理民族地区的机构
+def search(word):
+    # try:
+    response = requests.get(url % word, &#123;&quot;user-agent&quot;:user_agent&#125;)
+    soup = BeautifulSoup(response.text, &quot;html.parser&quot;)
+    wordH1 = soup.find_all(&quot;h1&quot;)[1].text
+    音标 = soup.find_all(&quot;div&quot;, class_=&quot;hd_prUS b_primtxt&quot;) + soup.find_all(&quot;div&quot;, class_=&quot;hd_pr b_primtxt&quot;)
+    print(wordH1)
+    for each in 音标:
+        print(each.text)
+    ul = soup.find_all(&quot;ul&quot;)[2]
+    text = str(ul)
+    soup1 = BeautifulSoup(text, &quot;html.parser&quot;)
+    meaningLi = soup1.find_all(&quot;li&quot;)
+    for each in meaningLi:
+        print(each.text)
+    try:
+        forms = soup.find(&quot;div&quot;, class_=&quot;hd_if&quot;).text
+        print(forms)
+    except:
+        pass
+    # using = soup.find(&quot;div&quot;, class_=&quot;wd_div&quot;).get_text(separator=&quot; &quot;).replace(&quot; ,&quot;, &quot;,&quot;)
+    # print(using)
+#     list1 = using.split(&quot;.&quot;)
+#    for i in range(len(list1)):
+#        list1.insert(i + 1, &quot;  &quot;)
+#    using1 = &quot;.&quot;.join(list1)
+#    list2 = using1.split(&quot;+&quot;)
+#    for i in range(len(list2)):
+#        if i != 0:
+#            list2[i] = list2[i][2:]
+#    using2 = &quot;+&quot;.join(list2)
 
 
 
-朝代
-机构
-皇帝、时间
-民族、地区
-内容
-页码
+        
+        
+
+        
+
+    print()
+#     for each in using.contents:
+#         #print(each.text)
+#         for eacheach in each.contents:
+#             print(eacheach.text)
+    # except:
+    #     pass
+    
+    
+if __name__ == &quot;__main__&quot;:
+    while True:
+        word = input()
+        if word != &quot;&quot;:
+            search(word)
 
 
+</code></pre>
+<p>使用命令</p>
+<pre><code class="bash">python3 1.py &lt; i.txt &gt; o.txt
+</code></pre>
+<p>然后就生成了一份英语的单词笔记</p>
+<p>像这个</p>
+<blockquote>
+<p>bound<br>美 [baʊnd]<br>英 [baʊnd]<br>n.跳跃；蹦跳<br>adj.一定会；很可能会；受（法律、义务或情况）约束（必须做某事）<br>v.跳跃着跑；形成…的边界（或界限）<br>网络惊世狂花；范围；限制<br>第三人称单数：bounds  现在分词：bounding  过去式：bounded  <br>同义词 反义词 adj. unlikely, free adj. certain, sure, obliged, forced v. border, border on, be contiguous to, touch, be adjacent to n. jump, leap, spring, bounce, hop</p>
+<p>restore<br>美 [rɪˈstɔr]<br>英 [rɪˈstɔː(r)]<br>v.恢复；修复；恢复（某种情况或感受）；使复原<br>网络还原；重建；归还<br>第三人称单数：restores  现在分词：restoring  过去式：restored  <br>搭配 同义词 v.+n. restore confidence, restore order, restore system, restore service, restore reputation v. reinstate, re-establish, reestablish, bring back, return</p>
+</blockquote>
+<p>你也可以用这个脚本来便捷地查词，不加参数直接执行就好了</p>
 
+      
+    </div>
 
-西汉
-西域都护府
-汉宣帝BC60年
-西域乌垒城
-作为管理西域的军政机构，还在西域设立武威、张掖、酒泉、敦煌四郡。
-23
-
-
-唐朝
-安西都护府、北庭都护府
-唐...
-                 
-             
-            <p class="more">
-                <a href="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">READ MORE</a>
-            </p>
-        </div>
-    </article>
-
-    <article class="post post-atmain" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 class="post-title" itemprop="name headline">
-            <a itemprop="url" class="post-title-link" href="/2023/03/10/hello-world/">
-                Hexo - Hello World
-            </a>
-        </h2>
-        <ul class="post-meta">
-            <li>
-                <time datetime="2020-09-04T20:18:00+00:00" itemprop="datePublished">
-                    2023-03-10
-                </time>
-            </li>
-            <li>
-            
-            </li>
-        </ul>
-        <div class="post-content">
-            
-                 
-                    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
-                 
-             
-            <p class="more">
-                <a href="/2023/03/10/hello-world/">READ MORE</a>
-            </p>
-        </div>
-    </article>
-
-
-
-    <ol class="page-navigator">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">»</a>
-    </ol>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-             
-            <footer id="footer" role="contentinfo">
-    
-        &copy; 2020 - 2023
-        <br />
-    
-    
-    <br />
-    
-    
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-        <span id="busuanzi_value_site_pv">......</span> visits ·
-        <span id="busuanzi_value_site_uv">......</span> visitors 
-    
-</footer>
-          </div>
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/10/seishuncpl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/10/seishuncpl/" class="post-title-link" itemprop="url">孤独摇滚OP-青春症候群-扒谱-HalcyonMusic ver</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-10 21:58:30" itemprop="dateCreated datePublished" datetime="2023-06-10T21:58:30+08:00">2023-06-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-15 11:09:52" itemprop="dateModified" datetime="2023-07-15T11:09:52+08:00">2023-07-15</time>
+              </span>
+
+          
+
         </div>
-      </main>
-      <!-- highlight support -->
+      </header>
 
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/styles/default.min.css">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>纯人工扒谱！  </p>
+<p>已完成：2023-06-10 16:00</p>
+<p>我的谱面完成啦，啊哈哈哈哈，啊哈哈哈哈哈哈</p>
+<p>原视频 </p>
+<iframe src="//player.bilibili.com/player.html?aid=647920373&bvid=BV1De4y1p7cS&cid=900363494&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>图片是svg</p>
+<p><img src="/2023/06/10/seishuncpl/1.svg" alt="1"><br><img src="/2023/06/10/seishuncpl/2.svg" alt="2"><br><img src="/2023/06/10/seishuncpl/3.svg" alt="3"><br><img src="/2023/06/10/seishuncpl/4.svg" alt="4"><br><img src="/2023/06/10/seishuncpl/5.svg" alt="5"></p>
+<p>软件musescore 4</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">计算尺的原理与制作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-06 21:06:58" itemprop="dateCreated datePublished" datetime="2023-06-06T21:06:58+08:00">2023-06-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-14 15:38:35" itemprop="dateModified" datetime="2023-07-14T15:38:35+08:00">2023-07-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="计算尺的原理与制作"><a href="#计算尺的原理与制作" class="headerlink" title="计算尺的原理与制作"></a>计算尺的原理与制作</h1><p>事情是这样的，我在b站看到了一个古董计算尺的视频，就想着自己能不能搞一把，但是奈何在网上逛了一圈没找到能用的图片，所以只好自己考功名一下他的原理然后写写代码自动生成。</p>
+<p>本文是介绍简易计算尺的制作过程,目前只完成了乘除部分。</p>
+<h2 id="什么是计算尺"><a href="#什么是计算尺" class="headerlink" title="什么是计算尺"></a>什么是计算尺</h2><p>计算尺就是在没有电子计算工具的时代用来辅助计算的一种仪器。<br>详情可以在这个视频里面看到<br><a target="_blank" rel="noopener" href="https://b23.tv/Or8JpaS">【百元科技古董-01】被禁止带入考场的尺子与人类没有计算器之前的工程师帮手</a></p>
+<h2 id="计算尺的原理"><a href="#计算尺的原理" class="headerlink" title="计算尺的原理"></a>计算尺的原理</h2><p>计算尺的乘除部分使用的是<strong>对数原理</strong>，上个学期在数学书上看到的对数原理的应用终于在这里找到了铁证。</p>
+<p>计算尺的基本原理是把其他的运算变成<strong>加减运算</strong>，所以才可以用尺子的平行移动来计算。</p>
+<p>简单来说，$lg(x \cdot y) &#x3D; lg(x) + lg(y)$, 所以，我们可以制作出两把一样的尺子，这两把尺子的每一个刻度长度都是相应数字的$log_{10}$值，且这两把尺子的左端刻度起点都是1，那么我们把上尺的1对准下尺的第一个乘数，然后找到上尺上的另一个乘数的刻度，再把这个刻度啮合的下尺刻度读出，就可以得到结果。</p>
+<p>这个过程就是把两个乘数的$log_{10}$值相加，然后用这个$log$值再对应回原乘积</p>
+<p>除法是乘法的逆运算，所以计算与原理也很简单。原理就是$lg(\dfrac x y) &#x3D; lg(x) - lg(y)$.如果要计算除法，那么则需要把上尺的除数对准下尺的被除数刻度，然后读出上尺中的对准了下尺中的1刻度的刻度，这个刻度就是商数。</p>
+<p>具体的用法也可以在刚刚我提到的b站视频里面看到。</p>
+<h2 id="计算尺的图像生成"><a href="#计算尺的图像生成" class="headerlink" title="计算尺的图像生成"></a>计算尺的图像生成</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG"><strong>svg</strong></a><strong>: 可缩放矢量图形</strong>（<strong>Scalable Vector Graphics，SVG</strong>）基于 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/XML">XML</a> 标记语言，用于描述二维的矢量图形</p>
+<p>考虑到svg作为纯文本（代码）的图像格式比较好生成，所以我就选用svg生成。</p>
+<p>一张简单的svg图像的代码大概这样：</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;2977.2px&quot; height=&quot;4208.4px&quot; viewBox=&quot;0 0 2977.2 4208.4&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+
+&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;200&quot; y2=&quot;200&quot;
+  style=&quot;stroke:rgb(255,0,0);stroke-width:2&quot;/&gt;
+
+&lt;/svg&gt;
+</code></pre>
+<p>使用python语言进行开发，不导入第三方库了因为要考功名很麻烦，我就用一点点功能，所以直接使用print的方法就好了。</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;4208.4px&quot; height=&quot;2977.2px&quot; viewBox=&quot;0 0 2977.2 4208.4&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2100
+end_num = 500
+xMove = -1340
+yMove = 60
 
 
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.1.0/build/highlight.min.js"></script>
- 
+# 画上尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 50, lgi + xMove, yMove + 80))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>然后把这个svg文件打开做个微调就可以用来打印了😃</p>
+<p>程序的使用</p>
+<pre><code class="bash">python3 calc_ruler.py &gt; output.svg
+</code></pre>
+<p>你也可以通过调整<strong>注释：参数设置</strong>下面的那几行代码中的值来更改你想要的尺子的范围、大小、缩放等等。</p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg.svg" alt="svg"></p>
+<h2 id="计算尺的改进"><a href="#计算尺的改进" class="headerlink" title="计算尺的改进"></a>计算尺的改进</h2><p>因为1刻度里面的空隙很大（也即log函数的特性），所以我们可以将里面填满小刻度。</p>
+<p>代码如下</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;8000px&quot; height=&quot;5656.85424949238019521351px&quot; viewBox=&quot;0 0 8000 5656.85424949238019521351&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2500
+end_num = 500
+small_end_num = 25
+xMove = 0
+yMove = 60
+
+
+# 画上尺！！
+# 划出整数刻度位置
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 50, lgi + xMove, yMove + 80))
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + (30 if a % 5 == 0 else 40), lgi + xMove, yMove + 80))
+
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + (40 if a % 5 == 0 else 30)))
+    
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>那么这就可以生成一张带有刻度的svg图像了。</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg1.svg" alt="eg1"></p>
+<p>然后使用inkscape软件微调，复制几份用来使用A4打印机打印，再裁纸。</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/print.svg" alt="print"></p>
+<p>其他的运算我以后可能也会做。</p>
+<p>2023-06-06 小核桃</p>
+<p>2023-06-07 更新</p>
+<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol>
+<li><p>之前的代码里面有bug, 上尺的刻度线画错了，整数厘米的地方和0.5厘米的地方没有区分开来，所以导致测量时候会令人困惑。</p>
+</li>
+<li><p>之前的代码里面，我输出的时候用的是%d，但是这里的刻度为了精确，应该使用双精度浮点型，也即double的%Lf来输出，然而%d只能用来输出整数，所以导致了踩坑。而且使用的格式化输出并不会导致代码更简洁。<br>使用%d的后果就是后面的小数被四舍五入掉了，所以到后面接近500的刻度线的时候有些刻度会（精确的）叠在一起，我很早就发现了这个问题，但是直到现在我才发现这个问题的解决办法。<br>这个踩坑给我一个教训，也就是输出格式化字符串的时候最好用<code>f&quot;string&#123;var_name&#125;&quot;</code>来输出，虽然这是一个很晚才支持的特性，但是这可以使代码更清晰和少犯错。</p>
+</li>
+</ol>
+<p>现在我把修改过的代码贴上来</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;8000px&quot; height=&quot;5656.85424949238019521351px&quot; viewBox=&quot;0 0 8000 5656.85424949238019521351&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2500
+end_num = 500
+small_end_num = 25
+xMove = 0
+yMove = 60
+
+
+# 画上尺！！
+# 划出整数刻度位置
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%Lf&quot; y=&quot;%Lf&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 30, lgi + xMove, yMove + 80))
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + (40 if a % 5 == 0 else 50), lgi + xMove, yMove + 80))
+
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%Lf&quot; y=&quot;%Lf&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + (40 if a % 5 == 0 else 30)))
+    
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>那么这就是新的代码，然后还有新的图片</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg11111.svg" alt="eg11111"><br>打印用的图片<br><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/SuperPrint.svg" alt="SuperPrint"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">化学学考复习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-20 10:10:00" itemprop="dateCreated datePublished" datetime="2023-05-20T10:10:00+08:00">2023-05-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-09 21:53:10" itemprop="dateModified" datetime="2023-07-09T21:53:10+08:00">2023-07-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="化学学考复习"><a href="#化学学考复习" class="headerlink" title="化学学考复习"></a>化学学考复习</h1><h2 id="同素异形体、同位素、同分异构体、同系物的概念区分"><a href="#同素异形体、同位素、同分异构体、同系物的概念区分" class="headerlink" title="同素异形体、同位素、同分异构体、同系物的概念区分"></a>同素异形体、同位素、同分异构体、同系物的概念区分</h2><p>同素异形体是由同种元素组成的不同<strong>单质</strong>的互称；<br>同位素是质子数相同而中子数不同的<strong>同一元素</strong>的不同原子的互称；<br>同分异构体是<strong>分子式相同而结构式不同</strong>的化合物的互称；<br>同系物是结构相似，在分子组成上相差一个或若干个**CH<sub>2</sub>**原子团的物质。</p>
+<h2 id="常见的盐类物质的结晶水数量"><a href="#常见的盐类物质的结晶水数量" class="headerlink" title="常见的盐类物质的结晶水数量"></a>常见的盐类物质的结晶水数量</h2><p>十水碳酸钠Na<sub>2</sub>CO<sub>3</sub>·10H<sub>2</sub>O（纯碱)，还有一水、七水<br>五水硫酸铜CuSO<sub>4</sub>·5H<sub>2</sub>O（胆矾、蓝矾），<br>七水硫酸亚铁FeSO<sub>4</sub>·7H<sub>2</sub>O（绿矾），<br>七水硫酸锌ZnSO<sub>4</sub>·7H<sub>2</sub>O（皓矾），<br>十二水硫酸铝钾KAl(SO<sub>4</sub>)<sub>2</sub>·12H<sub>2</sub>O（明矾），<br>二水硫酸钙CaSO<sub>4</sub>·2H<sub>2</sub>O（石膏），<br>2CaSO<sub>4</sub>·H<sub>2</sub>O（熟石膏），<br>十水硫酸钠Na<sub>2</sub>SO<sub>4</sub>·10H<sub>2</sub>O(芒硝)，还有七水</p>
+<h2 id="铝、铁与金属"><a href="#铝、铁与金属" class="headerlink" title="铝、铁与金属"></a>铝、铁与金属</h2><p>工业处理重铬酸根使用绿矾(FeSO<sub>4</sub>)  </p>
+<h3 id="生铁与钢"><a href="#生铁与钢" class="headerlink" title="生铁与钢"></a>生铁与钢</h3><p>生铁的含碳量为2%<del>4.3%, 钢的含碳量为0.03%</del>2%。<br>生铁<strong>硬度大</strong>，<strong>抗压</strong>，<strong>性脆</strong>，可以铸造成型，是制造机座、管道的重要材料<br>钢有良好的<strong>延展性</strong>，<strong>机械性能好</strong>，可以断轧和铸造，广泛用于制造机械和交通工具等<br>钢分为<strong>碳素钢</strong>和<strong>合金钢</strong>, 碳素钢分为高碳钢、中碳钢、和低碳钢<br>常用的合金钢中含有的元素有<strong>Cr</strong>, <strong>Ni</strong>, 有特殊性能，如强度、硬度大，可塑性、韧性好，耐磨，耐腐蚀等。在大气中比较稳定，不容易生锈，具有很强的抗腐蚀能力。  </p>
+<h3 id="铝的表面处理与蚀刻电路"><a href="#铝的表面处理与蚀刻电路" class="headerlink" title="铝的表面处理与蚀刻电路"></a>铝的表面处理与蚀刻电路</h3><p>利用覆铜板制作图案，氧化剂是<strong>FeCl<sub>3</sub></strong></p>
+<p>铝制品的表面处理使用铬酸(H<sub>2</sub>CrO<sub>4</sub>)做氧化剂，可以使氧化剂产生美丽的颜色  </p>
+<h2 id="物质结构与元素周期律"><a href="#物质结构与元素周期律" class="headerlink" title="物质结构与元素周期律"></a>物质结构与元素周期律</h2><h3 id="原子结构模型的演变"><a href="#原子结构模型的演变" class="headerlink" title="原子结构模型的演变"></a>原子结构模型的演变</h3><p>原子结构模型是科学家根据科学猜想和分析，通过对原子结构的形象描摹而建构的揭示原子本质的认知模型。人类认识原子的历史是漫长的，也是无止境的。下列几种在科学发展不同时期所建构的原子结构模型，代表了人类对原子结构认识的不同阶段，简明形象地表示了人类对原子结构认识逐步深化的演变过程。  </p>
+<p>道尔顿模型（1803年）：原子是构成物质的基本粒子，它们是坚实的、不可再分的实心球。  </p>
+<p>汤姆孙原子模型（1904年）：原子是一个平均分布着正电荷的粒子，其中镶嵌着许多电子，中和了正电荷，从而形成了中性原子。  </p>
+<p>卢瑟福原子模型（1911年）：在原子的中心有一个带正电荷的核，它的质量几乎等于原子的全部质量。电子在它的周围沿着不同的轨道运转，就像行星环绕太阳运转一样。  </p>
+<p>玻尔原子模型（1913年）：电子在原子核外空间的一定轨道上绕核做高速圆周运动。  </p>
+<p>电子云模型（1926~1935年）：现代物质结构学说。电子在原子核外很小的空间内做高速运动，其运动规律与一般物体不同，没有确定的轨道。  </p>
+<p>目前，科学家已经能利用电子显微镜和扫描隧道显微镜摄制显示原子图像的照片。随着现代科学技术的发展，人类对原子的认识过程还会不断深化。  </p>
+<h3 id="实验室与危险的图标及事故处理-TODO"><a href="#实验室与危险的图标及事故处理-TODO" class="headerlink" title="实验室与危险的图标及事故处理-TODO"></a>实验室与危险的图标及事故处理-TODO</h3><h4 id="酸碱等腐蚀性药品灼伤"><a href="#酸碱等腐蚀性药品灼伤" class="headerlink" title="酸碱等腐蚀性药品灼伤"></a>酸碱等腐蚀性药品灼伤</h4><p>酸：立即用大量水冲洗，然后用3%~5%的NaHCO<sub>3</sub>溶液冲洗  </p>
+<p>碱：立即用大量水冲洗，然后涂上1%的硼酸(H<sub>3</sub>BO<sub>3</sub>)  </p>
+<h3 id="常见物质的颜色"><a href="#常见物质的颜色" class="headerlink" title="常见物质的颜色"></a>常见物质的颜色</h3><p>液溴：深红棕色  </p>
+<p>碘单质：紫黑色  </p>
+<p>溴水：橙黄色  </p>
+<p>碘水：黄色或黄褐色  </p>
+<p>溴的四氯化碳溶液：橙色或红棕色  </p>
+<p>碘的四氯化碳溶液：紫色</p>
+<h2 id="化学与职业"><a href="#化学与职业" class="headerlink" title="化学与职业"></a>化学与职业</h2><ol>
+<li><p>化学科研工作者 必修一P11<br> 是从事与化学有关的基础研究和应用研究的专业技术人员。<br> 工作内容是：在原子、分子水平上研究<strong>物质的组成、结构、性质以及相互关系</strong>；研究物质<strong>转化的规律和控制手段</strong>；实现物质的<strong>人工转化</strong>和按需调控等。<br> 扎实的化学专业知识和技能，掌握系统的科学研究方法，有质疑精神和创新精神。  </p>
+</li>
+<li><p>水质检验员 必修一P47<br> 对<strong>水</strong>的物理性质、化学性质以及生物性质进行<strong>检验和评定</strong>的专业技术人员。<br> 目的是考察和研究环境质量、水的污染性或受污染的程度、水质是否适宜使用，以及水处理过程的效率等。  </p>
+</li>
+<li><p>测试工程师（金属材料） 必修一P75<br> 运用各类高精度化学检测仪器或化学检测方法，对合金等金属材料或冶炼产品等中的微量、常量<strong>杂质元素</strong>，以及金属材料中<strong>C、H、O、N、S等的含量等进行定性和定量分析</strong>，已获得金属材料的<strong>组成及其含</strong>量，为一些研究单位和企业提供相关的<strong>分析测试数据和质量检测结果</strong>等。<br> 具备化学的专业知识。  </p>
+</li>
+<li><p>科技考古研究人员 必修一P91<br> 利用现代科技手段分析古代遗存，再结合考古学方法，探索人类的历史。<br> 同位素测定年代</p>
+</li>
+<li><p>化工工程师 必修二P9<br> 是解决人类在生产、生活等领域面临的化工相关问题的专业技术人才。<br> 工作领域在<strong>石油炼制、化肥生产、医药开发和环境治理</strong>等领域。<br> 主要工作是依据科学原理，统筹各方面的资源，<strong>设计</strong>化工生产的<strong>工艺流程</strong>，并<strong>监控生产过程</strong>，及时<strong>解决技术问题</strong>。<br> 能力、知识……  </p>
+</li>
+<li><p>电池研发人员 必修二P39<br> <strong>材料</strong>的研制、电池性能的改进和应用的拓展等。<br> 关系电池的效率、寿命、安全性、适用性和制造成本。  </p>
+</li>
+<li><p>营养师 必修二P88<br> 根据食品科学、营养学和医学专业知识结合特殊需求进行<strong>膳食指导</strong>。<br> 了解食物的化学成分、管制营养素对健康的影响，熟悉食物营养和食品加工知识，坚实的化学基础。  </p>
+</li>
+<li><p>环境保护工程师 必修二P121<br> <strong>预防和治理环境污染</strong>，包括对环境问题的调查研究、分析检测、管理监督和对环境污染的控制和治理等。<br> 知识 ……</p>
+</li>
+</ol>
+<h2 id="硫-S"><a href="#硫-S" class="headerlink" title="硫 S"></a>硫 S</h2><p>黑火药的组成：硫磺，硝石和木炭  </p>
+<h2 id="二氧化硫"><a href="#二氧化硫" class="headerlink" title="二氧化硫"></a>二氧化硫</h2><p>二氧化硫的催化氧化，催化剂是五氧化二钒V<sub>2</sub>O<sub>5</sub>  </p>
+<h3 id="P4-食品中的二氧化硫"><a href="#P4-食品中的二氧化硫" class="headerlink" title="P4 食品中的二氧化硫"></a>P4 食品中的二氧化硫</h3><p>起到<strong>漂白、防腐、杀菌和抗氧化</strong>等作用。<br>有助于保持葡萄酒的天然<strong>果香味</strong>。<br>在蜜饯、干果、食糖和果酒等食品的加工中起到重要作用。<br>规定葡萄酒0.25g&#x2F;L  </p>
+<h3 id="P6-7-硫酸盐的俗名"><a href="#P6-7-硫酸盐的俗名" class="headerlink" title="P6, 7 硫酸盐的俗名"></a>P6, 7 硫酸盐的俗名</h3><ol>
+<li><p>硫酸钙 CaSO<sub>4</sub><br> 石膏：CaSO<sub>4</sub>.2H<sub>2</sub>O<br> 加热到<strong>150 摄氏度</strong>时失水变成熟石膏：2CaSO<sub>4</sub>.H<sub>2</sub>O  </p>
+</li>
+<li><p>硫酸钡 BaSO<sub>4</sub><br> <strong>重晶石</strong>：BaSO<sub>4</sub> 钡餐 原因：不溶于水和酸，不容易被X射线透过  </p>
+</li>
+<li><p>硫酸铜 CuSO<sub>4</sub><br> 胆矾：CuSO<sub>4</sub>.5H<sub>2</sub>O<br> 白色粉末变成蓝色用来检验酒精是否含有少量水<br> <strong>胆矾</strong>和<strong>石灰乳</strong>混合制成农药波尔多液  </p>
+</li>
+<li><p>芒硝 Na<sub>2</sub>SO<sub>4</sub>.10H<sub>2</sub>O  </p>
+</li>
+<li><p>黄铁矿 Fe<sub>2</sub>S  </p>
+</li>
+<li><p>黄铜矿 CuFeS<sub>2</sub><br> 黄铁矿和黄铜矿通常在岩层深处和海底的<strong>无氧环境</strong>存在，地表附近会由于水和氧气的长期作用转化为硫酸盐如石膏芒硝等。</p>
+</li>
+</ol>
+<h3 id="硫酸的工业制备"><a href="#硫酸的工业制备" class="headerlink" title="硫酸的工业制备"></a>硫酸的工业制备</h3><p>工业上制硫酸的设备分为三大部分,一是<strong>沸腾炉</strong>、二是<strong>接触室</strong>、三是<strong>吸收塔</strong>.在沸腾炉内煅烧黄铁矿生成二氧化硫;在接触室内有催化剂存在下二氧化硫进一步与氧气结合,生成三氧化硫;三氧化硫流经吸收塔时,采用98.3%的浓硫酸吸收,使三氧化硫最终与水化合形成硫酸.</p>
+<h2 id="氮-N"><a href="#氮-N" class="headerlink" title="氮 N"></a>氮 N</h2><h3 id="氮的固定"><a href="#氮的固定" class="headerlink" title="氮的固定"></a>氮的固定</h3><p>将大气中游离态的氮转化为氮的化合物的过程。<br>自然固氮：可以通过闪电、豆科植物的根瘤菌将氮气转化成氨实现自然固氮。<br>人工固氮：最重要的是工业合成氨，为农作物生长提供氮元素，为其他化工产品（如炸药、农药、燃料）的生产提供了必要原料。  </p>
+<h3 id="合成氨"><a href="#合成氨" class="headerlink" title="合成氨"></a>合成氨</h3><p>1909 德国化学家哈伯发现<br>德国工程师博施做出贡献<br>1913 年产量7000t的合成氨工厂建成投产，合成氨成为化工中的重要领域，两人获得诺贝尔化学奖  </p>
+<h3 id="P15-王水"><a href="#P15-王水" class="headerlink" title="P15 王水"></a>P15 王水</h3><p>浓硝酸和浓盐酸的1：3混合物，能溶解一些不溶于硝酸的金属如金、铂。  </p>
+<h2 id="硅"><a href="#硅" class="headerlink" title="硅"></a>硅</h2><h3 id="硅酸盐材料"><a href="#硅酸盐材料" class="headerlink" title="硅酸盐材料"></a>硅酸盐材料</h3><ol>
+<li><p>陶瓷<br> 成分：含水的铝硅酸盐<br> 应用：建筑材料、绝缘材料、日用器皿、卫生洁具等  </p>
+</li>
+<li><p>玻璃<br> 普通玻璃 成分：Na<sub>2</sub>SiO<sub>3</sub>、CaSiO<sub>3</sub>、SiO<sub>2</sub><br> 原料：纯碱、石灰石和石英砂（成分是SiO<sub>2</sub>）<br> 用途：建筑材料，光学仪器和各种器皿，玻璃纤维用于高强度复合材料  </p>
+<p> 含铅玻璃透光性好折射率高，制造光学镜片<br> 硼酸盐玻璃耐化学腐蚀、温度急剧变化，用于实验室玻璃仪器<br> 加入金属氧化物和盐可以得到彩色玻璃  </p>
+</li>
+<li><p>水泥<br> 原料：粘土和石灰石，适量石膏</p>
+</li>
+</ol>
+<h3 id="无机非金属材料"><a href="#无机非金属材料" class="headerlink" title="无机非金属材料"></a>无机非金属材料</h3><ol>
+<li><p>硅<br> 半导体材料<br> 硅在自然界主要形式是硅酸盐（地壳中的大多数矿物）和氧化物（如水晶、玛瑙等）<br> 用焦炭还原石英砂制得粗硅：SiO<sub>2</sub> + 2C &#x3D;高温&#x3D; Si + 2CO<br> 高纯硅的制备：  </p>
+<ol>
+<li>SiO<sub>2</sub> + 2<strong>C</strong> &#x3D;1800~2000摄氏度&#x3D; Si + 2CO  </li>
+<li>Si + 3 HCl &#x3D;300摄氏度&#x3D; SiHCl<sub>3</sub> + H<sub>2</sub>  </li>
+<li>SiHCl<sub>3</sub> + H<sub>2</sub> &#x3D;1100摄氏度&#x3D; Si + 3HCl<br>用途：制芯片、太阳能电池</li>
+</ol>
+</li>
+<li><p>二氧化硅<br> 用来生产光导纤维，提高通信效率  </p>
+</li>
+<li><p>新型陶瓷<br> 碳化硅 SiC 俗称金刚砂<br> 共价化合物，结构类似金刚石，做砂纸和砂轮的磨料<br> 高温抗氧化，温度1600摄氏度，制作耐高温结构材料、耐高温半导体材料  </p>
+<ol>
+<li><p>高温结构陶瓷：耐高温、抗氧化、耐磨蚀<br> 碳化硅、氮化硅(Si<sub>3</sub>N<sub>4</sub>)<br> 用途：火箭、汽车发动机和高温电极材料  </p>
+</li>
+<li><p>压电陶瓷：实现机械能和电能的相互转化<br> 钛酸盐、锆酸盐<br> 用途：滤波器、扬声器、超声波探伤器和点火器  </p>
+</li>
+<li><p>透明陶瓷：优异的光学性能，耐高温、绝缘性好<br> 氧化铝、氧化钇等氧化物和氮化铝、氟化钙等非氧化物<br> 用途：高压钠灯、激光器和高温探测窗等  </p>
+</li>
+<li><p>超导陶瓷：在某一临界温度下电阻为0，具有超导性，用于电力、交通、医疗等领域。</p>
+</li>
+</ol>
+</li>
+<li><p>碳纳米材料<br> 领域：能源、信息、医药  </p>
+<p> 富勒烯：笼形分子，C<sub>60</sub>  </p>
+<p> 碳纳米管：石墨片层卷成的管状物，直径在纳米尺度<br> 比表面积大，高强度和优良的电学性能，生产复合材料、电池和传感器等  </p>
+<p> 石墨烯：一个碳原子直径厚度的单层石墨，电阻率低，热导率高，高强度<br> 领域：光电器件、超级电容器、电池和复合材料等方面的应用研究在不断深入</p>
+</li>
+</ol>
+<h2 id="书上的可逆反应"><a href="#书上的可逆反应" class="headerlink" title="书上的可逆反应"></a>书上的可逆反应</h2><ol>
+<li><p>二氧化硫溶于水，与水反应 SO<sub>2</sub> + H<sub>2</sub>O ⇌ H<sub>2</sub>SO<sub>3</sub>  </p>
+</li>
+<li><p>二氧化硫催化氧化（催化剂五氧化二钒） 2SO<sub>2</sub> + O<sub>2</sub> ⇌V<sub>2</sub>O<sub>5</sub> 加热 &#x3D; 2SO<sub>3</sub>  </p>
+</li>
+<li><p>合成氨（催化剂鋨） N<sub>2</sub> + 3H<sub>2</sub> ⇌高温高压催化剂⇌ 2NH<sub>3</sub>   </p>
+</li>
+<li><p>碳与二氧化碳归中生成一氧化碳 C + CO<sub>2</sub> ⇌ 2CO  </p>
+</li>
+<li><p>酯化反应 CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH ⇌浓硫酸 加热⇌ CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + H<sub>2</sub>O 注:不要忘记小分子H<sub>2</sub>O  </p>
+</li>
+<li><p>氯气与水的反应：Cl<sub>2</sub> + H<sub>2</sub>O &#x3D;&#x3D; HCl + HClO<br>此处存疑，书上的是等于号也即非可逆反应，但是大量资料表明是可逆反应</p>
+</li>
+</ol>
+<p>注：</p>
+<ol>
+<li><p>氨的催化氧化不是可逆反应（4NH<sub>3</sub> + 5O<sub>2</sub> &#x3D;催化剂加热&#x3D; 4NO + 6H<sub>2</sub>O）  </p>
+</li>
+<li><p>甲烷的取代也不是可逆反应</p>
+</li>
+</ol>
+<h2 id="有机化合物"><a href="#有机化合物" class="headerlink" title="有机化合物"></a>有机化合物</h2><p>去除甲烷气体中混入的一部分乙烯：不能引入氢气；不能用酸性高锰酸钾溶液，因为乙烯会被直接氧化成二氧化碳出现新的杂质；应该通过溴水，乙烯变成1,2-二溴乙烷(l)，留在溶液里面；也可以用酸性高锰酸钾气体后接氢氧化钠溶液装置</p>
+<p>工业制取无水酒精：在工业酒精中加入生石灰并蒸馏</p>
+<h2 id="煤、石油、天然气的综合利用"><a href="#煤、石油、天然气的综合利用" class="headerlink" title="煤、石油、天然气的综合利用"></a>煤、石油、天然气的综合利用</h2><h3 id="煤"><a href="#煤" class="headerlink" title="煤"></a>煤</h3><p>煤是由有机物和少量无机物组成的复杂混合物，组成元素一碳元素为主，还含有少量氢、氧、氮、硫等元素。</p>
+<p>煤的<strong>干馏（焦化）</strong>：将煤隔绝空气加强热使其分解。</p>
+<p>煤<u>不含有苯</u>，<strong>煤焦油</strong>等物质中含有苯</p>
+<p>煤的<strong>气化</strong>是指将煤转化为可燃性气体的过程，主要反应是碳与水蒸气反应生成水煤气等等。</p>
+<p>C+H<sub>2</sub>O(g)&#x3D;高温&#x3D;CO+H<sub>2</sub></p>
+<p>煤的液化：<br>    直接液化：使煤与氢气反应生成液体燃料<br>    间接液化：先转化为一氧化碳和氢气，然后在催化剂的作用下合成甲醇等</p>
+<h3 id="石油"><a href="#石油" class="headerlink" title="石油"></a>石油</h3><p>石油是由多种碳氢化合物组成的化合物</p>
+<p><strong>分馏</strong>：利用石油中各组分沸点的不同进行分离的过程，获得汽油、煤油、柴油等含碳原子少的轻质油</p>
+<p><strong>裂化</strong>：将重油裂化为汽油等物质</p>
+<p><strong>裂解</strong>：获得更少碳原子量的物质</p>
+<p>石油在加热或催化剂的作用下，可以通过结构的调整，使链状烃转化为环状烃，如苯或甲苯等</p>
+<p><strong>⭐裂化汽油中含有烯烃</strong>所以裂化汽油不能用于萃取溴水中的溴</p>
+<p><strong>⭐直馏汽油中主要成分是烷烃</strong>所以直馏汽油可以用于萃取溴</p>
+<h2 id="其他提醒"><a href="#其他提醒" class="headerlink" title="其他提醒"></a>其他提醒</h2><p>硫酸铝只能用作混凝剂，不能用作消毒剂（2022-7 21）</p>
+<p>皂化反应：通常指的是 碱 (通常为<strong>强碱</strong>）和酯反应，而生产出 醇和羧酸盐 ，尤指油脂和碱 反应。狭义的讲，皂化 反应仅限于 油脂与氢氧化钠或氢氧化钾混合，得到高级脂肪酸的钠&#x2F;钾盐和甘油的反应。这个反应是制造肥皂流程中的一步，因此而得名。</p>
+<h3 id="几种结晶方式的区别-–-知乎"><a href="#几种结晶方式的区别-–-知乎" class="headerlink" title="几种结晶方式的区别 – 知乎"></a>几种结晶方式的区别 – 知乎</h3><p><img src="https://pic1.zhimg.com/80/v2-49be590c0f8bbcc3a1a437b69c045c3e_1440w.webp?source=1940ef5c" alt="1"><br><img src="https://pic1.zhimg.com/80/v2-389affd7df91eec830f89746cb5ef90d_1440w.webp?source=1940ef5c" alt="2"><br><img src="https://pic1.zhimg.com/80/v2-d2fc52f7b8e65073a7bc65172593c684_1440w.webp?source=1940ef5c" alt="3"></p>
+<p>一共三种方式</p>
+<p>第一种，蒸发结晶，初中学过的方法，很少固体可以运用这种方法结晶，要求物体的热稳定性很好才可以，如食盐水中获取食盐晶体(๑˙ー˙๑)</p>
+<p>第二种，蒸发浓缩冷却结晶</p>
+<p>与第一种相比，运用范围最广，高中最常见，适用于溶解度随温度变化大的晶体，还有一个区别是蒸发出少量晶体就静置冷却</p>
+<p>第三种，最让人脑阔疼的</p>
+<p>蒸发结晶，趁热过滤(减压抽滤)    </p>
+<p>硝酸钾中含有的少量氯化钠可以使用<strong>重结晶</strong>的方法进行提纯（蒸发浓缩冷却结晶）</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/" class="post-title-link" itemprop="url">历史学考复习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-05-20 10:10:00" itemprop="dateCreated datePublished" datetime="2023-05-20T10:10:00+08:00">2023-05-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-09 21:53:10" itemprop="dateModified" datetime="2023-07-09T21:53:10+08:00">2023-07-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="历史学考复习"><a href="#历史学考复习" class="headerlink" title="历史学考复习"></a>历史学考复习</h1><h2 id="中国古代民族关系：大一统中央政府设立的边疆的管理民族地区的机构"><a href="#中国古代民族关系：大一统中央政府设立的边疆的管理民族地区的机构" class="headerlink" title="中国古代民族关系：大一统中央政府设立的边疆的管理民族地区的机构"></a>中国古代民族关系：大一统中央政府设立的边疆的管理民族地区的机构</h2><table>
+<thead>
+<tr>
+<th align="center">朝代</th>
+<th align="center">机构</th>
+<th align="center">皇帝、时间</th>
+<th align="center">民族、地区</th>
+<th align="left">内容</th>
+<th align="center">页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">西汉</td>
+<td align="center">西域都护府</td>
+<td align="center">汉宣帝BC60年</td>
+<td align="center">西域乌垒城</td>
+<td align="left">作为管理西域的军政机构，还在西域设立武威、张掖、酒泉、敦煌四郡。</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center">唐朝</td>
+<td align="center">安西都护府、北庭都护府</td>
+<td align="center">唐太宗640年</td>
+<td align="center">西域</td>
+<td align="left">统辖天山南北</td>
+<td align="center">36</td>
+</tr>
+<tr>
+<td align="center">元朝</td>
+<td align="center">宣政院</td>
+<td align="center"></td>
+<td align="center">吐蕃地区藏族</td>
+<td align="left">管理</td>
+<td align="center">62</td>
+</tr>
+<tr>
+<td align="center">元朝</td>
+<td align="center">北庭都元帅府、宣慰司</td>
+<td align="center"></td>
+<td align="center">西域</td>
+<td align="left">管理军政事务，加强了对西域的管辖</td>
+<td align="center">62</td>
+</tr>
+<tr>
+<td align="center">元朝</td>
+<td align="center">澎湖巡检司</td>
+<td align="center"></td>
+<td align="center">台湾</td>
+<td align="left">行政管理职能以经略台湾</td>
+<td align="center">62</td>
+</tr>
+<tr>
+<td align="center">明朝</td>
+<td align="center">行都指挥使司</td>
+<td align="center"></td>
+<td align="center">西藏（乌思藏）</td>
+<td align="left">管理西藏军民事务，任用藏族上层人士</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td align="center">明朝</td>
+<td align="center">奴儿干都司</td>
+<td align="center">明朝前期</td>
+<td align="center">女真、东北</td>
+<td align="left">对东北女真各部落首领封授官号</td>
+<td align="center">80</td>
+</tr>
+<tr>
+<td align="center">清朝</td>
+<td align="center">驻藏大臣</td>
+<td align="center">1727开始</td>
+<td align="center">西藏</td>
+<td align="left">中央派遣，代表朝廷与达赖班禅共同治理西藏</td>
+<td align="center">84</td>
+</tr>
+<tr>
+<td align="center">清朝</td>
+<td align="center">理藩院</td>
+<td align="center"></td>
+<td align="center">蒙古族、藏族</td>
+<td align="left">掌管民族事务</td>
+<td align="center">84</td>
+</tr>
+<tr>
+<td align="center">清朝</td>
+<td align="center">盟、旗两级单位</td>
+<td align="center"></td>
+<td align="center">蒙古族</td>
+<td align="left">任命蒙古王公为盟长、旗长</td>
+<td align="center">84</td>
+</tr>
+<tr>
+<td align="center">清朝</td>
+<td align="center">伊犁将军</td>
+<td align="center">1762</td>
+<td align="center">新疆</td>
+<td align="left">总领军政事务</td>
+<td align="center">84</td>
+</tr>
+</tbody></table>
+<h2 id="书上没有细说的机构"><a href="#书上没有细说的机构" class="headerlink" title="书上没有细说的机构"></a>书上没有细说的机构</h2><table>
+<thead>
+<tr>
+<th align="center">朝代</th>
+<th align="center">机构</th>
+<th align="center">皇帝、时间</th>
+<th align="center">民族、地区</th>
+<th align="left">内容</th>
+<th align="center">页码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">唐朝</td>
+<td align="center">安北都护府、瀚海都督府</td>
+<td align="center"></td>
+<td align="center">回纥蒙古地带</td>
+<td align="left"></td>
+<td align="center">37</td>
+</tr>
+<tr>
+<td align="center">唐朝</td>
+<td align="center">渤海都督府、黑水都督府</td>
+<td align="center">713、726</td>
+<td align="center">靺鞨、东北</td>
+<td align="left"></td>
+<td align="center">37</td>
+</tr>
+<tr>
+<td align="center">唐朝</td>
+<td align="center">安东都护府</td>
+<td align="center"></td>
+<td align="center">朝鲜</td>
+<td align="left"></td>
+<td align="center">37</td>
+</tr>
+</tbody></table>
+<h2 id="中国古代政治措施"><a href="#中国古代政治措施" class="headerlink" title="中国古代政治措施"></a>中国古代政治措施</h2><ol>
+<li><p><strong>秦朝</strong> 秦始皇<br> 政治制度：<br> 确立<strong>皇帝制</strong>与皇帝至高无上的地位<br> 中央设置<strong>三公九卿制</strong>组成中央政府：<br>   三公：丞相、太尉、御史大夫<br>   九卿泛指分掌具体事物的诸卿(qing1)<br> 在地方彻底废除分封制，将<strong>郡县制</strong>在全国推广，设立郡县两级行政机构，主要官员由中央任免和考核。<br> 县以下设置<strong>乡、里、亭</strong>，分别负责管理民众和治安<br> 其他方面：<br><strong>统一车轨文字度量衡</strong><br>修 <strong>驰道、直道</strong><br> 颁行<strong>法律</strong>，编制户籍<br> <strong>迁徙</strong>六国豪强<strong>贵族</strong>到关中、巴蜀等地<br><strong>整顿社会风俗</strong>   </p>
+</li>
+<li><p><strong>西汉</strong> 汉武帝<br> 政治：<br> 颁行<strong>推恩令</strong>，削弱诸侯王势力<br> 加强皇权，削弱丞相权力，设立直接为皇帝所掌控的<strong>中朝</strong>，尚书令的作用开始提升<br> 确立以<strong>察举制</strong>为代表的新的官吏选拔制度<br> 将全国划分为13州部，分设<strong>刺史</strong>，负责对辖区内军机官员及子弟和豪强势力进行巡视监察<br> 任用<strong>酷吏</strong>治理地方，严厉打击豪强、游侠不法行为<br> 经济：<br> 改革币制，将<strong>铸币权收归中央</strong><br> <strong>盐铁官营</strong><br> <strong>均输平准</strong>（国家调控）<br> 抑制工商业者征收财产税<br> 罢黜百家，独尊<strong>儒</strong>术<br> 民族关系：<br> 开拓疆域：<br>   卫青霍去病打匈奴<br>   河西走廊设置武威、张掖、酒泉、敦煌四郡<br>   张骞通西域<br>   丝绸之路<br>   BC60 设置西域都护府  </p>
+</li>
+<li><p><strong>唐朝</strong><br> 选官制度：产生<strong>科举制</strong><br> <strong>三省六部</strong>制：<br> <strong>中书省</strong>负责草拟诏令<br> <strong>门下省</strong>负责审核诏令<br> <strong>尚书省</strong>负责执行诏令，下设六部<br> 宰相议事的地方称<strong>政事堂</strong>，改成中书门下，提高了行政效率三省出现一体化趋势<br> 赋税制度：租庸调制改为<strong>两税法</strong>：780年，皇帝唐德宗，宰相杨炎  </p>
+</li>
+<li><p><strong>宋朝</strong> 宋太祖<br> 加强对地方的控制：<br> 派文官出任各地方长官知州，节度使变为虚衔<br> 设著录转运司统管地方财政<br> 地方精锐编入禁军，拱卫京师，镇守地方，定期更换驻地<br> 分散地方权力：<br> 在中央，枢密院转账军政，三司专掌财政，与宰相分权，增设参知政事为副相<br> 枢密院与禁军管理机构“三衙”分权<br> 在地方，包括转运司在内，先后设立了平行的四个路级机构，从不同方面对各州进行监控和节制<br> 州一级增设<strong>通判</strong>，与知州共同签署文书，彼此制约<br> 为抑制武将势力膨胀，<strong>崇文抑武</strong>：<br> 罢免宿将兵权，<strong>文官</strong>担任枢密院长官<br> 提高科举规模，抬高<strong>文官</strong>和士人的地位  </p>
+</li>
+<li><p>明朝<br> 朱元璋废除宰相制度<br> 明成祖设立内阁</p>
+</li>
+<li><p>清朝<br> 设立奏折制度<br> 设立军机处</p>
+</li>
+</ol>
+<h2 id="中国古代朝代图"><a href="#中国古代朝代图" class="headerlink" title="中国古代朝代图"></a>中国古代朝代图</h2><img src="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E4%B8%AD%E5%9B%BD%E5%8E%86%E5%8F%B2%E6%9C%9D%E4%BB%A3%E6%BC%94%E5%8F%98%E5%9B%BE.svg" class="" title="中国古代朝代图.svg">
+
+<h2 id="重要历史事件的大概时间（世界古代史、近代史、中国近代史）"><a href="#重要历史事件的大概时间（世界古代史、近代史、中国近代史）" class="headerlink" title="重要历史事件的大概时间（世界古代史、近代史、中国近代史）"></a>重要历史事件的大概时间（世界古代史、近代史、中国近代史）</h2><ol>
+<li><p>公元<strong>前几千年</strong><br> 古代西亚两河流域、埃及、印度产生文明  </p>
+</li>
+<li><p>公元<strong>前1千年以内</strong><br> 希腊：古代希腊城邦逐渐发展起来（公元前8-前6世纪）<br> 西亚：公元<strong>前8世纪</strong>之后的亚述；公元<strong>前6世纪</strong>，<strong>波斯</strong>兴起于伊朗高原，征服了广大地区<br> 希腊：公元<strong>前4世纪晚期</strong>，马其顿的<strong>亚历山大帝国</strong>建立<br> 罗马：罗马共和国（前509～前27年）、<strong>罗马帝国</strong>的建立（<strong>前27</strong>～476年&#x2F;1453年）  </p>
+</li>
+<li><p>公元<strong>前5世纪以内</strong><br> 宗教：<strong>1世纪</strong>，基督教诞生于巴基斯坦<br> 中国和罗马的接触：2世纪，已经有来自罗马的商人到达洛阳<br> <strong>4世纪末</strong>，罗马帝国分裂<br> <strong>5世纪后期</strong>，西罗马帝国灭亡  </p>
+</li>
+<li><p><strong>欧洲中世纪时期</strong>（<strong>5世纪到15世纪</strong>）<br> <strong>6世纪</strong>查士丁尼在位时，拜占庭扩张<br> <strong>9世纪</strong>，<strong>基辅罗斯</strong>建立，<strong>13世纪上半期</strong>，被蒙古征服<br> <strong>城市</strong>的兴起：<strong>10-11世纪</strong>起，西欧<br> 英国议会的起源：<strong>1215年</strong>签署的《大宪章》调整了封君和封臣的关系，有利于封建统治的稳定<br> <strong>15世纪中期</strong>，拜占庭灭亡<br> <strong>15世纪晚期</strong>，英格兰都铎王朝建立（王权得到巩固）；法兰西基本统一；伊比利亚半岛形成了西班牙和葡萄牙<br> <strong>16世纪初</strong>，以莫斯科公国为中心的统一国家建立并扩张，1547，伊凡四世沙皇加冕，<strong>17世纪末</strong>，俄罗斯成为地跨两洲的大帝国<br> <em><strong>同时期的亚洲</strong></em><br> <strong>646年</strong>，日本<strong>大化改新</strong><br> <strong>7世纪初</strong>，穆罕默德创立<strong>伊斯兰教</strong><br> <strong>7世纪末</strong>，新罗初步统一了朝鲜半岛，建立中央集权<br> <strong>8世纪中期</strong>，<strong>阿拉伯</strong>建立起地跨亚欧非三洲的大帝国<br> <strong>12世纪末</strong>，日本建立第一个幕府：镰仓幕府<br> <strong>13世纪</strong>奥斯曼发展，<strong>14世纪中期</strong>，向欧洲进军，<strong>1453</strong>，灭拜占庭，<strong>16世纪后期</strong>，建立起地跨三洲的大帝国<br> <strong>17世纪</strong>，日本建立德川幕府，闭关锁国  </p>
+</li>
+<li><p><strong>大航海时代</strong>（<strong>15-16世纪</strong>）  时间顺序：<strong>葡西葡西，迪哥达麦</strong><br> <strong>1487-1488年</strong>，迪亚士航海（到达好望角）<br> <strong>1492</strong>，哥伦布航海到达美洲的巴哈马群岛<br> <strong>1497-1498年</strong>，达.伽马绕过好望角到达印度<br> <strong>1519-1522年</strong>，麦哲伦船队环球航行<br> <strong>1571</strong>，马尼拉大帆船航线开通<br> <strong>16世纪</strong>，葡萄牙把巴西变成殖民地，在非洲、印度、中国澳门等地设置殖民据点和商站<br> <strong>17世纪</strong>，荷兰、英国、法国也在亚洲、非洲、北美建立了多个殖民地  </p>
+</li>
+<li><p>文艺复兴、宗教改革、科学革命与启蒙运动<br> <strong>14-17世纪初</strong> 欧洲文艺复兴<br> <strong>1517开始</strong> 宗教改革, 1517年《九十五条论纲》<br> <strong>16-17世纪</strong> 科学革命<br> <strong>17-19世纪</strong> 启蒙运动  </p>
+</li>
+<li><p><strong>资产阶级革命、资本主义的扩展</strong>（<strong>17世纪起</strong>）<br> <em><strong>资产阶级革命</strong></em><br> <strong>1640年</strong>英国革命，1644马斯顿荒原战役，<strong>1688年</strong>英国发生“光荣革命”<br> <strong>1775年</strong>莱克星顿的枪声，<strong>1781年</strong>美国军队打败了英国军队，<strong>1783年</strong>英国承认美国独立，<strong>1787年</strong>制订宪法<br> <strong>1789年</strong>法国攻占巴士底狱，8月，颁布《人权宣言》，<strong>1791年</strong>颁布宪法，<strong>1799年</strong>，拿破仑建立军事独裁统治，<strong>1804年</strong>，颁布《法国民法典》<br> <em><strong>资本主义的扩展</strong></em>（<strong>19世纪</strong>）<br> <strong>1861年</strong>，俄国的农奴制改革<br> <strong>1861年-1865年</strong>，美国南北战争<br> <strong>1861年</strong>，意大利王国建立，<strong>1870年</strong>，国家统一<br> <strong>1871年</strong>，德意志帝国成立，颁布宪法<br> <strong>1868年</strong>，日本明治维新  </p>
+</li>
+<li><p><strong>工业革命与马克思主义的诞生</strong>（<strong>18-19世纪</strong>）<br> <em><strong>第一次工业革命</strong></em>（英国：<strong>18世纪中期</strong>开始）<br> <strong>15世纪开始</strong> 圈地运动，客观上促进了资本主义的发展<br> <strong>18世纪60年代</strong> 珍妮纺纱机（标志着工业革命的开始）<br> <strong>1771年</strong>，阿克莱特开办了第一家水力纺纱厂，成为近代工厂的开端<br> <strong>1782年</strong>，瓦特改良蒸汽机，1785年开始使用<br> <strong>19世纪初</strong>，汽船、火车<br> <em><strong>第二次工业革命</strong></em>（<strong>19世纪60年代后期</strong>）<br> 内燃机的创制和运用<br> 汽车、飞机等新式快速交通工具应运而生<br> <em><strong>马克思主义的诞生与早期社会主义实践</strong></em>（<strong>19世纪中叶</strong>）<br> <strong>19世纪三四十年代</strong> 法国里昂工人起义、英国宪章运动与德意志西里西亚织工起义<br> <strong>1848年</strong> 《共产党宣言》<br> <strong>1867年</strong> 《资本论》<br> <strong>1871年3月-5月</strong> 巴黎公社  </p>
+</li>
+<li><p><strong>两次世界大战</strong><br> <strong>1914-1918<em>第一次世界大战</em></strong><br><strong>1914-9</strong> 德法马恩河激战，德军战败，“速决战”破产<br><strong>1916</strong>年，西线相继发生凡尔登战役和索姆河战役，双方均伤亡惨重<br><strong>1917年</strong> 英国在日德兰海域进行海战，德国未能突破英国的海上封锁<br><strong>1917</strong>年，美国和中国参加协约国一方作战<br>1918俄国十月革命之后退出了战争<br><strong>1919</strong>巴黎和会，<strong>1921-22</strong>华盛顿会议<br> <em><strong>第二次世界大战</strong></em><br> <strong>1919-1922</strong> 三国的法西斯政权建立<br> <strong>1929</strong> 经济大危机<br> <strong>1931</strong> 九一八事变，标志着中国局部抗战的开始<br> <strong>1935</strong> 华北事变 -&gt;同年12月9日，北平学生大规模游行示威，即一二·九运动<br> <strong>1936</strong>-8-1 瓦窑堡会议，发布八一宣言（确立了建立抗日民族统一战线的方针，统一了党内思想<br> <strong>1936</strong>-12-12 西安事变–十年内战的局面基本结束，全国团结抗战的局面初步形成<br> <strong>1936</strong> 意大利和德国结成轴心国<br> <strong>1937</strong> 日本制造七七事变，是中国全面抗战的开始<br> <strong>1937</strong>-8 洛川会议，标志着中共全面抗战路线的形成<br> <strong>1937-8～11</strong> 淞沪会战，粉碎“三个月亡华”企图<br> <strong>1937-9</strong> 平型关大捷：  是全民族抗战爆发后中国军队主动对日作战取得的第一个重大胜利，打破了日军不可战胜的神话<br>   随后忻口会战：是抗战初期华北战场规模最大、战斗最激烈的一次战役<br> <strong>1937-12-13</strong> 南京大屠杀<br> <strong>1938-3~4</strong> 台儿庄大捷，正面战场中国军队取得的最大胜利<br> <strong>1938-6开始</strong> 武汉会战,《论持久战》<br> <strong>1939</strong> 德国突袭波兰，<strong>第二次世界大战全面爆发</strong><br> <strong>1940-8～1941-1</strong> 百团大战，敌后战场逐渐成为全国抗战的主战场<br> <strong>1941-1</strong> 皖南事变，国民党顽固派突袭围剿<br> <strong>1941年6月</strong>德国入侵苏联，苏德战场成为主战场<br> <strong>1941年12月</strong> 日本挑起太平洋战争，第二次世界大战发展到全球阶段<br> <strong>1942年</strong> 《联合国家宣言》签署，标志着世界反法西斯统一战线正式形成<br> <strong>1945年</strong> 德日投降<br> <strong>1945年10月</strong>联合国成立  </p>
+</li>
+<li><p><strong>苏联</strong>的兴衰、<strong>资本主义的新变化</strong>与<strong>冷战</strong><br> <strong>1917</strong>俄国爆发二月革命和十月革命<br> <strong>1921年</strong>新经济政策实行<br> <strong>1922</strong>苏联建立<br> 1936斯大林模式<br> <em><strong>资本主义的新变化 194x</strong></em>  </p>
+ <img src="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E5%9B%BD%E9%99%85%E8%B4%A7%E5%B8%81%E5%9F%BA%E9%87%91%E7%BB%84%E7%BB%87%E3%80%81%E4%B8%96%E7%95%8C%E9%93%B6%E8%A1%8C%E3%80%81%E5%85%B3%E7%A8%8E%E4%B8%8E%E8%B4%B8%E6%98%93%E6%80%BB%E5%8D%8F%E5%AE%9A%E5%9B%BE%E6%A0%87.png" class="" title="国际货币基金组织、世界银行、关税与贸易总协定图标.png">  
+<p> 国际货币基金组织<strong>1945</strong> 世界银行<strong>1945</strong> 关税与贸易总协定总协定GATT <strong>1948</strong><br> <em><strong>冷战</strong></em> <strong>20世纪40年代中后期至80年代末90年代初</strong><br> <strong>1947</strong>杜鲁门主义<br> <strong>1948</strong>第一次柏林危机（封锁，美国空投物资）<br> <strong>1949</strong> 北约建立<br> <strong>1955年</strong> 万隆会议、在此基础上形成不结盟运动<br> <strong>1958</strong> 第二次柏林危机苏联要求西柏林撤军，最后妥协<br> <strong>1961</strong> 苏联重新提出撤军要求，并且最后筑起柏林墙<br> 1979 苏联入侵阿富汗<br> <strong>1991</strong>苏联解体  </p>
+</li>
+<li><p><strong>当代世界</strong><br><strong>1993</strong>欧盟成立<br><strong>1995年</strong> 世界贸易组织建立 (World Trade Organization)<br><strong>1999</strong> G20 二十国集团成立<br><strong>2001</strong>上海合作组织<br><strong>2009</strong> 金砖国家领导人会晤<br><strong>2013</strong>一带一路提出<br><strong>2015</strong> 亚投行（亚洲基础设施投资银行）成立</p>
+</li>
+</ol>
+<h2 id="近代中国不平等条约梳理"><a href="#近代中国不平等条约梳理" class="headerlink" title="近代中国不平等条约梳理"></a>近代中国不平等条约梳理</h2><img src="/2023/05/20/%E5%8E%86%E5%8F%B2%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E8%BF%91%E4%BB%A3%E4%B8%AD%E5%9B%BD%E4%B8%8D%E5%B9%B3%E7%AD%89%E6%9D%A1%E7%BA%A6.svg" class="" title="八下：历史不平等条约">
+
+<h2 id="宋元明清思想家思想对比"><a href="#宋元明清思想家思想对比" class="headerlink" title="宋元明清思想家思想对比"></a>宋元明清思想家思想对比</h2><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>理学</th>
+<th>心学</th>
+<th>明清其他思想家</th>
+<th>明清其他思想家</th>
+<th>明清其他思想家</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代表人物</td>
+<td>北宋程颐程颢兄弟；南宋朱熹</td>
+<td>南宋陆九渊；明朝中期王守仁</td>
+<td>李贽</td>
+<td>黄宗羲</td>
+<td>顾炎武、王夫之</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>“<strong>理</strong>”是自然界和社会的根本原则，也称“天理”；“<u><strong>存天理，灭人欲</strong></u>”；“<u><strong>格物致知</strong></u>”</td>
+<td>“致良知”；良知是隐藏在每个人心中的“天理”，往往被私欲遮蔽，需要重新发现、扩充和践行，以达到圣贤境界</td>
+<td>提倡个性自由，蔑视权威和教条，甚至否定传统道德标准，引起了很大震动</td>
+<td>严厉<strong>批判君主专制</strong>制度，称专制帝王为“天下之大害”；反对重农抑商，提倡“工商皆本”</td>
+<td>对高度<strong>集权</strong>的政治制度进行<strong>批判</strong>；顾炎武“保天下者，<strong>匹夫</strong>之贱与<strong>有责</strong>焉耳矣”</td>
+</tr>
+<tr>
+<td>特点</td>
+<td>注重<strong>抽象思维</strong>，是一套包括宇宙观、人生观、认识论、方法论的理论体系</td>
+<td>以“<u><strong>致良知</strong></u>”为核心；强调主观能动性，激发人们奋发励志；而以自己的内心为准则，又隐含了一定的平等和叛逆色彩</td>
+<td>叛逆的</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>分类</td>
+<td><u><strong>客观唯心主义</strong></u></td>
+<td><strong><u>主观唯心主义</u></strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="二十世纪七十年代中国的外交成就与对应时间"><a href="#二十世纪七十年代中国的外交成就与对应时间" class="headerlink" title="二十世纪七十年代中国的外交成就与对应时间"></a>二十世纪七十年代中国的外交成就与对应时间</h2><ol>
+<li><p>1971年，中华人民共和国恢复在联合国的一切合法权利</p>
+</li>
+<li><p>1972年，中美两国结束了长期敌对状态，开始走向关系正常化 – 《中美联合公报》</p>
+</li>
+<li><p>1972年，中日正式建交 – 《中日联合声明》（又称《中日建交公报》）</p>
+</li>
+<li><p>1979年，中美建交</p>
+</li>
+</ol>
+<p>与中国建交的国家从1965年的49个增加到1976年的111个，大多数是发展中国家</p>
+<p>极大地改善了中国的安全环境，拓展了外交活动的舞台</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://xht8350.github.io/2023/03/10/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/10/hello-world/" class="post-title-link" itemprop="url">Hexo - Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-03-10 10:10:00" itemprop="dateCreated datePublished" datetime="2023-03-10T10:10:00+08:00">2023-03-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-23 11:08:53" itemprop="dateModified" datetime="2023-06-23T11:08:53+08:00">2023-06-23</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+</code></pre>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="https://pic4.zhimg.com/80/v2-7a009fc65fe4c46a7bb2fccd656c91ee.jpg" alt="hello"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
 <script>
-        hljs.initHighlightingOnLoad();
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
 </script>
- 
-<!-- prettify support -->
- 
-<!-- mathjax support -->
 
-    
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src=""></script>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-<!-- fancybox support -->
- 
-<!-- viewerjs support -->
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.css">
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
 
-
-<script src="https://cdn.jsdelivr.net/npm/viewerjs@1.10.0/dist/viewer.min.js"></script>
-
-<script type="text/javascript">
-    Viewer.setDefaults({
-        zoomRatio: [0.5],
-        show: function () {
-            this.viewer.zoomTo(1);
-        },
-    });
-    
-    var imageList = document.querySelector('.post-content').getElementsByTagName('img');
-    
-    var imageArray = new Array();
-    Array.prototype.forEach.call(imageList, element => {
-        if (element.alt != "no-view" && element.className != "no-view") {
-            imageArray.push(element);
-        }
-    });
-    
-    Array.prototype.forEach.call(imageArray, element => {
-        var viewer1 = new Viewer(element);
-        viewer1.images = imageArray;
-        viewer1.length = imageArray.length;
-    });
-</script>
- 
-<!-- google analytics support -->
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">xht</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
 
 
 
- 
- 
+      </div>
 
-<!-- lazyload support -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
 
-<script>
-    new LazyLoad({
-        elements_selector: '.post-content img'
-    });
-</script>
- 
-  </body>
+      </div>
+    </main>
 
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xht</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
 </html>
