@@ -1091,7 +1091,7 @@ python3 example.py --audio_path=&quot;$pwd1/$1&quot; --output_midi_path=&quot;$p
       </tags>
   </entry>
   <entry>
-    <title>Firefox浏览器调教</title>
+    <title>LinuxFirefox浏览器调教</title>
     <url>/2023/07/31/LinuxFirefox%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%99/</url>
     <content><![CDATA[<p>我刚开始尝试linux系统的时候是一年前，那时候我装的是linux mint, 碰巧这个系统是基于ubuntu 20.04, 而这个系统出来的时候我的笔记本都没有出来，所以里面好多的问题，比如屏幕缩放的问题、视频硬解的问题，chromium鼠标滚动速度慢的问题、触控板不支持多点触控的问题……</p>
 <p>好在我最终没有放弃，用到了现在，然而时间过去了一年，我也亲眼见证了linux系统的好多严重妨碍使用体验的小小bug被修复了，可喜可贺。</p>
