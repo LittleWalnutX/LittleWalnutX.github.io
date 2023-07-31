@@ -1090,4 +1090,39 @@ python3 example.py --audio_path=&quot;$pwd1/$1&quot; --output_midi_path=&quot;$p
         <tag>技术</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Firefox浏览器调教</title>
+    <url>/2023/07/31/LinuxFirefox%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%99/</url>
+    <content><![CDATA[<p>我刚开始尝试linux系统的时候是一年前，那时候我装的是linux mint, 碰巧这个系统是基于ubuntu 20.04, 而这个系统出来的时候我的笔记本都没有出来，所以里面好多的问题，比如屏幕缩放的问题、视频硬解的问题，chromium鼠标滚动速度慢的问题、触控板不支持多点触控的问题……</p>
+<p>好在我最终没有放弃，用到了现在，然而时间过去了一年，我也亲眼见证了linux系统的好多严重妨碍使用体验的小小bug被修复了，可喜可贺。</p>
+<p>让我们一起见证linux变得越来越好！</p>
+<h2 id="1-关于选linux发行版的一个建议"><a href="#1-关于选linux发行版的一个建议" class="headerlink" title="-1. 关于选linux发行版的一个建议"></a>-1. 关于选linux发行版的一个建议</h2><p>建议如果选择LTS发行版用作个人linux电脑，则不要选择太老的，比如你像我一样，在2022年7月初装了linuxMint, 然而这个时候LinuxMint只有20.x版，Ubuntu的22.04已经出了，LinuxMint开发有一定的时间延迟，但是我的电脑是2020年的款，所以我阴差阳错的装上了2年前、我的电脑出生之前的distrobution, 所以导致了很多的驱动、软件等问题</p>
+<p>建议选择新一点的，最好滚动更新，因为linux作为PC是个还在进步的系统，直接装上大概率是不如Windows的完美体验的，总有点小毛病，比如视频硬解、比如Firefox的触控板和触摸屏支持。过了一段时间这些bug可能会一个一个修复，但是你的发行版是LTS就收不到更新了。好像现在python3.11都出了但是ubuntu 20.04还是最高支持到3.8</p>
+<h2 id="1-linux-firefox支持触控板和触屏平滑滚动"><a href="#1-linux-firefox支持触控板和触屏平滑滚动" class="headerlink" title="1. linux firefox支持触控板和触屏平滑滚动"></a>1. linux firefox支持触控板和触屏平滑滚动</h2><p>linux的firefox默认是不支持触控板的平和滚动的，所以滚动起来就是模拟鼠标，然后是一顿一顿的，卡顿不跟手。还有一个问题是他不支持平滑缩放，对于笔记本电脑来说这是一个十分影响使用体验的问题。更离谱的是如果你的笔记本电脑支持触屏，那么你用手指在屏幕上滑动的时候火狐会认为你是用鼠标在屏幕滑动，于是选中了很多文字。好在现在我们可以通过更改配置来实现这两个功能。</p>
+<p>引自网页：</p>
+<blockquote>
+<p>一共有两个地方需要修改：</p>
+<p>第一个是在about:config中找到dom.w3c_touch_events.enabled项改为1（启用），默认为2（自动）。</p>
+<p>第二个地方是修改文件&#x2F;etc&#x2F;security&#x2F;pam_env.conf，在文件最后添加下面代码</p>
+<p>MOZ_USE_XINPUT2 DEFAULT&#x3D;1</p>
+<p>修改完成后重启Firefox就可以使用触摸屏进行操作了。支持的操作有拖拽和双指缩放。</p>
+<p>此外还发现鼠标滚轮滚送速度有些慢，会经常抽动。通过设置mousewheel.min_line_scroll_amount项为40，设置 general.smoothScroll项为true，设置 general.smoothScroll.pages项为false。</p>
+</blockquote>
+<p>这样设置完重启firefox可能是不够的，可能还要重启系统</p>
+<p>如果还不行就下载一个Wayland的桌面，然后你去Wayland里面看看开了没，开了以后应该X11也能用的</p>
+<p>装完后好像还是不如windows丝滑</p>
+<p>我这么弄能成功纯属瞎折腾瞎猫碰上死耗子</p>
+<h2 id="2-Firefox开启浏览器的视频硬件加速"><a href="#2-Firefox开启浏览器的视频硬件加速" class="headerlink" title="2. Firefox开启浏览器的视频硬件加速"></a>2. Firefox开启浏览器的视频硬件加速</h2><p>linux作为一台个人电脑的一个很重要的功能是放视频，毕竟如果用CPU软解然后卡顿发热，那么是真的不可接受的</p>
+<p>Firefox开启视频硬件加速的方法，你首先要在电脑上装好VA-API的显卡驱动，我只知道intel的。</p>
+<p>然后要开启firefox里面的一些选项</p>
+<p>推荐直接看这篇文章</p>
+<p><a href="https://zhuanlan.zhihu.com/p/268401890">https://zhuanlan.zhihu.com/p/268401890</a></p>
+<p>能看懂Archwiki的推荐Archwiki</p>
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>linux的一些小毛病是很难折腾的，说不定不是我的问题干脆就是软件bug, 比如我最近在KDE看到我的CPU总是有一个核心100%占用，但是我下载了gnome的系统monitor, 又用htop发现全正常。所以折腾很久是很正常的，但是linux是在进步的！我非常高兴看到进步。</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
 </search>
