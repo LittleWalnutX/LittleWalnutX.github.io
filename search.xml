@@ -1210,4 +1210,31 @@ with open(&quot;icon.py&quot;,&quot;a&quot;) as f:
         <tag>小说</tag>
       </tags>
   </entry>
+  <entry>
+    <title>自制云原神</title>
+    <url>/2024/02/12/%E8%87%AA%E5%88%B6%E4%BA%91%E5%8E%9F%E7%A5%9E/</url>
+    <content><![CDATA[<h1 id="自制云原神"><a href="#自制云原神" class="headerlink" title="自制云原神"></a>自制云原神</h1><p>关于这个的想法我在很久之前就产生了，然而当时我下载的sunshine是在第三方渠道下载的，因为神秘力量导致我不能访问github。于是我多点触控的配置失败了。今天我重新下载安装sunshine，成功多点触控玩原神，在此记录。</p>
+<p>需要软件、文件：</p>
+<ol>
+<li><p>sunshine windows &gt;&#x3D; 0.20</p>
+</li>
+<li><p>usbmmidd_v2（虚拟显示器驱动）（如果使用HDMI转VGA的线空接来欺骗显卡，分辨率没有奇奇怪怪的选项）</p>
+</li>
+<li><p>moonlight Android 阿西西修改版</p>
+</li>
+</ol>
+<p>安装所有软件。</p>
+<p>配置sunshine输入显示屏路径。（\,\DISPLAY5）音频的配置非必须。</p>
+<p>平板不做副屏而是玩游戏时，电脑音频改为Steam Streaming Speakers。</p>
+<p>虚拟显示器驱动要</p>
+<pre><code>deviceinstaller64 install usbmmidd.inf usbmmidd
+deviceinstaller64 enableidd 1
+</code></pre>
+<p>参见<a href="https://www.cnblogs.com/zspace/p/17069763.html">WIN版虚拟显示器usbmmidd_v2 - 小脚丫走天下 - 博客园</a></p>
+<p>moonlight连接windows成功。</p>
+<p>云原神启动参数 <code>yuanshen.exe use_mobile_platform -is_cloud 1 -platform_type CLOUD_THIRD_PARTY_MOBILE  -popupwindow -borderless </code></p>
+<p>记得设置副屏为主显示器否则原神会启动在电脑屏幕，拖过去之后会导致纵横比失调。</p>
+<p>愉快玩耍吧。</p>
+]]></content>
+  </entry>
 </search>

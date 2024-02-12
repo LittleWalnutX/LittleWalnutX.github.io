@@ -152,6 +152,335 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/" class="post-title-link" itemprop="url">计算尺的原理与制作</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-06 21:06:58" itemprop="dateCreated datePublished" datetime="2023-06-06T21:06:58+08:00">2023-06-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-14 15:38:35" itemprop="dateModified" datetime="2023-07-14T15:38:35+08:00">2023-07-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="计算尺的原理与制作"><a href="#计算尺的原理与制作" class="headerlink" title="计算尺的原理与制作"></a>计算尺的原理与制作</h1><p>事情是这样的，我在b站看到了一个古董计算尺的视频，就想着自己能不能搞一把，但是奈何在网上逛了一圈没找到能用的图片，所以只好自己考功名一下他的原理然后写写代码自动生成。</p>
+<p>本文是介绍简易计算尺的制作过程,目前只完成了乘除部分。</p>
+<h2 id="什么是计算尺"><a href="#什么是计算尺" class="headerlink" title="什么是计算尺"></a>什么是计算尺</h2><p>计算尺就是在没有电子计算工具的时代用来辅助计算的一种仪器。<br>详情可以在这个视频里面看到<br><a target="_blank" rel="noopener" href="https://b23.tv/Or8JpaS">【百元科技古董-01】被禁止带入考场的尺子与人类没有计算器之前的工程师帮手</a></p>
+<h2 id="计算尺的原理"><a href="#计算尺的原理" class="headerlink" title="计算尺的原理"></a>计算尺的原理</h2><p>计算尺的乘除部分使用的是<strong>对数原理</strong>，上个学期在数学书上看到的对数原理的应用终于在这里找到了铁证。</p>
+<p>计算尺的基本原理是把其他的运算变成<strong>加减运算</strong>，所以才可以用尺子的平行移动来计算。</p>
+<p>简单来说，$lg(x \cdot y) &#x3D; lg(x) + lg(y)$, 所以，我们可以制作出两把一样的尺子，这两把尺子的每一个刻度长度都是相应数字的$log_{10}$值，且这两把尺子的左端刻度起点都是1，那么我们把上尺的1对准下尺的第一个乘数，然后找到上尺上的另一个乘数的刻度，再把这个刻度啮合的下尺刻度读出，就可以得到结果。</p>
+<p>这个过程就是把两个乘数的$log_{10}$值相加，然后用这个$log$值再对应回原乘积</p>
+<p>除法是乘法的逆运算，所以计算与原理也很简单。原理就是$lg(\dfrac x y) &#x3D; lg(x) - lg(y)$.如果要计算除法，那么则需要把上尺的除数对准下尺的被除数刻度，然后读出上尺中的对准了下尺中的1刻度的刻度，这个刻度就是商数。</p>
+<p>具体的用法也可以在刚刚我提到的b站视频里面看到。</p>
+<h2 id="计算尺的图像生成"><a href="#计算尺的图像生成" class="headerlink" title="计算尺的图像生成"></a>计算尺的图像生成</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/SVG"><strong>svg</strong></a><strong>: 可缩放矢量图形</strong>（<strong>Scalable Vector Graphics，SVG</strong>）基于 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/XML">XML</a> 标记语言，用于描述二维的矢量图形</p>
+<p>考虑到svg作为纯文本（代码）的图像格式比较好生成，所以我就选用svg生成。</p>
+<p>一张简单的svg图像的代码大概这样：</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;2977.2px&quot; height=&quot;4208.4px&quot; viewBox=&quot;0 0 2977.2 4208.4&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+
+&lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;200&quot; y2=&quot;200&quot;
+  style=&quot;stroke:rgb(255,0,0);stroke-width:2&quot;/&gt;
+
+&lt;/svg&gt;
+</code></pre>
+<p>使用python语言进行开发，不导入第三方库了因为要考功名很麻烦，我就用一点点功能，所以直接使用print的方法就好了。</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;4208.4px&quot; height=&quot;2977.2px&quot; viewBox=&quot;0 0 2977.2 4208.4&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2100
+end_num = 500
+xMove = -1340
+yMove = 60
+
+
+# 画上尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 50, lgi + xMove, yMove + 80))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>然后把这个svg文件打开做个微调就可以用来打印了😃</p>
+<p>程序的使用</p>
+<pre><code class="bash">python3 calc_ruler.py &gt; output.svg
+</code></pre>
+<p>你也可以通过调整<strong>注释：参数设置</strong>下面的那几行代码中的值来更改你想要的尺子的范围、大小、缩放等等。</p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg.svg" alt="svg"></p>
+<h2 id="计算尺的改进"><a href="#计算尺的改进" class="headerlink" title="计算尺的改进"></a>计算尺的改进</h2><p>因为1刻度里面的空隙很大（也即log函数的特性），所以我们可以将里面填满小刻度。</p>
+<p>代码如下</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;8000px&quot; height=&quot;5656.85424949238019521351px&quot; viewBox=&quot;0 0 8000 5656.85424949238019521351&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2500
+end_num = 500
+small_end_num = 25
+xMove = 0
+yMove = 60
+
+
+# 画上尺！！
+# 划出整数刻度位置
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 50, lgi + xMove, yMove + 80))
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + (30 if a % 5 == 0 else 40), lgi + xMove, yMove + 80))
+
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%d&quot; y=&quot;%d&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%d&quot; y1=&quot;%d&quot; x2=&quot;%d&quot; y2=&quot;%d&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + (40 if a % 5 == 0 else 30)))
+    
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>那么这就可以生成一张带有刻度的svg图像了。</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg1.svg" alt="eg1"></p>
+<p>然后使用inkscape软件微调，复制几份用来使用A4打印机打印，再裁纸。</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/print.svg" alt="print"></p>
+<p>其他的运算我以后可能也会做。</p>
+<p>2023-06-06 小核桃</p>
+<p>2023-06-07 更新</p>
+<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><ol>
+<li><p>之前的代码里面有bug, 上尺的刻度线画错了，整数厘米的地方和0.5厘米的地方没有区分开来，所以导致测量时候会令人困惑。</p>
+</li>
+<li><p>之前的代码里面，我输出的时候用的是%d，但是这里的刻度为了精确，应该使用双精度浮点型，也即double的%Lf来输出，然而%d只能用来输出整数，所以导致了踩坑。而且使用的格式化输出并不会导致代码更简洁。<br>使用%d的后果就是后面的小数被四舍五入掉了，所以到后面接近500的刻度线的时候有些刻度会（精确的）叠在一起，我很早就发现了这个问题，但是直到现在我才发现这个问题的解决办法。<br>这个踩坑给我一个教训，也就是输出格式化字符串的时候最好用<code>f&quot;string&#123;var_name&#125;&quot;</code>来输出，虽然这是一个很晚才支持的特性，但是这可以使代码更清晰和少犯错。</p>
+</li>
+</ol>
+<p>现在我把修改过的代码贴上来</p>
+<pre><code class="python">import math as m
+
+# svg 前缀
+_svg = &quot;&quot;&quot;&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;
+&lt;svg width=&quot;8000px&quot; height=&quot;5656.85424949238019521351px&quot; viewBox=&quot;0 0 8000 5656.85424949238019521351&quot;
+ xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; version=&quot;1.2&quot; baseProfile=&quot;tiny&quot;&gt;
+&quot;&quot;&quot;
+
+#svg 后缀
+svg_ = &quot;&quot;&quot;
+&lt;/svg&gt;
+&quot;&quot;&quot;
+
+print(_svg)
+
+#参数设置
+rate = 2500
+end_num = 500
+small_end_num = 25
+xMove = 0
+yMove = 60
+
+
+# 画上尺！！
+# 划出整数刻度位置
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 16 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 30
+        print(&#39;&lt;text x=&quot;%Lf&quot; y=&quot;%Lf&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + 30, lgi + xMove, yMove + 80))
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove + (40 if a % 5 == 0 else 50), lgi + xMove, yMove + 80))
+
+# 画上尺结束
+
+yMove += 160
+
+
+# 画下尺！！
+for a in range(1, end_num + 1):
+    # 根据对数原理计算刻度的位置
+    lgi = m.log(a, 10) * rate
+    # 划出有刻度数值的标识的较长的线和数字
+    if ((a % 5 == 0 or a &lt;= 10) and a &lt;= end_num // 2) or (a % 10 == 0 and a &gt; end_num // 2):
+        textY = yMove + 64 if (a &gt; end_num // 2 and a % 20 == 0) or (a &lt;= end_num // 2 and a % 10 == 0) else yMove + 78 
+        print(&#39;&lt;text x=&quot;%Lf&quot; y=&quot;%Lf&quot; fill=&quot;black&quot; font-size=&quot;20&quot;&gt;%d&lt;/text&gt;&#39; %(lgi + xMove, textY, a))
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 80))
+    # 划出短标识
+    else:
+        print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + 50))
+    
+# 划出尺子的上下边缘
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove, m.log(end_num, 10) * rate + xMove, yMove))
+print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (m.log(1, 10) * rate + xMove, yMove + 80, m.log(end_num, 10) * rate + xMove, yMove + 80))
+
+# 划出小数刻度位置
+for a in range(10, small_end_num * 10 + 1):
+    lgi = m.log(a / 10, 10) * rate
+    print(&#39;&lt;line x1=&quot;%Lf&quot; y1=&quot;%Lf&quot; x2=&quot;%Lf&quot; y2=&quot;%Lf&quot; style=&quot;stroke:black;stroke-width:1&quot;/&gt;&#39; % (lgi + xMove, yMove, lgi + xMove, yMove + (40 if a % 5 == 0 else 30)))
+    
+# 画下尺结束
+
+
+print(svg_)
+</code></pre>
+<p>那么这就是新的代码，然后还有新的图片</p>
+<p><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/eg11111.svg" alt="eg11111"><br>打印用的图片<br><img src="/2023/06/06/%E8%AE%A1%E7%AE%97%E5%B0%BA%E7%9A%84%E5%8E%9F%E7%90%86%E4%B8%8E%E5%88%B6%E4%BD%9C/SuperPrint.svg" alt="SuperPrint"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2023/05/20/%E5%8C%96%E5%AD%A6%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -870,7 +1199,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -906,7 +1235,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
