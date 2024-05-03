@@ -152,6 +152,132 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2024/05/03/%E4%BF%A1%E6%81%AF%E8%AF%BE%E8%81%8A%E5%A4%A9%E5%AE%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="xht">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xht - Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/03/%E4%BF%A1%E6%81%AF%E8%AF%BE%E8%81%8A%E5%A4%A9%E5%AE%A4/" class="post-title-link" itemprop="url">信息课聊天室</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-03 14:09:11 / 修改时间：14:10:57" itemprop="dateCreated datePublished" datetime="2024-05-03T14:09:11+08:00">2024-05-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>使用flask和简单的html写了一个简单的信息课聊天室</p>
+<pre><code class="lang-python">from flask import Flask, request
+
+app = Flask(__name__)
+
+msglist = []
+
+@app.route(&quot;/&quot;, methods=[&quot;POST&quot;, &quot;GET&quot;])
+def root():
+    global msglist
+    if request.method == &quot;GET&quot;:
+        ip = request.remote_addr
+        reqnum = ip[ip.rfind(&quot;.&quot;)+1:]
+        user = request.values.get(&quot;user&quot;)
+        message = request.values.get(&quot;message&quot;)
+        print(reqnum, user, message)
+        if (user and message) and (not msglist or msglist[0] != (reqnum, user, message)):
+            msglist.insert(0, (reqnum, user, message))
+
+
+    with open(&quot;chat.html&quot;, &#39;r&#39;) as f:
+        text = &quot;&quot;
+        name = &quot;&quot;
+        for fornum, user, message in msglist:
+            text += &quot;&lt;p&gt;%s,%s: %s&lt;/p&gt;&quot; % (fornum, user, message)
+            if not name and reqnum == fornum:
+                name = user
+        # 防止老师直接偷看
+        if ip == &quot;10.10.50.49&quot;:
+            return &quot;&quot;
+        return f.read() % (name, text)
+
+app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
+</code></pre>
+<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;title&gt;
+        聊天室
+    &lt;/title&gt;
+    &lt;body&gt;
+        &lt;h2&gt;聊天室！&lt;/h2&gt;
+        &lt;p&gt;输入完成之后点击send发送&lt;/p&gt;
+        &lt;p&gt;如果不点击页面上的刷新按钮是不能看到新的信息的&lt;/p&gt;
+        &lt;p&gt;不要手动使用浏览器的刷新&lt;/p&gt;
+        &lt;div&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;javascript:location.replace(&#39;/&#39;)&quot;&gt;刷新&lt;/button&gt;
+            &lt;form action=&quot;/&quot; method=&quot;get&quot;&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;name&quot;&gt;name:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; value=&quot;%s&quot; required /&gt; 
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;message&quot;&gt;message:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;message&quot; id=&quot;message&quot; required /&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;send&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+        &lt;div&gt;
+            %s
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2024/02/12/%E8%87%AA%E5%88%B6%E4%BA%91%E5%8E%9F%E7%A5%9E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1149,79 +1275,6 @@ if __name__ == &quot;__main__&quot;:
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2023/06/10/seishuncpl/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="xht">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xht - Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/10/seishuncpl/" class="post-title-link" itemprop="url">孤独摇滚OP-青春症候群-扒谱-HalcyonMusic ver</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-10 21:58:30" itemprop="dateCreated datePublished" datetime="2023-06-10T21:58:30+08:00">2023-06-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-15 11:09:52" itemprop="dateModified" datetime="2023-07-15T11:09:52+08:00">2023-07-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>纯人工扒谱！  </p>
-<p>已完成：2023-06-10 16:00</p>
-<p>我的谱面完成啦，啊哈哈哈哈，啊哈哈哈哈哈哈</p>
-<p>原视频 </p>
-<iframe src="//player.bilibili.com/player.html?aid=647920373&bvid=BV1De4y1p7cS&cid=900363494&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>图片是svg</p>
-<p><img src="/2023/06/10/seishuncpl/1.svg" alt="1"><br><img src="/2023/06/10/seishuncpl/2.svg" alt="2"><br><img src="/2023/06/10/seishuncpl/3.svg" alt="3"><br><img src="/2023/06/10/seishuncpl/4.svg" alt="4"><br><img src="/2023/06/10/seishuncpl/5.svg" alt="5"></p>
-<p>软件musescore 4</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1291,7 +1344,7 @@ if __name__ == &quot;__main__&quot;:
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

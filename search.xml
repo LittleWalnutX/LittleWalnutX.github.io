@@ -1237,4 +1237,80 @@ deviceinstaller64 enableidd 1
 <p>愉快玩耍吧。</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>信息课聊天室</title>
+    <url>/2024/05/03/%E4%BF%A1%E6%81%AF%E8%AF%BE%E8%81%8A%E5%A4%A9%E5%AE%A4/</url>
+    <content><![CDATA[<p>使用flask和简单的html写了一个简单的信息课聊天室</p>
+<pre><code class="lang-python">from flask import Flask, request
+
+app = Flask(__name__)
+
+msglist = []
+
+@app.route(&quot;/&quot;, methods=[&quot;POST&quot;, &quot;GET&quot;])
+def root():
+    global msglist
+    if request.method == &quot;GET&quot;:
+        ip = request.remote_addr
+        reqnum = ip[ip.rfind(&quot;.&quot;)+1:]
+        user = request.values.get(&quot;user&quot;)
+        message = request.values.get(&quot;message&quot;)
+        print(reqnum, user, message)
+        if (user and message) and (not msglist or msglist[0] != (reqnum, user, message)):
+            msglist.insert(0, (reqnum, user, message))
+
+
+    with open(&quot;chat.html&quot;, &#39;r&#39;) as f:
+        text = &quot;&quot;
+        name = &quot;&quot;
+        for fornum, user, message in msglist:
+            text += &quot;&lt;p&gt;%s,%s: %s&lt;/p&gt;&quot; % (fornum, user, message)
+            if not name and reqnum == fornum:
+                name = user
+        # 防止老师直接偷看
+        if ip == &quot;10.10.50.49&quot;:
+            return &quot;&quot;
+        return f.read() % (name, text)
+
+app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
+</code></pre>
+<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;title&gt;
+        聊天室
+    &lt;/title&gt;
+    &lt;body&gt;
+        &lt;h2&gt;聊天室！&lt;/h2&gt;
+        &lt;p&gt;输入完成之后点击send发送&lt;/p&gt;
+        &lt;p&gt;如果不点击页面上的刷新按钮是不能看到新的信息的&lt;/p&gt;
+        &lt;p&gt;不要手动使用浏览器的刷新&lt;/p&gt;
+        &lt;div&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;javascript:location.replace(&#39;/&#39;)&quot;&gt;刷新&lt;/button&gt;
+            &lt;form action=&quot;/&quot; method=&quot;get&quot;&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;name&quot;&gt;name:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; value=&quot;%s&quot; required /&gt; 
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;message&quot;&gt;message:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;message&quot; id=&quot;message&quot; required /&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;send&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+        &lt;div&gt;
+            %s
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
 </search>
