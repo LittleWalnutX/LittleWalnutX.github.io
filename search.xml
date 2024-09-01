@@ -1321,7 +1321,7 @@ app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
 <p>买一个树莓派全天候运行，装好firefox, geckodriver, python的selenium, 使用<code>screen -S ban -s ban</code>后台运行ban脚本，把脚本放在PATH下面。</p>
 <p>原理是自动模拟人登录路由器后台手动禁止联网，过一段时间模拟人手动允许他联网。<br>我一开始绝对不会想到这么离谱的想法最后会采用而且效果这么好。</p>
 <p>ban.py</p>
-<pre><code class="python">
+<pre><code class="lang-python">
 #!/bin/python3
 
 from selenium import webdriver
@@ -1337,8 +1337,8 @@ from threading import Thread
 
 def ban(driver, sec):
     url = &quot;http://192.168.6.6&quot;
-    
-    
+
+
     driver.get(url)
 
     wait = WebDriverWait(driver, 20)
@@ -1421,11 +1421,11 @@ if __name__ == &#39;__main__&#39;:
             print(&quot;wait&quot;, s:=randint(16, 48), flush=True)
             sleep(s)
         driver.quit()
-
 </code></pre>
 <p>踩到的坑稍微做一下总结：</p>
-<p>service对象不能再driver对象退出以后重复使用，也就是service &#x3D; S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
+<p>service对象不能再driver对象退出以后重复使用，也就是service = S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
 <p>对于要点击的对象一定要wait.until等他加载出来。</p>
+<p>路由器里面设备的序号是会变的，正如我注释掉的代码，所以最好的方式使用MAC地址来定位。通过XPATH寻找与定位MAC文本同框的按钮，非常稳定。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>每隔几十秒断网十几秒，实测监控不会显示断线，APP上面只能看到卡顿转圈圈，卡很久能进去，看了十几秒画面又不动了。</p>
 <p>这绝不是阿Q式的或者扎纸小人式的自我安慰，而是我想要搞你 想要恶心一下你就有能力做到恶心一下你，你想偷窥我的生活就给你看，岂有此理，没那么容易！而且这个东西的应用也在客观上确实降低了他们看的频率，毕竟我实测感觉还是非常卡的。</p>
 <p>另外这一次也算是点亮了一点浏览器自动控制的科技树，当初云原神每天只送15分钟的时候我都是手动登录，如果有这东西那么也许不会那么麻烦，不过可惜现在云原神免费了，没用了</p>
