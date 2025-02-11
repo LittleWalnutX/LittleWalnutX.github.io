@@ -197,7 +197,7 @@
 
       
         <p>使用flask和简单的html写了一个简单的信息课聊天室</p>
-<pre><code class="lang-python">from flask import Flask, request
+<pre><code class="python">from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -214,7 +214,7 @@ def root():
         print(reqnum, user, message)
         if (user and message) and (not msglist or msglist[0] != (reqnum, user, message)):
             msglist.insert(0, (reqnum, user, message))
-
+    
 
     with open(&quot;chat.html&quot;, &#39;r&#39;) as f:
         text = &quot;&quot;
@@ -230,7 +230,7 @@ def root():
 
 app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
 </code></pre>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
+<pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;title&gt;
         聊天室
@@ -360,14 +360,14 @@ app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

@@ -208,7 +208,7 @@
 <p>买一个树莓派全天候运行，装好firefox, geckodriver, python的selenium, 使用<code>screen -S ban -s ban</code>后台运行ban脚本，把脚本放在PATH下面。</p>
 <p>原理是自动模拟人登录路由器后台手动禁止联网，过一段时间模拟人手动允许他联网。<br>我一开始绝对不会想到这么离谱的想法最后会采用而且效果这么好。</p>
 <p>ban.py</p>
-<pre><code class="lang-python">
+<pre><code class="python">
 #!/bin/python3
 
 from selenium import webdriver
@@ -224,8 +224,8 @@ from threading import Thread
 
 def ban(driver, sec):
     url = &quot;http://192.168.6.6&quot;
-
-
+    
+    
     driver.get(url)
 
     wait = WebDriverWait(driver, 20)
@@ -308,9 +308,10 @@ if __name__ == &#39;__main__&#39;:
             print(&quot;wait&quot;, s:=randint(16, 48), flush=True)
             sleep(s)
         driver.quit()
+
 </code></pre>
 <p>踩到的坑稍微做一下总结：</p>
-<p>service对象不能再driver对象退出以后重复使用，也就是service = S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
+<p>service对象不能再driver对象退出以后重复使用，也就是service &#x3D; S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
 <p>对于要点击的对象一定要wait.until等他加载出来。</p>
 <p>路由器里面设备的序号是会变的，正如我注释掉的代码，所以最好的方式使用MAC地址来定位。通过XPATH寻找与定位MAC文本同框的按钮，非常稳定。</p>
 <p>driver如果每次都新实例化比较慢和占CPU, 如果每次只用同一个driver会内存泄漏，所以折中，每64次ban，关掉浏览器重新实例化一个driver.</p>
@@ -321,7 +322,7 @@ if __name__ == &#39;__main__&#39;:
 <p>有的时候程序会找不到那个小米摄像机，那是因为等待的时间太短了，此时所有的2.4G联网设备全部离线，所以导致浏览器默认进入分类是5G设备，等再久也等不到摄像机重新连上。</p>
 <p>还有别的概率bug不可复现。随他去吧</p>
 <p>以下是更新之后的代码</p>
-<pre><code class="lang-python">#!/bin/python3
+<pre><code class="python">#!/bin/python3
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -338,7 +339,7 @@ from random import randint, choice
 
 def ban(driver, sec):
     url = &quot;http://192.168.6.6&quot;
-
+    
     driver.get(url)
 
     # wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;inputArea paddingleft_14&#39;)))
@@ -462,6 +463,7 @@ if __name__ == &#39;__main__&#39;:
             print(i, &quot;wait&quot;, s:=choice(waittimelist), flush=True)
             sleep(s)
         driver.quit()
+
 </code></pre>
 
     </div>
@@ -561,14 +563,14 @@ if __name__ == &#39;__main__&#39;:
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

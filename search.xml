@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>KDEplasma面板崩溃</title>
+    <url>/2025/02/01/KDEplasma%E9%9D%A2%E6%9D%BF%E5%B4%A9%E6%BA%83/</url>
+    <content><![CDATA[<p>KDE Plasma面板经常崩溃，然而killall plasmashell不管用。网上没有找到解决办法。</p>
+<p>经实测，发现<code>killall -9 plasmashell</code>就行了。</p>
+<p>这就类似windows explorer重启。</p>
+<p>还有其他意想不到的效果：</p>
+<p>本来KDE wayland和x11的鼠标指针大小不是同一个标准，如果电脑屏幕有150%缩放，则wayland的24号鼠标指针等于x11的36号。在x11里面修改鼠标指针大小只会对新打开的应用生效，然而桌面不会，很难受。现在我们知道了，包括桌面和panel全部都是plasmashell这个进程，我们把他杀掉他就会自动重启，鼠标指针大小正常了。</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Don&#39;t say lazy：TV Anime K-ON ED1 Animenz钢琴扒谱</title>
+    <url>/2023/07/13/dontsaylazy/</url>
+    <content><![CDATA[<h1 id="Don’t-say-lazy-Animenz版-钢琴扒谱"><a href="#Don’t-say-lazy-Animenz版-钢琴扒谱" class="headerlink" title="Don’t say lazy  Animenz版 钢琴扒谱"></a>Don’t say lazy  Animenz版 钢琴扒谱</h1><p>说明：原谱用的是bilibili上这位老哥<a href="https://space.bilibili.com/417273937?spm_id_from=333.337.0.0">きんりん星</a>的PDF文件逆向导入Musescore, 因为他的谱子有一些错误所以我手动改正。<a href="https://www.bilibili.com/video/BV12t4y117PA/?spm_id_from=333.999.0.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频</a></p>
+<p>而他的视频里面说参考了这位<a href="https://space.bilibili.com/44925790">夏乐です</a>的扒谱<a href="https://www.bilibili.com/video/BV1tC4y1W7ib/?spm_id_from=333.788.recommend_more_video.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频：B站最速扒谱</a></p>
+<p>属于是套娃了</p>
+<p>下面是乐谱图片</p>
+<p><img src="/2023/07/13/dontsaylazy/1.svg" alt="1"><br><img src="/2023/07/13/dontsaylazy/2.svg" alt="2"><br><img src="/2023/07/13/dontsaylazy/3.svg" alt="3"><br><img src="/2023/07/13/dontsaylazy/4.svg" alt="4"><br><img src="/2023/07/13/dontsaylazy/5.svg" alt="5"><br><img src="/2023/07/13/dontsaylazy/6.svg" alt="6"></p>
+]]></content>
+      <tags>
+        <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LinuxFirefox浏览器调教</title>
     <url>/2023/07/31/LinuxFirefox%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E6%95%99/</url>
     <content><![CDATA[<p>我刚开始尝试linux系统的时候是一年前，那时候我装的是linux mint, 碰巧这个系统是基于ubuntu 20.04, 而这个系统出来的时候我的笔记本都没有出来，所以里面好多的问题，比如屏幕缩放的问题、视频硬解的问题，chromium鼠标滚动速度慢的问题、触控板不支持多点触控的问题……</p>
@@ -37,31 +63,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Helloworld!</title>
-    <url>/2023/03/05/README/</url>
-    <content><![CDATA[<h1 id="小核桃的个人博客"><a href="#小核桃的个人博客" class="headerlink" title="小核桃的个人博客"></a>小核桃的个人博客</h1><p>你好！</p>
-<p>这里是小核桃的个人博客！</p>
-<p>My Github: xht8350 <a href="https://github.com/xht8350">https://github.com/xht8350</a><br>My E-mail: <a href="mailto:&#x71;&#119;&#x65;&#114;&#x74;&#121;&#x75;&#105;&#x6f;&#x70;&#56;&#51;&#53;&#48;&#64;&#49;&#x36;&#51;&#x2e;&#x63;&#x6f;&#109;">&#x71;&#119;&#x65;&#114;&#x74;&#121;&#x75;&#105;&#x6f;&#x70;&#56;&#51;&#53;&#48;&#64;&#49;&#x36;&#51;&#x2e;&#x63;&#x6f;&#109;</a><br>My Site (ipv6 only) (sometimes available): <a href="https://xiaohetao.dynv6.net/">https://xiaohetao.dynv6.net</a><br>    port 5244: Alist <a href="https://xiaohetao.dynv6.net:5244/">https://xiaohetao.dynv6.net:5244</a><br>    port 4000: hexo <a href="https://xiaohetao.dynv6.net:4000/">https://xiaohetao.dynv6.net:4000</a><br>This Blog: <a href="https://xht8350.github.io/">https://xht8350.github.io</a></p>
-<p><img src="/2023/03/05/README/waifu.jpg" alt="hello"></p>
-]]></content>
-      <tags>
-        <tag>博客介绍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Don&#39;t say lazy：TV Anime K-ON ED1 Animenz钢琴扒谱</title>
-    <url>/2023/07/13/dontsaylazy/</url>
-    <content><![CDATA[<h1 id="Don’t-say-lazy-Animenz版-钢琴扒谱"><a href="#Don’t-say-lazy-Animenz版-钢琴扒谱" class="headerlink" title="Don’t say lazy  Animenz版 钢琴扒谱"></a>Don’t say lazy  Animenz版 钢琴扒谱</h1><p>说明：原谱用的是bilibili上这位老哥<a href="https://space.bilibili.com/417273937?spm_id_from=333.337.0.0">きんりん星</a>的PDF文件逆向导入Musescore, 因为他的谱子有一些错误所以我手动改正。<a href="https://www.bilibili.com/video/BV12t4y117PA/?spm_id_from=333.999.0.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频</a></p>
-<p>而他的视频里面说参考了这位<a href="https://space.bilibili.com/44925790">夏乐です</a>的扒谱<a href="https://www.bilibili.com/video/BV1tC4y1W7ib/?spm_id_from=333.788.recommend_more_video.0&vd_source=4663f9a4c778e1a074fa26b38bf7f76b">原视频：B站最速扒谱</a></p>
-<p>属于是套娃了</p>
-<p>下面是乐谱图片</p>
-<p><img src="/2023/07/13/dontsaylazy/1.svg" alt="1"><br><img src="/2023/07/13/dontsaylazy/2.svg" alt="2"><br><img src="/2023/07/13/dontsaylazy/3.svg" alt="3"><br><img src="/2023/07/13/dontsaylazy/4.svg" alt="4"><br><img src="/2023/07/13/dontsaylazy/5.svg" alt="5"><br><img src="/2023/07/13/dontsaylazy/6.svg" alt="6"></p>
-]]></content>
-      <tags>
-        <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo - Hello World</title>
     <url>/2023/03/10/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -81,6 +82,36 @@
 ]]></content>
   </entry>
   <entry>
+    <title>linux打印工具开发</title>
+    <url>/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[<p>项目地址：<code>https://github.com/LittleWalnutX/Multiple_PDF_Printer</code></p>
+<p>为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。</p>
+<p>项目生成PDF文件然后再手动打印。以后可能加入直接打印的方式。</p>
+<p>目前已经开发完成的功能有：</p>
+<pre><code>双面打印
+小册子打印
+</code></pre>
+<p>下面介绍一下思路: 双面打印的思路比较简单，只需要先把偶数页逆序提取出来，然后再提取奇数页，最后手动进行打印就可以了</p>
+<p>小册子打印的思路比较复杂，其中的难点主要在于拼合PDF。几乎是直接引用了一个日本网站上的代码，然后修改了一下。</p>
+<p>小册子打印需要解决另外一个问题就是页码的排布问题。观察一本钉好的小册子，可以发现，以16页的小册子为例，它的页码排布分别是，16，1，2，15, 14, 3, 4, 13 …..。这也就是说，第一页是最后一页，然后从头取两页，从后面取两页。</p>
+<p>然后我们把它分成奇数页面和偶数页面，可以得到它的规律。详细的规律见代码。</p>
+<p>然后写一下图形界面工具。这是用AI写的，把代码搬过来，然后改一下bug，再把自己的功能填上去就可以了。</p>
+<p>这个地方还有一个问题，就是用tkinter写的代码，在linux的X11上，存在一个极大概率触发的问题，就是文件拖拽上去之后会直接闪退，并且报如下的错误：</p>
+<pre><code>X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  20 (X_GetProperty)
+  Resource id in failed request:  0x1417efd
+  Serial number of failed request:  1225
+  Current serial number in output stream:  1225
+</code></pre>
+<p>排查了很长时间，我觉得这个问题不是我的问题，可能是因为AI写的代码里面用了tkinterdnd2库的问题。</p>
+<p>这个问题在wayland上不会出现。尽管如此，这个问题仍然难以接受，所以使用AI工具，把这个界面用pyside重写，然后就得到了pyside版的gui。也在项目里面。</p>
+<p>希望这么个项目可以对linux的桌面应用有一点微薄的帮助。以后如果有时间的话，可能再考虑尝试一下开发预览功能，以及直接打印而不是生成PDF的功能。</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>孤独摇滚OP-青春症候群-扒谱-HalcyonMusic ver</title>
     <url>/2023/06/10/seishuncpl/</url>
     <content><![CDATA[<p>纯人工扒谱！  </p>
@@ -95,6 +126,119 @@
 ]]></content>
       <tags>
         <tag>音乐</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tkinter插入窗口图标的方法</title>
+    <url>/2023/08/09/tkinter%E6%8F%92%E5%85%A5%E7%AA%97%E5%8F%A3%E5%9B%BE%E6%A0%87%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>这个问题的发现和解决是有将近一年了，当时我在开发一个背单词的一个小项目，但是我在想打包的时候出现问题了。</p>
+<p>我想更换窗口的图标，就是windows下左上角的那个小图标，但是tkinter给的方法的参数却是一个文件名，这意味着我不能完美地把这个项目打包成一个单文件，而是需要把这个icon文件和打包好的exe放在一起，变成两个文件发布。</p>
+<p>网上所给出的方法一般是先把这个ico文件打包进去，需要的时候在写到cache, 然后再让tkinter用这个文件名来导入。这个方法一看就极其不优雅，虽然性能也就这样了，但是这样的方法是我所不能接受的。</p>
+<p>最后，我查看了ttkbootstrap的源码解决了问题。</p>
+<p>我想，ttkbootstrap有一个自带的图标，是不管在哪个代码里面执行都会有这个图标，于是我想参考官方的做法。</p>
+<p>我当初发现的ttkbootstrap的代码是在哪里我早就已经忘记了，但是我解决问题的思路仍清晰。</p>
+<p>之前我看到ttkbootstrap的源码里面有一段base64，然后使用了这段base64来导入，并非网上的先写到cache, 这也符合我对一个成熟的项目的预期。</p>
+<p>所以我贴上我解决的代码：</p>
+<pre><code class="python">root = tk.Tk()
+root.title(&quot;Xdict背单词&quot;)
+photo = ttk.PhotoImage(master=root, data=myIcon.img)
+root.iconphoto(True, photo)
+</code></pre>
+<p>这段代码中的data项就是一个base64字符串。</p>
+<p>制作myIcon.py需要编写一个mkicon.py.</p>
+<pre><code class="python">#!/bin/python3
+import base64
+with open(&quot;icon.py&quot;,&quot;a&quot;) as f:
+    f.write(&quot;img=&#39;&quot;)
+with open(&quot;bell.png&quot;,&quot;rb&quot;) as i:
+    b64str = base64.b64encode(i.read())
+    with open(&quot;icon.py&quot;,&quot;ab+&quot;) as f:
+        f.write(b64str)
+with open(&quot;icon.py&quot;,&quot;a&quot;) as f:
+    f.write(&quot;&#39;&quot;)
+</code></pre>
+<p>这段代码的意思就是读取目录下的bell.png的文件内容并把他转换为base64, 输出到myIcon.py, 这样pyinstaller也可以直接知道要调用。</p>
+<p>最后要在main.py里面引入myIcon</p>
+<p>写的不太清楚，若不能理解请通过文章“博客介绍”里面的联系方式联系我</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息课聊天室</title>
+    <url>/2024/05/03/%E4%BF%A1%E6%81%AF%E8%AF%BE%E8%81%8A%E5%A4%A9%E5%AE%A4/</url>
+    <content><![CDATA[<p>使用flask和简单的html写了一个简单的信息课聊天室</p>
+<pre><code class="python">from flask import Flask, request
+
+app = Flask(__name__)
+
+msglist = []
+
+@app.route(&quot;/&quot;, methods=[&quot;POST&quot;, &quot;GET&quot;])
+def root():
+    global msglist
+    if request.method == &quot;GET&quot;:
+        ip = request.remote_addr
+        reqnum = ip[ip.rfind(&quot;.&quot;)+1:]
+        user = request.values.get(&quot;user&quot;)
+        message = request.values.get(&quot;message&quot;)
+        print(reqnum, user, message)
+        if (user and message) and (not msglist or msglist[0] != (reqnum, user, message)):
+            msglist.insert(0, (reqnum, user, message))
+    
+
+    with open(&quot;chat.html&quot;, &#39;r&#39;) as f:
+        text = &quot;&quot;
+        name = &quot;&quot;
+        for fornum, user, message in msglist:
+            text += &quot;&lt;p&gt;%s,%s: %s&lt;/p&gt;&quot; % (fornum, user, message)
+            if not name and reqnum == fornum:
+                name = user
+        # 防止老师直接偷看
+        if ip == &quot;10.10.50.49&quot;:
+            return &quot;&quot;
+        return f.read() % (name, text)
+
+app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
+</code></pre>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;title&gt;
+        聊天室
+    &lt;/title&gt;
+    &lt;body&gt;
+        &lt;h2&gt;聊天室！&lt;/h2&gt;
+        &lt;p&gt;输入完成之后点击send发送&lt;/p&gt;
+        &lt;p&gt;如果不点击页面上的刷新按钮是不能看到新的信息的&lt;/p&gt;
+        &lt;p&gt;不要手动使用浏览器的刷新&lt;/p&gt;
+        &lt;div&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;javascript:location.replace(&#39;/&#39;)&quot;&gt;刷新&lt;/button&gt;
+            &lt;form action=&quot;/&quot; method=&quot;get&quot;&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;name&quot;&gt;name:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; value=&quot;%s&quot; required /&gt; 
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;message&quot;&gt;message:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;message&quot; id=&quot;message&quot; required /&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;input type=&quot;submit&quot; value=&quot;send&quot; /&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+        &lt;div&gt;
+            %s
+        &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+]]></content>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
   <entry>
@@ -571,6 +715,479 @@
       </tags>
   </entry>
   <entry>
+    <title>小说-电车惊魂</title>
+    <url>/2023/09/24/%E5%B0%8F%E8%AF%B4-%E7%94%B5%E8%BD%A6%E6%83%8A%E9%AD%82/</url>
+    <content><![CDATA[<h1 id="电车惊魂"><a href="#电车惊魂" class="headerlink" title="电车惊魂"></a>电车惊魂</h1><p>那是一个美好的一天的早晨，我怀着轻松的心情去上班。那天天气晴的恰到好处，被淡淡的云遮挡掉一部分的太阳光线让我觉得很舒服。</p>
+<p>“又是美好的一天。”我心想。</p>
+<p>我像往常一样走入电车，今天电车里人反常得很多，不对，不如说这段日子里面电车里人都反常得很多。座位几乎坐满了。</p>
+<p>过了几站上来一个十五六岁的中学生。他走进来的时候时不时看看手表，我知道了他好像快要迟到了。没有地方坐下，他就站着，拉着电车中央的那根竖铁杆。</p>
+<p>滴滴的警铃声响起，门关上，列车就启动。我马上感觉到加速度压在我身上，重力像是该换了方向。于是我看见那中学生一个趔趄，他站不稳了，马上用手抓住栏杆，另一只手里提着的包向后甩去。</p>
+<p>加速完成了，他得到了一片刻的休息机会。他手扶着栏杆站稳，像是没力气没睡醒似的揉眼睛，这时我才注意到他的眼睛上重重的黑眼圈。</p>
+<p>过了几站车外面开始风雨大作起来，本来阳光在建筑物的缝隙之间洒下来，有间隔地透过车窗玻璃进入我们的电车里面，我们的电车就像是穿梭在时空的隧道里面。现在乌云密布了，外面的乌云遮蔽太阳，外面的风吹得树都要朝侧面倒过去，风连树上的叶子也扯下来。</p>
+<p>外面风雨大作起来，我们的电车里面也风雨飘摇。风把我们的电车吹得左摇右晃，开得慢的时候我觉得我们像是坐在船里飘在海上。车轮和轨道摩擦的啸叫与风雨的声音混合在一起很吵闹，把我的耳膜都向里压得难受，并且使我有了不祥的预感。</p>
+<p>我们的车厢风雨飘摇起来，他内心好像也风雨大作了。他用手紧紧抓着竖杆，他手上的青筋暴起，脸上露出痛苦的神情，他咬牙切齿把牙龈整个地都露出来，他的脸上汗如雨下。他像是在和被挡在车外面进不来的风雨搏斗着，他一会被甩到左边，一会被甩到右边，他的两个脚快要拧起来了，他花了好一会把自己稳住。</p>
+<p>我们一车厢人静静看他的表演。</p>
+<p>突然他松开一只手捂住自己的胃部，他把面部的肌肉也要拧起来了，他似乎是胃痛到不能稳定的站立，于是他艰难地蹲下了，他蹲下的时候我看见一张卡片样的东西，从他的裤子口袋里面滚出来。</p>
+<p>那张卡片滚到下一个车厢的连接处卡在地面的突起上停住了。</p>
+<p>突然他像是想起了什么似的，他用一只手捂住耳朵，然后马上开始念咒语似的大声背诵古诗词“僵卧孤村不自哀，尚思为国戍轮台。夜阑卧听风吹雨，铁马冰河入梦来。僵卧孤村不自哀，尚思为国戍轮台。夜阑卧听风吹雨，铁马冰河入梦来……”背得很大声。我知道这是一首什么风雨大作的古诗。</p>
+<p>背完古诗他又“静摩擦力略大于滑动摩擦力，所以我的卡不会回来……”</p>
+<p>我不知道他的咒语和当前情况有没有关系，不过事实上他的咒语没有缓解他的痛苦，他脸上的神情还是那么痛苦。</p>
+<p>然后我们车厢中的有一个人扑哧的笑了，开始是掩口胡卢而笑。他的样子确实很好笑，我也想着。</p>
+<p>笑声一个传染俩，马上变成了哄堂大笑，有的人笑他上学迟到，肯定是昨晚不好好睡觉打游戏；有的人笑他读书读傻了，只知道念古诗咒语了；有的人笑他弱不禁风，连列车的一点点加速度也把握不住；有的人笑他的头发那么长，肯定不好好学习；有的人笑他不带伞，要遭殃；还有两个带行李箱的情侣大学生，笑你们高中不准谈恋爱，笑你们八月中旬就开学，我们九月了赶到学校城市还有三两天玩耍的光景。</p>
+<p>我呢？我也跟着他们笑，笑得上气不接下气，我伸出我的右手，一个大拇指指向老天爷，一个食指指向他，还有三四五指弯回来朝向自己。</p>
+<p>我也一直这么笑着，上气不接下气，直到我的站点要到了，于是我收起笑容和东西站起来，在我离开座位的一瞬间，我就被巨大的加速度甩到了车厢后面，头重重地撞在后面车厢的竖杆上。</p>
+<p>于是我残存的意识听到新的一轮哄堂大笑开始了，指向我。</p>
+]]></content>
+      <tags>
+        <tag>小说</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>干扰监控总结</title>
+    <url>/2024/09/01/%E5%B9%B2%E6%89%B0%E7%9B%91%E6%8E%A7/</url>
+    <content><![CDATA[<p>房里被装了监控，有一两年了，一直想想办法干扰，现在做了一个完美的解决方案，供参考。</p>
+<p>本来希望通过DNS来阻断，但是DNS有缓存之类的东西，而且猾伪路由器篡改我的DNS，而且我在Adguard Home里面也没有找到有关小米API的DNS解析记录，所以放弃。没想到最后采用的方案效果比之前还要好。</p>
+<p>买一个树莓派全天候运行，装好firefox, geckodriver, python的selenium, 使用<code>screen -S ban -s ban</code>后台运行ban脚本，把脚本放在PATH下面。</p>
+<p>原理是自动模拟人登录路由器后台手动禁止联网，过一段时间模拟人手动允许他联网。<br>我一开始绝对不会想到这么离谱的想法最后会采用而且效果这么好。</p>
+<p>ban.py</p>
+<pre><code class="python">
+#!/bin/python3
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC  # 和下面WebDriverWait一起用的
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.firefox.service import Service
+from time import sleep
+from random import randint
+from threading import Thread
+
+def ban(driver, sec):
+    url = &quot;http://192.168.6.6&quot;
+    
+    
+    driver.get(url)
+
+    wait = WebDriverWait(driver, 20)
+    # wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;inputArea paddingleft_14&#39;)))
+    wait.until(EC.presence_of_element_located((By.ID, &#39;userpassword_ctrl&#39;)))
+
+    pw_input = driver.find_element(By.ID, &#39;userpassword_ctrl&#39;)
+    login_btn = driver.find_element(By.ID, &#39;loginbtn&#39;)
+    pw_input.send_keys(&quot;freedom&quot;)
+    sleep(0.6)
+    login_btn.click()
+    #sleep(6)
+    sleep(0.6)
+
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;nav_title&#39;)
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
+    #wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)))
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
+    #term_mng.click()
+    sleep(0.6)
+
+    driver.get(&quot;http://192.168.6.6/html/index.html#/devicecontrol&quot;)
+    actionchains = ActionChains(driver)
+
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
+    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
+    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
+    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__blackon&#39;)
+    wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
+    btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址:不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
+    btn.click()
+
+    sleep(sec)
+
+    div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
+    actionchains.click(div).perform()
+
+    wait.until(EC.presence_of_element_located((By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)))
+    disal = driver.find_element(By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)
+    actionchains.click(disal).perform()
+
+    # actionchains.move_to_element(div).click().perform()
+
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)))
+
+    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)
+    # btn.click()
+
+    wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址:不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
+    btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
+    btn.click()
+
+    driver.get(&quot;about:blank&quot;)
+    driver.refresh()
+
+
+
+    #print(driver.page_source)
+
+
+
+if __name__ == &#39;__main__&#39;:
+    while True:
+        print(&quot;drv init&quot;, flush=True)
+        opt = webdriver.FirefoxOptions()
+        # 设置无界面
+        opt.add_argument(&quot;--headless&quot;)
+
+
+        service = Service(log_path=&#39;/dev/null&#39;)
+
+        # 禁用 gpu
+        # opt.add_argument(&#39;--disable-gpu&#39;)
+
+        driver = webdriver.Firefox(options=opt, service=service)
+        for i in range(64):
+            print(&quot;ban&quot;, s:=randint(8, 16), flush=True)
+            ban(driver, s)
+            print(&quot;wait&quot;, s:=randint(16, 48), flush=True)
+            sleep(s)
+        driver.quit()
+
+</code></pre>
+<p>踩到的坑稍微做一下总结：</p>
+<p>service对象不能再driver对象退出以后重复使用，也就是service &#x3D; S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
+<p>对于要点击的对象一定要wait.until等他加载出来。</p>
+<p>路由器里面设备的序号是会变的，正如我注释掉的代码，所以最好的方式使用MAC地址来定位。通过XPATH寻找与定位MAC文本同框的按钮，非常稳定。</p>
+<p>driver如果每次都新实例化比较慢和占CPU, 如果每次只用同一个driver会内存泄漏，所以折中，每64次ban，关掉浏览器重新实例化一个driver.</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>每隔几十秒断网十几秒，实测监控不会显示断线，APP上面只能看到卡顿转圈圈，卡很久能进去，看了十几秒画面又不动了。</p>
+<p>这绝不是阿Q式的或者扎纸小人式的自我安慰，而是我想要搞你 想要恶心一下你就有能力做到恶心一下你，你想偷窥我的生活就给你看，岂有此理，没那么容易！而且这个东西的应用也在客观上确实降低了他们看的频率，毕竟我实测感觉还是非常卡的。</p>
+<p>另外这一次也算是点亮了一点浏览器自动控制的科技树，当初云原神每天只送15分钟的时候我都是手动登录，如果有这东西那么也许不会那么麻烦，不过可惜现在云原神免费了，没用了</p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>通过故障分析，情况判断，我的程序得到了一个很好的鲁棒性提升。</p>
+<p>有的时候程序会找不到那个小米摄像机，那是因为等待的时间太短了，此时所有的2.4G联网设备全部离线，所以导致浏览器默认进入分类是5G设备，等再久也等不到摄像机重新连上。</p>
+<p>还有别的概率bug不可复现。随他去吧</p>
+<p>以下是更新之后的代码</p>
+<pre><code class="python">#!/bin/python3
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC  # 和下面WebDriverWait一起用的
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.firefox.service import Service
+from selenium.common.exceptions import TimeoutException
+from time import sleep, strftime, localtime
+from random import randint, choice
+
+
+
+def ban(driver, sec):
+    url = &quot;http://192.168.6.6&quot;
+    
+    driver.get(url)
+
+    # wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;inputArea paddingleft_14&#39;)))
+    wait.until(EC.presence_of_element_located((By.ID, &#39;userpassword_ctrl&#39;)))
+    pw_input = driver.find_element(By.ID, &#39;userpassword_ctrl&#39;)
+    wait.until(EC.presence_of_element_located((By.ID, &#39;loginbtn&#39;)))
+    login_btn = driver.find_element(By.ID, &#39;loginbtn&#39;)
+    pw_input.send_keys(&quot;freedom&quot;)
+    sleep(0.06)
+    login_btn.click()
+    #sleep(6)
+    #sleep(1)
+    sleep(0.06)
+    wait.until(EC.presence_of_element_located((By.ID, &quot;devicecontrol&quot;)))
+
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;nav_title&#39;)
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
+    #wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)))
+    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
+    #term_mng.click()
+    #sleep(0.6)
+
+    driver.get(&quot;http://192.168.6.6/html/index.html#/devicecontrol&quot;)
+    actionchains = ActionChains(driver)
+
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
+    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
+    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
+    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__blackon&#39;)
+
+    # check if 2.4G section
+    while True:
+        wait.until(EC.presence_of_element_located((By.ID, &quot;device_selectlist_parenselect&quot;)))
+        div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
+        if div.text == &quot;2.4G 联网设备&quot;:
+            # print(div.text)
+            break
+        else:
+            print(&quot;LOCATED&quot; + div.text)
+            sleep(1)
+            driver.refresh()
+            sleep(0.2)
+
+
+
+    try:
+        wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
+        btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
+        btn.click()
+    except TimeoutException:
+        time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
+        print(time_str, &quot;START BAN FAILED&quot;)
+        with open(time_str + &quot;start_failed.log&quot;, &#39;a&#39;) as f:
+            f.write(time_str + &#39;\n&#39; + driver.page_source + &quot;\nSTART BAN FAILED&quot;)
+
+
+    sleep(sec - 1.6)
+
+    wait.until(EC.presence_of_element_located((By.ID, &#39;device_selectlist_parenselect&#39;)))
+    div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
+    actionchains.click(div).perform()
+
+    wait.until(EC.presence_of_element_located((By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)))
+    disal = driver.find_element(By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)
+    actionchains.click(disal).perform()
+
+    # actionchains.move_to_element(div).click().perform()
+
+    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)))
+
+    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)
+    # btn.click()
+
+    try:
+        wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
+        btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
+        btn.click()
+    except TimeoutException:
+        time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
+        print(time_str, &quot;END BAN FAILED&quot;)
+        with open(time_str + &quot;end_failed.log&quot;, &#39;a&#39;) as f:
+            f.write(time_str + &#39;\n&#39; + driver.page_source + &quot;\nEND BAN FAILED&quot;)
+
+    driver.get(&quot;about:blank&quot;)
+    sleep(0.1)
+    driver.refresh()
+
+
+
+    #print(driver.page_source)
+
+
+
+if __name__ == &#39;__main__&#39;:
+    while True:
+        print(&quot;drv init&quot;, flush=True)
+        opt = webdriver.FirefoxOptions()
+        # 设置无界面
+        opt.add_argument(&quot;--headless&quot;)
+        # opt.page_load_strategy = &#39;none&#39;
+
+        # firefox_profile = webdriver.FirefoxProfile()
+        # firefox_profile.set_preference(&#39;permissions.default.image&#39;, 2)#某些firefox只需要这个
+        # firefox_profile.set_preference(&#39;permissions.default.stylesheet&#39;, 2)
+
+
+        service = Service(log_path=&#39;/dev/null&#39;)
+
+        # 禁用 gpu
+        # opt.add_argument(&#39;--disable-gpu&#39;)
+
+        driver = webdriver.Firefox(options=opt, service=service)
+        wait = WebDriverWait(driver, 10)
+        waittimelist = list(range(8, 10)) * 4 + list(range(8, 17))
+        for i in range(50):
+            time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
+            print(time_str)
+            print(i, &quot;ban&quot;, s:=randint(9, 16), flush=True)
+            ban(driver, s)
+            print(i, &quot;wait&quot;, s:=choice(waittimelist), flush=True)
+            sleep(s)
+        driver.quit()
+
+</code></pre>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+        <tag>自由</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽牌算二十四点有解的概率问题</title>
+    <url>/2025/01/28/%E6%8A%BD%E7%89%8C%E7%AE%97%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%82%B9%E6%9C%89%E8%A7%A3%E7%9A%84%E6%A6%82%E7%8E%87%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>闲着没事的阿玮提出了这么个问题：在一副扑克牌中任抽4张，算24点，有解的概率是多少。</p>
+<p>（注：不允许使用乘方、开根、求导、阶乘等计算。）</p>
+<p>于是开始研究：</p>
+<ol>
+<li>计算任意一组数一个的二十四点表达式的算法解决：</li>
+</ol>
+<p>上bing搜索，copilot太热情了，直接给出了算法。这个算法的原理就是枚举四个数之间所有可能的数学四则运算表达式，然后一个个算。测试代码发现可用。既然可以使用，那么具体原理不深究了。代码如下(cal24.py)：</p>
+<pre><code class="python">from itertools import permutations, product
+
+def calculate(a, b, op):
+    if op == &#39;+&#39;:
+        return a + b
+    elif op == &#39;-&#39;:
+        return a - b
+    elif op == &#39;*&#39;:
+        return a * b
+    elif op == &#39;/&#39;:
+        if b != 0:
+            return a / b
+        else:
+            return None
+
+def solve_24(nums):
+    operators = [&#39;+&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;]
+    for num_perm in permutations(nums):
+        for ops in product(operators, repeat=3):
+            # Try different parenthesis combinations
+            expressions = [
+                f&quot;((&#123;num_perm[0]&#125; &#123;ops[0]&#125; &#123;num_perm[1]&#125;) &#123;ops[1]&#125; &#123;num_perm[2]&#125;) &#123;ops[2]&#125; &#123;num_perm[3]&#125;&quot;,
+                f&quot;(&#123;num_perm[0]&#125; &#123;ops[0]&#125; (&#123;num_perm[1]&#125; &#123;ops[1]&#125; &#123;num_perm[2]&#125;)) &#123;ops[2]&#125; &#123;num_perm[3]&#125;&quot;,
+                f&quot;&#123;num_perm[0]&#125; &#123;ops[0]&#125; ((&#123;num_perm[1]&#125; &#123;ops[1]&#125; &#123;num_perm[2]&#125;) &#123;ops[2]&#125; &#123;num_perm[3]&#125;)&quot;,
+                f&quot;&#123;num_perm[0]&#125; &#123;ops[0]&#125; (&#123;num_perm[1]&#125; &#123;ops[1]&#125; (&#123;num_perm[2]&#125; &#123;ops[2]&#125; &#123;num_perm[3]&#125;))&quot;,
+                f&quot;((&#123;num_perm[0]&#125; &#123;ops[0]&#125; &#123;num_perm[1]&#125;) &#123;ops[1]&#125; (&#123;num_perm[2]&#125; &#123;ops[2]&#125; &#123;num_perm[3]&#125;))&quot;
+            ]
+            for expr in expressions:
+                try:
+                    if abs(eval(expr) - 24) &lt; 1e-6:
+                        return expr
+                except ZeroDivisionError:
+                    continue
+    return 0
+
+# 示例使用
+nums = [8, 12, 6, 6]
+solution = solve_24(nums)
+print(solution)
+</code></pre>
+<ol start="2">
+<li>一副52张的扑克里面抽牌，抽到一个特定组合的概率是多少：</li>
+</ol>
+<p>分析这个问题可以发现，所有的组合可以分类如下：</p>
+<p>AAAA型, AAAB型, AABB型, AABC型, ABCD型。</p>
+<p>没有其他可能的分布。</p>
+<p>计算这5种组合中，特定一种组合出现的概率。</p>
+<p>总抽法是comb(52, 4)。(注：comb是qalculate写法，表示组合数; perm是qalculate写法, 表示permutation, 排列数)</p>
+<p>AAAA型：1 &#x2F; comb(52, 4)</p>
+<p>AAAB型：考虑花色。A牌是在四个花色中选了3个，B牌是在四个花色里面选了一个。全部考虑顺序。则概率为4&#x2F;52 * 3&#x2F;51 * 2&#x2F;50 * 4&#x2F;49 * perm(4, 4)。</p>
+<p>AABB型：同理。4&#x2F;52 * 3&#x2F;51 * 4&#x2F;50 * 3&#x2F;49 * perm(4, 4)</p>
+<p>AABC型：同理。4&#x2F;52 * 3&#x2F;51 * 4&#x2F;50 * 4&#x2F;49 * perm(4, 4)</p>
+<p>ABCD型：同理。4&#x2F;52 * 4&#x2F;51 * 4&#x2F;50 * 4&#x2F;49 * perm(4, 4)</p>
+<p>具体的数据见代码。</p>
+<p>把所有情况列出，所有概率加和，发现略小于1。正常现象，因为python浮点数存在误差。</p>
+<p>代码如下（stat.py）:</p>
+<pre><code class="python">import cal24
+pa = 0
+for f in range(1, 14):
+    for i in range(1, f+1):
+        for j in range(1, i+1):
+            for k in range(1, j+1):
+                if f != i and i != j and j != k:
+                    # case1: abcd
+                    # p = 2816/4165
+                    p = 24*32/812175
+                elif f == i and i != j and j != k or f != i and i == j and j != k or f != i and i != j and j == k:
+                    # case2: aabc
+                    # p = 2112/20825
+                    p = 12*8/270725
+                elif f == i and i == j and j != k or f != i and i == j and j == k or f == i and i != j and j == k:
+                    # case3: aaab
+                    # p = 96/20825
+                    p = 4*4/270725
+                elif f == i and i != j and j == k:
+                    # case4: aabb
+                    # p = 216/20825
+                    p = 6*6/270725
+                elif f == i and i == j and j == k:
+                    # case5: aaaa
+                    # p = 1/20825
+                    p = 1/270725
+                expr = cal24.solve_24([f, i, j, k])
+                print(f, i, j, k, expr)
+                if expr:
+                    pa += p
+
+
+print(pa)
+</code></pre>
+<p>执行<code>python stat.py &gt; 24.txt</code>可以得到：</p>
+<pre><code>1 1 1 1 0
+2 1 1 1 0
+2 2 1 1 0
+2 2 2 1 0
+2 2 2 2 0
+3 1 1 1 0
+3 2 1 1 0
+3 2 2 1 0
+3 2 2 2 (3 * (2 + 2)) * 2
+3 3 1 1 0
+3 3 2 1 (3 * (3 + 1)) * 2
+3 3 2 2 ((3 + 3) * (2 + 2))
+3 3 3 1 ((3 + 3) * (3 + 1))
+3 3 3 2 (3 + (3 * 3)) * 2
+3 3 3 3 ((3 * 3) * 3) - 3
+4 1 1 1 0
+4 2 1 1 0
+4 2 2 1 4 * (2 * (2 + 1))
+4 2 2 2 ((4 + 2) * (2 + 2))
+4 3 1 1 4 * (3 * (1 + 1))
+4 3 2 1 4 * ((3 + 2) + 1)
+4 3 2 2 ((4 + 2) + 2) * 3
+4 3 3 1 (4 * (3 + 3)) * 1
+4 3 3 2 0
+4 3 3 3 ((4 + 3) * 3) + 3
+4 4 1 1 4 * ((4 + 1) + 1)
+4 4 2 1 ((4 + 4) * (2 + 1))
+4 4 2 2 (4 + (4 * 2)) * 2
+</code></pre>
+<p>……</p>
+<pre><code>13 13 11 4 0
+13 13 11 5 0
+13 13 11 6 0
+13 13 11 7 0
+13 13 11 8 0
+13 13 11 9 ((13 + 13) - 11) + 9
+13 13 11 10 0
+13 13 11 11 0
+13 13 12 1 ((13 / 13) + 1) * 12
+13 13 12 2 ((13 - 13) + 12) * 2
+13 13 12 3 12 * (3 - (13 / 13))
+13 13 12 4 0
+13 13 12 5 0
+13 13 12 6 13 + (13 - (12 / 6))
+13 13 12 7 0
+13 13 12 8 0
+13 13 12 9 0
+13 13 12 10 ((13 + 13) - 12) + 10
+13 13 12 11 13 + ((13 - 12) * 11)
+13 13 12 12 ((13 - 13) + 12) + 12
+13 13 13 1 0
+13 13 13 2 (13 - (13 / 13)) * 2
+13 13 13 3 0
+13 13 13 4 0
+13 13 13 5 0
+13 13 13 6 0
+13 13 13 7 0
+13 13 13 8 0
+13 13 13 9 0
+13 13 13 10 (13 + (13 / 13)) + 10
+13 13 13 11 ((13 + 13) - 13) + 11
+13 13 13 12 ((13 + 13) / 13) * 12
+13 13 13 13 0
+0.8012448056145496
+</code></pre>
+<p>可以看到，有解的概率大概是80%多点。</p>
+<p>后来发现，可以参考知乎<a href="https://www.zhihu.com/question/307729091/answer/1116445273?utm_oi=618815643735166976" title="随机取牌算不出 24 点的概率是多少？Super Mario的回答">这篇回答</a><br>他计算的结果和我相近。</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>生物学考复习</title>
     <url>/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="生物学考复习"><a href="#生物学考复习" class="headerlink" title="生物学考复习"></a>生物学考复习</h1><h2 id="细胞呼吸模型图（自制）"><a href="#细胞呼吸模型图（自制）" class="headerlink" title="细胞呼吸模型图（自制）"></a>细胞呼吸模型图（自制）</h2><img src="/2023/06/29/%E7%94%9F%E7%89%A9%E5%AD%A6%E8%80%83%E5%A4%8D%E4%B9%A0/%E7%BB%86%E8%83%9E%E5%91%BC%E5%90%B8%E6%A8%A1%E5%9E%8B%E5%9B%BE.svg" class="" title="细胞呼吸模型图">
@@ -717,6 +1334,33 @@
       <tags>
         <tag>考功名</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>自制云原神</title>
+    <url>/2024/02/12/%E8%87%AA%E5%88%B6%E4%BA%91%E5%8E%9F%E7%A5%9E/</url>
+    <content><![CDATA[<h1 id="自制云原神"><a href="#自制云原神" class="headerlink" title="自制云原神"></a>自制云原神</h1><p>关于这个的想法我在很久之前就产生了，然而当时我下载的sunshine是在第三方渠道下载的，因为神秘力量导致我不能访问github。于是我多点触控的配置失败了。今天我重新下载安装sunshine，成功多点触控玩原神，在此记录。</p>
+<p>需要软件、文件：</p>
+<ol>
+<li><p>sunshine windows &gt;&#x3D; 0.20</p>
+</li>
+<li><p>usbmmidd_v2（虚拟显示器驱动）（如果使用HDMI转VGA的线空接来欺骗显卡，分辨率没有奇奇怪怪的选项）</p>
+</li>
+<li><p>moonlight Android 阿西西修改版</p>
+</li>
+</ol>
+<p>安装所有软件。</p>
+<p>配置sunshine输入显示屏路径。（\,\DISPLAY5）音频的配置非必须。</p>
+<p>平板不做副屏而是玩游戏时，电脑音频改为Steam Streaming Speakers。</p>
+<p>虚拟显示器驱动要</p>
+<pre><code>deviceinstaller64 install usbmmidd.inf usbmmidd
+deviceinstaller64 enableidd 1
+</code></pre>
+<p>参见<a href="https://www.cnblogs.com/zspace/p/17069763.html">WIN版虚拟显示器usbmmidd_v2 - 小脚丫走天下 - 博客园</a></p>
+<p>moonlight连接windows成功。</p>
+<p>云原神启动参数 <code>yuanshen.exe use_mobile_platform -is_cloud 1 -platform_type CLOUD_THIRD_PARTY_MOBILE  -popupwindow -borderless </code></p>
+<p>记得设置副屏为主显示器否则原神会启动在电脑屏幕，拖过去之后会导致纵横比失调。</p>
+<p>愉快玩耍吧。</p>
+]]></content>
   </entry>
   <entry>
     <title>英语单词笔记生成器</title>
@@ -1143,658 +1787,6 @@ python3 example.py --audio_path=&quot;$pwd1/$1&quot; --output_midi_path=&quot;$p
       <tags>
         <tag>技术</tag>
         <tag>音乐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>tkinter插入窗口图标的方法</title>
-    <url>/2023/08/09/tkinter%E6%8F%92%E5%85%A5%E7%AA%97%E5%8F%A3%E5%9B%BE%E6%A0%87%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>这个问题的发现和解决是有将近一年了，当时我在开发一个背单词的一个小项目，但是我在想打包的时候出现问题了。</p>
-<p>我想更换窗口的图标，就是windows下左上角的那个小图标，但是tkinter给的方法的参数却是一个文件名，这意味着我不能完美地把这个项目打包成一个单文件，而是需要把这个icon文件和打包好的exe放在一起，变成两个文件发布。</p>
-<p>网上所给出的方法一般是先把这个ico文件打包进去，需要的时候在写到cache, 然后再让tkinter用这个文件名来导入。这个方法一看就极其不优雅，虽然性能也就这样了，但是这样的方法是我所不能接受的。</p>
-<p>最后，我查看了ttkbootstrap的源码解决了问题。</p>
-<p>我想，ttkbootstrap有一个自带的图标，是不管在哪个代码里面执行都会有这个图标，于是我想参考官方的做法。</p>
-<p>我当初发现的ttkbootstrap的代码是在哪里我早就已经忘记了，但是我解决问题的思路仍清晰。</p>
-<p>之前我看到ttkbootstrap的源码里面有一段base64，然后使用了这段base64来导入，并非网上的先写到cache, 这也符合我对一个成熟的项目的预期。</p>
-<p>所以我贴上我解决的代码：</p>
-<pre><code class="python">root = tk.Tk()
-root.title(&quot;Xdict背单词&quot;)
-photo = ttk.PhotoImage(master=root, data=myIcon.img)
-root.iconphoto(True, photo)
-</code></pre>
-<p>这段代码中的data项就是一个base64字符串。</p>
-<p>制作myIcon.py需要编写一个mkicon.py.</p>
-<pre><code class="python">#!/bin/python3
-import base64
-with open(&quot;icon.py&quot;,&quot;a&quot;) as f:
-    f.write(&quot;img=&#39;&quot;)
-with open(&quot;bell.png&quot;,&quot;rb&quot;) as i:
-    b64str = base64.b64encode(i.read())
-    with open(&quot;icon.py&quot;,&quot;ab+&quot;) as f:
-        f.write(b64str)
-with open(&quot;icon.py&quot;,&quot;a&quot;) as f:
-    f.write(&quot;&#39;&quot;)
-</code></pre>
-<p>这段代码的意思就是读取目录下的bell.png的文件内容并把他转换为base64, 输出到myIcon.py, 这样pyinstaller也可以直接知道要调用。</p>
-<p>最后要在main.py里面引入myIcon</p>
-<p>写的不太清楚，若不能理解请通过文章“博客介绍”里面的联系方式联系我</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>小说-电车惊魂</title>
-    <url>/2023/09/24/%E5%B0%8F%E8%AF%B4-%E7%94%B5%E8%BD%A6%E6%83%8A%E9%AD%82/</url>
-    <content><![CDATA[<h1 id="电车惊魂"><a href="#电车惊魂" class="headerlink" title="电车惊魂"></a>电车惊魂</h1><p>那是一个美好的一天的早晨，我怀着轻松的心情去上班。那天天气晴的恰到好处，被淡淡的云遮挡掉一部分的太阳光线让我觉得很舒服。</p>
-<p>“又是美好的一天。”我心想。</p>
-<p>我像往常一样走入电车，今天电车里人反常得很多，不对，不如说这段日子里面电车里人都反常得很多。座位几乎坐满了。</p>
-<p>过了几站上来一个十五六岁的中学生。他走进来的时候时不时看看手表，我知道了他好像快要迟到了。没有地方坐下，他就站着，拉着电车中央的那根竖铁杆。</p>
-<p>滴滴的警铃声响起，门关上，列车就启动。我马上感觉到加速度压在我身上，重力像是该换了方向。于是我看见那中学生一个趔趄，他站不稳了，马上用手抓住栏杆，另一只手里提着的包向后甩去。</p>
-<p>加速完成了，他得到了一片刻的休息机会。他手扶着栏杆站稳，像是没力气没睡醒似的揉眼睛，这时我才注意到他的眼睛上重重的黑眼圈。</p>
-<p>过了几站车外面开始风雨大作起来，本来阳光在建筑物的缝隙之间洒下来，有间隔地透过车窗玻璃进入我们的电车里面，我们的电车就像是穿梭在时空的隧道里面。现在乌云密布了，外面的乌云遮蔽太阳，外面的风吹得树都要朝侧面倒过去，风连树上的叶子也扯下来。</p>
-<p>外面风雨大作起来，我们的电车里面也风雨飘摇。风把我们的电车吹得左摇右晃，开得慢的时候我觉得我们像是坐在船里飘在海上。车轮和轨道摩擦的啸叫与风雨的声音混合在一起很吵闹，把我的耳膜都向里压得难受，并且使我有了不祥的预感。</p>
-<p>我们的车厢风雨飘摇起来，他内心好像也风雨大作了。他用手紧紧抓着竖杆，他手上的青筋暴起，脸上露出痛苦的神情，他咬牙切齿把牙龈整个地都露出来，他的脸上汗如雨下。他像是在和被挡在车外面进不来的风雨搏斗着，他一会被甩到左边，一会被甩到右边，他的两个脚快要拧起来了，他花了好一会把自己稳住。</p>
-<p>我们一车厢人静静看他的表演。</p>
-<p>突然他松开一只手捂住自己的胃部，他把面部的肌肉也要拧起来了，他似乎是胃痛到不能稳定的站立，于是他艰难地蹲下了，他蹲下的时候我看见一张卡片样的东西，从他的裤子口袋里面滚出来。</p>
-<p>那张卡片滚到下一个车厢的连接处卡在地面的突起上停住了。</p>
-<p>突然他像是想起了什么似的，他用一只手捂住耳朵，然后马上开始念咒语似的大声背诵古诗词“僵卧孤村不自哀，尚思为国戍轮台。夜阑卧听风吹雨，铁马冰河入梦来。僵卧孤村不自哀，尚思为国戍轮台。夜阑卧听风吹雨，铁马冰河入梦来……”背得很大声。我知道这是一首什么风雨大作的古诗。</p>
-<p>背完古诗他又“静摩擦力略大于滑动摩擦力，所以我的卡不会回来……”</p>
-<p>我不知道他的咒语和当前情况有没有关系，不过事实上他的咒语没有缓解他的痛苦，他脸上的神情还是那么痛苦。</p>
-<p>然后我们车厢中的有一个人扑哧的笑了，开始是掩口胡卢而笑。他的样子确实很好笑，我也想着。</p>
-<p>笑声一个传染俩，马上变成了哄堂大笑，有的人笑他上学迟到，肯定是昨晚不好好睡觉打游戏；有的人笑他读书读傻了，只知道念古诗咒语了；有的人笑他弱不禁风，连列车的一点点加速度也把握不住；有的人笑他的头发那么长，肯定不好好学习；有的人笑他不带伞，要遭殃；还有两个带行李箱的情侣大学生，笑你们高中不准谈恋爱，笑你们八月中旬就开学，我们九月了赶到学校城市还有三两天玩耍的光景。</p>
-<p>我呢？我也跟着他们笑，笑得上气不接下气，我伸出我的右手，一个大拇指指向老天爷，一个食指指向他，还有三四五指弯回来朝向自己。</p>
-<p>我也一直这么笑着，上气不接下气，直到我的站点要到了，于是我收起笑容和东西站起来，在我离开座位的一瞬间，我就被巨大的加速度甩到了车厢后面，头重重地撞在后面车厢的竖杆上。</p>
-<p>于是我残存的意识听到新的一轮哄堂大笑开始了，指向我。</p>
-]]></content>
-      <tags>
-        <tag>小说</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自制云原神</title>
-    <url>/2024/02/12/%E8%87%AA%E5%88%B6%E4%BA%91%E5%8E%9F%E7%A5%9E/</url>
-    <content><![CDATA[<h1 id="自制云原神"><a href="#自制云原神" class="headerlink" title="自制云原神"></a>自制云原神</h1><p>关于这个的想法我在很久之前就产生了，然而当时我下载的sunshine是在第三方渠道下载的，因为神秘力量导致我不能访问github。于是我多点触控的配置失败了。今天我重新下载安装sunshine，成功多点触控玩原神，在此记录。</p>
-<p>需要软件、文件：</p>
-<ol>
-<li><p>sunshine windows &gt;&#x3D; 0.20</p>
-</li>
-<li><p>usbmmidd_v2（虚拟显示器驱动）（如果使用HDMI转VGA的线空接来欺骗显卡，分辨率没有奇奇怪怪的选项）</p>
-</li>
-<li><p>moonlight Android 阿西西修改版</p>
-</li>
-</ol>
-<p>安装所有软件。</p>
-<p>配置sunshine输入显示屏路径。（\,\DISPLAY5）音频的配置非必须。</p>
-<p>平板不做副屏而是玩游戏时，电脑音频改为Steam Streaming Speakers。</p>
-<p>虚拟显示器驱动要</p>
-<pre><code>deviceinstaller64 install usbmmidd.inf usbmmidd
-deviceinstaller64 enableidd 1
-</code></pre>
-<p>参见<a href="https://www.cnblogs.com/zspace/p/17069763.html">WIN版虚拟显示器usbmmidd_v2 - 小脚丫走天下 - 博客园</a></p>
-<p>moonlight连接windows成功。</p>
-<p>云原神启动参数 <code>yuanshen.exe use_mobile_platform -is_cloud 1 -platform_type CLOUD_THIRD_PARTY_MOBILE  -popupwindow -borderless </code></p>
-<p>记得设置副屏为主显示器否则原神会启动在电脑屏幕，拖过去之后会导致纵横比失调。</p>
-<p>愉快玩耍吧。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>信息课聊天室</title>
-    <url>/2024/05/03/%E4%BF%A1%E6%81%AF%E8%AF%BE%E8%81%8A%E5%A4%A9%E5%AE%A4/</url>
-    <content><![CDATA[<p>使用flask和简单的html写了一个简单的信息课聊天室</p>
-<pre><code class="lang-python">from flask import Flask, request
-
-app = Flask(__name__)
-
-msglist = []
-
-@app.route(&quot;/&quot;, methods=[&quot;POST&quot;, &quot;GET&quot;])
-def root():
-    global msglist
-    if request.method == &quot;GET&quot;:
-        ip = request.remote_addr
-        reqnum = ip[ip.rfind(&quot;.&quot;)+1:]
-        user = request.values.get(&quot;user&quot;)
-        message = request.values.get(&quot;message&quot;)
-        print(reqnum, user, message)
-        if (user and message) and (not msglist or msglist[0] != (reqnum, user, message)):
-            msglist.insert(0, (reqnum, user, message))
-
-
-    with open(&quot;chat.html&quot;, &#39;r&#39;) as f:
-        text = &quot;&quot;
-        name = &quot;&quot;
-        for fornum, user, message in msglist:
-            text += &quot;&lt;p&gt;%s,%s: %s&lt;/p&gt;&quot; % (fornum, user, message)
-            if not name and reqnum == fornum:
-                name = user
-        # 防止老师直接偷看
-        if ip == &quot;10.10.50.49&quot;:
-            return &quot;&quot;
-        return f.read() % (name, text)
-
-app.run(host=&quot;0.0.0.0&quot;, port=8080, debug=False)
-</code></pre>
-<pre><code class="lang-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;title&gt;
-        聊天室
-    &lt;/title&gt;
-    &lt;body&gt;
-        &lt;h2&gt;聊天室！&lt;/h2&gt;
-        &lt;p&gt;输入完成之后点击send发送&lt;/p&gt;
-        &lt;p&gt;如果不点击页面上的刷新按钮是不能看到新的信息的&lt;/p&gt;
-        &lt;p&gt;不要手动使用浏览器的刷新&lt;/p&gt;
-        &lt;div&gt;
-            &lt;button type=&quot;button&quot; onclick=&quot;javascript:location.replace(&#39;/&#39;)&quot;&gt;刷新&lt;/button&gt;
-            &lt;form action=&quot;/&quot; method=&quot;get&quot;&gt;
-                &lt;div&gt;
-                    &lt;label for=&quot;name&quot;&gt;name:&lt;/label&gt;
-                    &lt;input type=&quot;text&quot; name=&quot;user&quot; id=&quot;user&quot; value=&quot;%s&quot; required /&gt; 
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;label for=&quot;message&quot;&gt;message:&lt;/label&gt;
-                    &lt;input type=&quot;text&quot; name=&quot;message&quot; id=&quot;message&quot; required /&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;input type=&quot;submit&quot; value=&quot;send&quot; /&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-        &lt;/div&gt;
-        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-        &lt;div&gt;
-            %s
-        &lt;/div&gt;
-
-    &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>干扰监控总结</title>
-    <url>/2024/09/01/%E5%B9%B2%E6%89%B0%E7%9B%91%E6%8E%A7/</url>
-    <content><![CDATA[<p>房里被装了监控，有一两年了，一直想想办法干扰，现在做了一个完美的解决方案，供参考。</p>
-<p>本来希望通过DNS来阻断，但是DNS有缓存之类的东西，而且猾伪路由器篡改我的DNS，而且我在Adguard Home里面也没有找到有关小米API的DNS解析记录，所以放弃。没想到最后采用的方案效果比之前还要好。</p>
-<p>买一个树莓派全天候运行，装好firefox, geckodriver, python的selenium, 使用<code>screen -S ban -s ban</code>后台运行ban脚本，把脚本放在PATH下面。</p>
-<p>原理是自动模拟人登录路由器后台手动禁止联网，过一段时间模拟人手动允许他联网。<br>我一开始绝对不会想到这么离谱的想法最后会采用而且效果这么好。</p>
-<p>ban.py</p>
-<pre><code class="lang-python">
-#!/bin/python3
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC  # 和下面WebDriverWait一起用的
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.firefox.service import Service
-from time import sleep
-from random import randint
-from threading import Thread
-
-def ban(driver, sec):
-    url = &quot;http://192.168.6.6&quot;
-
-
-    driver.get(url)
-
-    wait = WebDriverWait(driver, 20)
-    # wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;inputArea paddingleft_14&#39;)))
-    wait.until(EC.presence_of_element_located((By.ID, &#39;userpassword_ctrl&#39;)))
-
-    pw_input = driver.find_element(By.ID, &#39;userpassword_ctrl&#39;)
-    login_btn = driver.find_element(By.ID, &#39;loginbtn&#39;)
-    pw_input.send_keys(&quot;freedom&quot;)
-    sleep(0.6)
-    login_btn.click()
-    #sleep(6)
-    sleep(0.6)
-
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;nav_title&#39;)
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
-    #wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)))
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
-    #term_mng.click()
-    sleep(0.6)
-
-    driver.get(&quot;http://192.168.6.6/html/index.html#/devicecontrol&quot;)
-    actionchains = ActionChains(driver)
-
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
-    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
-    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
-    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__blackon&#39;)
-    wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
-    btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址:不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
-    btn.click()
-
-    sleep(sec)
-
-    div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
-    actionchains.click(div).perform()
-
-    wait.until(EC.presence_of_element_located((By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)))
-    disal = driver.find_element(By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)
-    actionchains.click(disal).perform()
-
-    # actionchains.move_to_element(div).click().perform()
-
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)))
-
-    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)
-    # btn.click()
-
-    wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址:不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
-    btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 不给你看&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
-    btn.click()
-
-    driver.get(&quot;about:blank&quot;)
-    driver.refresh()
-
-
-
-    #print(driver.page_source)
-
-
-
-if __name__ == &#39;__main__&#39;:
-    while True:
-        print(&quot;drv init&quot;, flush=True)
-        opt = webdriver.FirefoxOptions()
-        # 设置无界面
-        opt.add_argument(&quot;--headless&quot;)
-
-
-        service = Service(log_path=&#39;/dev/null&#39;)
-
-        # 禁用 gpu
-        # opt.add_argument(&#39;--disable-gpu&#39;)
-
-        driver = webdriver.Firefox(options=opt, service=service)
-        for i in range(64):
-            print(&quot;ban&quot;, s:=randint(8, 16), flush=True)
-            ban(driver, s)
-            print(&quot;wait&quot;, s:=randint(16, 48), flush=True)
-            sleep(s)
-        driver.quit()
-</code></pre>
-<p>踩到的坑稍微做一下总结：</p>
-<p>service对象不能再driver对象退出以后重复使用，也就是service = S……这句不能写在while True外面。否则报错。很奇怪的坑，网上没有解决方案，最后是我自己改对的。</p>
-<p>对于要点击的对象一定要wait.until等他加载出来。</p>
-<p>路由器里面设备的序号是会变的，正如我注释掉的代码，所以最好的方式使用MAC地址来定位。通过XPATH寻找与定位MAC文本同框的按钮，非常稳定。</p>
-<p>driver如果每次都新实例化比较慢和占CPU, 如果每次只用同一个driver会内存泄漏，所以折中，每64次ban，关掉浏览器重新实例化一个driver.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>每隔几十秒断网十几秒，实测监控不会显示断线，APP上面只能看到卡顿转圈圈，卡很久能进去，看了十几秒画面又不动了。</p>
-<p>这绝不是阿Q式的或者扎纸小人式的自我安慰，而是我想要搞你 想要恶心一下你就有能力做到恶心一下你，你想偷窥我的生活就给你看，岂有此理，没那么容易！而且这个东西的应用也在客观上确实降低了他们看的频率，毕竟我实测感觉还是非常卡的。</p>
-<p>另外这一次也算是点亮了一点浏览器自动控制的科技树，当初云原神每天只送15分钟的时候我都是手动登录，如果有这东西那么也许不会那么麻烦，不过可惜现在云原神免费了，没用了</p>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p>通过故障分析，情况判断，我的程序得到了一个很好的鲁棒性提升。</p>
-<p>有的时候程序会找不到那个小米摄像机，那是因为等待的时间太短了，此时所有的2.4G联网设备全部离线，所以导致浏览器默认进入分类是5G设备，等再久也等不到摄像机重新连上。</p>
-<p>还有别的概率bug不可复现。随他去吧</p>
-<p>以下是更新之后的代码</p>
-<pre><code class="lang-python">#!/bin/python3
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC  # 和下面WebDriverWait一起用的
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.firefox.service import Service
-from selenium.common.exceptions import TimeoutException
-from time import sleep, strftime, localtime
-from random import randint, choice
-
-
-
-def ban(driver, sec):
-    url = &quot;http://192.168.6.6&quot;
-
-    driver.get(url)
-
-    # wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;inputArea paddingleft_14&#39;)))
-    wait.until(EC.presence_of_element_located((By.ID, &#39;userpassword_ctrl&#39;)))
-    pw_input = driver.find_element(By.ID, &#39;userpassword_ctrl&#39;)
-    wait.until(EC.presence_of_element_located((By.ID, &#39;loginbtn&#39;)))
-    login_btn = driver.find_element(By.ID, &#39;loginbtn&#39;)
-    pw_input.send_keys(&quot;freedom&quot;)
-    sleep(0.06)
-    login_btn.click()
-    #sleep(6)
-    #sleep(1)
-    sleep(0.06)
-    wait.until(EC.presence_of_element_located((By.ID, &quot;devicecontrol&quot;)))
-
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;nav_title&#39;)
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
-    #wait.until(EC.presence_of_element_located((By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)))
-    #term_mng = driver.find_element(By.CLASS_NAME, &#39;small_icon want_devicecontrol&#39;)
-    #term_mng.click()
-    #sleep(0.6)
-
-    driver.get(&quot;http://192.168.6.6/html/index.html#/devicecontrol&quot;)
-    actionchains = ActionChains(driver)
-
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
-    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)))
-    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__qoson&#39;)
-    #btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_1__blackon&#39;)
-
-    # check if 2.4G section
-    while True:
-        wait.until(EC.presence_of_element_located((By.ID, &quot;device_selectlist_parenselect&quot;)))
-        div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
-        if div.text == &quot;2.4G 联网设备&quot;:
-            # print(div.text)
-            break
-        else:
-            print(&quot;LOCATED&quot; + div.text)
-            sleep(1)
-            driver.refresh()
-            sleep(0.2)
-
-
-
-    try:
-        wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
-        btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
-        btn.click()
-    except TimeoutException:
-        time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
-        print(time_str, &quot;START BAN FAILED&quot;)
-        with open(time_str + &quot;start_failed.log&quot;, &#39;a&#39;) as f:
-            f.write(time_str + &#39;\n&#39; + driver.page_source + &quot;\nSTART BAN FAILED&quot;)
-
-
-    sleep(sec - 1.6)
-
-    wait.until(EC.presence_of_element_located((By.ID, &#39;device_selectlist_parenselect&#39;)))
-    div = driver.find_element(By.ID, &#39;device_selectlist_parenselect&#39;)
-    actionchains.click(div).perform()
-
-    wait.until(EC.presence_of_element_located((By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)))
-    disal = driver.find_element(By.ID, &#39;disallow_selectlist_SmallSelectBoxScrollItemID&#39;)
-    actionchains.click(disal).perform()
-
-    # actionchains.move_to_element(div).click().perform()
-
-    #wait.until(EC.presence_of_element_located((By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)))
-
-    # btn = driver.find_element(By.ID, &#39;InternetGatewayDevice_LANDevice_1_Hosts_Host_29__blackoff&#39;)
-    # btn.click()
-
-    try:
-        wait.until(EC.presence_of_element_located((By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)))
-        btn = driver.find_element(By.XPATH, &quot;//*[text()=&#39;MAC 地址: 94:F8:27:78:20:A1&#39;]/../../../../div[2]/div[1]/div[1]&quot;)
-        btn.click()
-    except TimeoutException:
-        time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
-        print(time_str, &quot;END BAN FAILED&quot;)
-        with open(time_str + &quot;end_failed.log&quot;, &#39;a&#39;) as f:
-            f.write(time_str + &#39;\n&#39; + driver.page_source + &quot;\nEND BAN FAILED&quot;)
-
-    driver.get(&quot;about:blank&quot;)
-    sleep(0.1)
-    driver.refresh()
-
-
-
-    #print(driver.page_source)
-
-
-
-if __name__ == &#39;__main__&#39;:
-    while True:
-        print(&quot;drv init&quot;, flush=True)
-        opt = webdriver.FirefoxOptions()
-        # 设置无界面
-        opt.add_argument(&quot;--headless&quot;)
-        # opt.page_load_strategy = &#39;none&#39;
-
-        # firefox_profile = webdriver.FirefoxProfile()
-        # firefox_profile.set_preference(&#39;permissions.default.image&#39;, 2)#某些firefox只需要这个
-        # firefox_profile.set_preference(&#39;permissions.default.stylesheet&#39;, 2)
-
-
-        service = Service(log_path=&#39;/dev/null&#39;)
-
-        # 禁用 gpu
-        # opt.add_argument(&#39;--disable-gpu&#39;)
-
-        driver = webdriver.Firefox(options=opt, service=service)
-        wait = WebDriverWait(driver, 10)
-        waittimelist = list(range(8, 10)) * 4 + list(range(8, 17))
-        for i in range(50):
-            time_str = strftime(&quot;%Y-%m-%d--%H-%M-%S&quot;, localtime())
-            print(time_str)
-            print(i, &quot;ban&quot;, s:=randint(9, 16), flush=True)
-            ban(driver, s)
-            print(i, &quot;wait&quot;, s:=choice(waittimelist), flush=True)
-            sleep(s)
-        driver.quit()
-</code></pre>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-        <tag>自由</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>抽牌算二十四点有解的概率问题</title>
-    <url>/2025/01/28/%E6%8A%BD%E7%89%8C%E7%AE%97%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%82%B9%E6%9C%89%E8%A7%A3%E7%9A%84%E6%A6%82%E7%8E%87%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>闲着没事的阿玮提出了这么个问题：在一副扑克牌中任抽4张，算24点，有解的概率是多少。</p>
-<p>（注：不允许使用乘方、开根、求导、阶乘等计算。）</p>
-<p>于是开始研究：</p>
-<ol>
-<li>计算任意一组数一个的二十四点表达式的算法解决：</li>
-</ol>
-<p>上bing搜索，copilot太热情了，直接给出了算法。这个算法的原理就是枚举四个数之间所有可能的数学四则运算表达式，然后一个个算。测试代码发现可用。既然可以使用，那么具体原理不深究了。代码如下(cal24.py)：</p>
-<pre><code class="python">from itertools import permutations, product
-
-def calculate(a, b, op):
-    if op == &#39;+&#39;:
-        return a + b
-    elif op == &#39;-&#39;:
-        return a - b
-    elif op == &#39;*&#39;:
-        return a * b
-    elif op == &#39;/&#39;:
-        if b != 0:
-            return a / b
-        else:
-            return None
-
-def solve_24(nums):
-    operators = [&#39;+&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;]
-    for num_perm in permutations(nums):
-        for ops in product(operators, repeat=3):
-            # Try different parenthesis combinations
-            expressions = [
-                f&quot;((&#123;num_perm[0]&#125; &#123;ops[0]&#125; &#123;num_perm[1]&#125;) &#123;ops[1]&#125; &#123;num_perm[2]&#125;) &#123;ops[2]&#125; &#123;num_perm[3]&#125;&quot;,
-                f&quot;(&#123;num_perm[0]&#125; &#123;ops[0]&#125; (&#123;num_perm[1]&#125; &#123;ops[1]&#125; &#123;num_perm[2]&#125;)) &#123;ops[2]&#125; &#123;num_perm[3]&#125;&quot;,
-                f&quot;&#123;num_perm[0]&#125; &#123;ops[0]&#125; ((&#123;num_perm[1]&#125; &#123;ops[1]&#125; &#123;num_perm[2]&#125;) &#123;ops[2]&#125; &#123;num_perm[3]&#125;)&quot;,
-                f&quot;&#123;num_perm[0]&#125; &#123;ops[0]&#125; (&#123;num_perm[1]&#125; &#123;ops[1]&#125; (&#123;num_perm[2]&#125; &#123;ops[2]&#125; &#123;num_perm[3]&#125;))&quot;,
-                f&quot;((&#123;num_perm[0]&#125; &#123;ops[0]&#125; &#123;num_perm[1]&#125;) &#123;ops[1]&#125; (&#123;num_perm[2]&#125; &#123;ops[2]&#125; &#123;num_perm[3]&#125;))&quot;
-            ]
-            for expr in expressions:
-                try:
-                    if abs(eval(expr) - 24) &lt; 1e-6:
-                        return expr
-                except ZeroDivisionError:
-                    continue
-    return 0
-
-# 示例使用
-nums = [8, 12, 6, 6]
-solution = solve_24(nums)
-print(solution)
-</code></pre>
-<ol start="2">
-<li>一副52张的扑克里面抽牌，抽到一个特定组合的概率是多少：</li>
-</ol>
-<p>分析这个问题可以发现，所有的组合可以分类如下：</p>
-<p>AAAA型, AAAB型, AABB型, AABC型, ABCD型。</p>
-<p>没有其他可能的分布。</p>
-<p>计算这5种组合中，特定一种组合出现的概率。</p>
-<p>总抽法是comb(52, 4)。(注：comb是qalculate写法，表示组合数; perm是qalculate写法, 表示permutation, 排列数)</p>
-<p>AAAA型：1 &#x2F; comb(52, 4)</p>
-<p>AAAB型：考虑花色。A牌是在四个花色中选了3个，B牌是在四个花色里面选了一个。全部考虑顺序。则概率为4&#x2F;52 * 3&#x2F;51 * 2&#x2F;50 * 4&#x2F;49 * perm(4, 4)。</p>
-<p>AABB型：同理。4&#x2F;52 * 3&#x2F;51 * 4&#x2F;50 * 3&#x2F;49 * perm(4, 4)</p>
-<p>AABC型：同理。4&#x2F;52 * 3&#x2F;51 * 4&#x2F;50 * 4&#x2F;49 * perm(4, 4)</p>
-<p>ABCD型：同理。4&#x2F;52 * 4&#x2F;51 * 4&#x2F;50 * 4&#x2F;49 * perm(4, 4)</p>
-<p>具体的数据见代码。</p>
-<p>把所有情况列出，所有概率加和，发现略小于1。正常现象，因为python浮点数存在误差。</p>
-<p>代码如下（stat.py）:</p>
-<pre><code class="python">import cal24
-pa = 0
-for f in range(1, 14):
-    for i in range(1, f+1):
-        for j in range(1, i+1):
-            for k in range(1, j+1):
-                if f != i and i != j and j != k:
-                    # case1: abcd
-                    # p = 2816/4165
-                    p = 24*32/812175
-                elif f == i and i != j and j != k or f != i and i == j and j != k or f != i and i != j and j == k:
-                    # case2: aabc
-                    # p = 2112/20825
-                    p = 12*8/270725
-                elif f == i and i == j and j != k or f != i and i == j and j == k or f == i and i != j and j == k:
-                    # case3: aaab
-                    # p = 96/20825
-                    p = 4*4/270725
-                elif f == i and i != j and j == k:
-                    # case4: aabb
-                    # p = 216/20825
-                    p = 6*6/270725
-                elif f == i and i == j and j == k:
-                    # case5: aaaa
-                    # p = 1/20825
-                    p = 1/270725
-                expr = cal24.solve_24([f, i, j, k])
-                print(f, i, j, k, expr)
-                if expr:
-                    pa += p
-
-
-print(pa)
-</code></pre>
-<p>执行<code>python stat.py &gt; 24.txt</code>可以得到：</p>
-<pre><code>1 1 1 1 0
-2 1 1 1 0
-2 2 1 1 0
-2 2 2 1 0
-2 2 2 2 0
-3 1 1 1 0
-3 2 1 1 0
-3 2 2 1 0
-3 2 2 2 (3 * (2 + 2)) * 2
-3 3 1 1 0
-3 3 2 1 (3 * (3 + 1)) * 2
-3 3 2 2 ((3 + 3) * (2 + 2))
-3 3 3 1 ((3 + 3) * (3 + 1))
-3 3 3 2 (3 + (3 * 3)) * 2
-3 3 3 3 ((3 * 3) * 3) - 3
-4 1 1 1 0
-4 2 1 1 0
-4 2 2 1 4 * (2 * (2 + 1))
-4 2 2 2 ((4 + 2) * (2 + 2))
-4 3 1 1 4 * (3 * (1 + 1))
-4 3 2 1 4 * ((3 + 2) + 1)
-4 3 2 2 ((4 + 2) + 2) * 3
-4 3 3 1 (4 * (3 + 3)) * 1
-4 3 3 2 0
-4 3 3 3 ((4 + 3) * 3) + 3
-4 4 1 1 4 * ((4 + 1) + 1)
-4 4 2 1 ((4 + 4) * (2 + 1))
-4 4 2 2 (4 + (4 * 2)) * 2
-</code></pre>
-<p>……</p>
-<pre><code>13 13 11 4 0
-13 13 11 5 0
-13 13 11 6 0
-13 13 11 7 0
-13 13 11 8 0
-13 13 11 9 ((13 + 13) - 11) + 9
-13 13 11 10 0
-13 13 11 11 0
-13 13 12 1 ((13 / 13) + 1) * 12
-13 13 12 2 ((13 - 13) + 12) * 2
-13 13 12 3 12 * (3 - (13 / 13))
-13 13 12 4 0
-13 13 12 5 0
-13 13 12 6 13 + (13 - (12 / 6))
-13 13 12 7 0
-13 13 12 8 0
-13 13 12 9 0
-13 13 12 10 ((13 + 13) - 12) + 10
-13 13 12 11 13 + ((13 - 12) * 11)
-13 13 12 12 ((13 - 13) + 12) + 12
-13 13 13 1 0
-13 13 13 2 (13 - (13 / 13)) * 2
-13 13 13 3 0
-13 13 13 4 0
-13 13 13 5 0
-13 13 13 6 0
-13 13 13 7 0
-13 13 13 8 0
-13 13 13 9 0
-13 13 13 10 (13 + (13 / 13)) + 10
-13 13 13 11 ((13 + 13) - 13) + 11
-13 13 13 12 ((13 + 13) / 13) * 12
-13 13 13 13 0
-0.8012448056145496
-</code></pre>
-<p>可以看到，有解的概率大概是80%多点。</p>
-<p>后来发现，可以参考知乎<a href="https://www.zhihu.com/question/307729091/answer/1116445273?utm_oi=618815643735166976" title="随机取牌算不出 24 点的概率是多少？Super Mario的回答">这篇回答</a><br>他计算的结果和我相近。</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>KDEplasma面板崩溃</title>
-    <url>/2025/02/01/KDEplasma%E9%9D%A2%E6%9D%BF%E5%B4%A9%E6%BA%83/</url>
-    <content><![CDATA[<p>KDE Plasma面板经常崩溃，然而killall plasmashell不管用。网上没有找到解决办法。</p>
-<p>经实测，发现<code>killall -9 plasmashell</code>就行了。</p>
-<p>这就类似windows explorer重启。</p>
-<p>还有其他意想不到的效果：</p>
-<p>本来KDE wayland和x11的鼠标指针大小不是同一个标准，如果电脑屏幕有150%缩放，则wayland的24号鼠标指针等于x11的36号。在x11里面修改鼠标指针大小只会对新打开的应用生效，然而桌面不会，很难受。现在我们知道了，包括桌面和panel全部都是plasmashell这个进程，我们把他杀掉他就会自动重启，鼠标指针大小正常了。</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux打印工具开发</title>
-    <url>/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</url>
-    <content><![CDATA[<p>项目地址：<code>https://github.com/LittleWalnutX/Multiple_PDF_Printer</code></p>
-<p>为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。</p>
-<p>项目生成PDF文件然后再手动打印。以后可能加入直接打印的方式。</p>
-<p>目前已经开发完成的功能有：</p>
-<pre><code>双面打印
-小册子打印
-</code></pre><p>下面介绍一下思路: 双面打印的思路比较简单，只需要先把偶数页逆序提取出来，然后再提取奇数页，最后手动进行打印就可以了</p>
-<p>小册子打印的思路比较复杂，其中的难点主要在于拼合PDF。几乎是直接引用了一个日本网站上的代码，然后修改了一下。</p>
-<p>小册子打印需要解决另外一个问题就是页码的排布问题。观察一本钉好的小册子，可以发现，以16页的小册子为例，它的页码排布分别是，16，1，2，15, 14, 3, 4, 13 …..。这也就是说，第一页是最后一页，然后从头取两页，从后面取两页。</p>
-<p>然后我们把它分成奇数页面和偶数页面，可以得到它的规律。详细的规律见代码。</p>
-<p>然后写一下图形界面工具。这是用AI写的，把代码搬过来，然后改一下bug，再把自己的功能填上去就可以了。</p>
-<p>这个地方还有一个问题，就是用tkinter写的代码，在linux的X11上，存在一个极大概率触发的问题，就是文件拖拽上去之后会直接闪退，并且报如下的错误：</p>
-<pre><code>X Error of failed request:  BadWindow (invalid Window parameter)
-  Major opcode of failed request:  20 (X_GetProperty)
-  Resource id in failed request:  0x1417efd
-  Serial number of failed request:  1225
-  Current serial number in output stream:  1225
-</code></pre><p>排查了很长时间，我觉得这个问题不是我的问题，可能是因为AI写的代码里面用了tkinterdnd2库的问题。</p>
-<p>这个问题在wayland上不会出现。尽管如此，这个问题仍然难以接受，所以使用AI工具，把这个界面用pyside重写，然后就得到了pyside版的gui。也在项目里面。</p>
-<p>希望这么个项目可以对linux的桌面应用有一点微薄的帮助。以后如果有时间的话，可能再考虑尝试一下开发预览功能，以及直接打印而不是生成PDF的功能。</p>
-]]></content>
-      <tags>
-        <tag>技术</tag>
       </tags>
   </entry>
 </search>
