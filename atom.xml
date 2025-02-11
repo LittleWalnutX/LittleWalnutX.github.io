@@ -6,7 +6,7 @@
   <link href="http://littlewalnutx.github.io/atom.xml" rel="self"/>
   
   <link href="http://littlewalnutx.github.io/"/>
-  <updated>2025-01-28T03:16:06.007Z</updated>
+  <updated>2025-02-11T03:23:10.074Z</updated>
   <id>http://littlewalnutx.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux打印工具开发</title>
+    <link href="http://littlewalnutx.github.io/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/"/>
+    <id>http://littlewalnutx.github.io/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</id>
+    <published>2025-02-11T02:45:10.000Z</published>
+    <updated>2025-02-11T03:23:10.074Z</updated>
+    
+    <content type="html"><![CDATA[<p>项目地址：<code>https://github.com/LittleWalnutX/Multiple_PDF_Printer</code></p><p>为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。</p><p>项目生成PDF文件然后再手动打印。以后可能加入直接打印的方式。</p><p>目前已经开发完成的功能有：</p><pre><code>双面打印小册子打印</code></pre><p>下面介绍一下思路: 双面打印的思路比较简单，只需要先把偶数页逆序提取出来，然后再提取奇数页，最后手动进行打印就可以了</p><p>小册子打印的思路比较复杂，其中的难点主要在于拼合PDF。几乎是直接引用了一个日本网站上的代码，然后修改了一下。</p><p>小册子打印需要解决另外一个问题就是页码的排布问题。观察一本钉好的小册子，可以发现，以16页的小册子为例，它的页码排布分别是，16，1，2，15, 14, 3, 4, 13 …..。这也就是说，第一页是最后一页，然后从头取两页，从后面取两页。</p><p>然后我们把它分成奇数页面和偶数页面，可以得到它的规律。详细的规律见代码。</p><p>然后写一下图形界面工具。这是用AI写的，把代码搬过来，然后改一下bug，再把自己的功能填上去就可以了。</p><p>这个地方还有一个问题，就是用tkinter写的代码，在linux的X11上，存在一个极大概率触发的问题，就是文件拖拽上去之后会直接闪退，并且报如下的错误：</p><pre><code>X Error of failed request:  BadWindow (invalid Window parameter)  Major opcode of failed request:  20 (X_GetProperty)  Resource id in failed request:  0x1417efd  Serial number of failed request:  1225  Current serial number in output stream:  1225</code></pre><p>排查了很长时间，我觉得这个问题不是我的问题，可能是因为AI写的代码里面用了tkinterdnd2库的问题。</p><p>这个问题在wayland上不会出现。尽管如此，这个问题仍然难以接受，所以使用AI工具，把这个界面用pyside重写，然后就得到了pyside版的gui。也在项目里面。</p><p>希望这么个项目可以对linux的桌面应用有一点微薄的帮助。以后如果有时间的话，可能再考虑尝试一下开发预览功能，以及直接打印而不是生成PDF的功能。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;项目地址：&lt;code&gt;https://github.com/LittleWalnutX/Multiple_PDF_Printer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrob</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="http://littlewalnutx.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KDEplasma面板崩溃</title>
+    <link href="http://littlewalnutx.github.io/2025/02/01/KDEplasma%E9%9D%A2%E6%9D%BF%E5%B4%A9%E6%BA%83/"/>
+    <id>http://littlewalnutx.github.io/2025/02/01/KDEplasma%E9%9D%A2%E6%9D%BF%E5%B4%A9%E6%BA%83/</id>
+    <published>2025-02-01T10:36:20.000Z</published>
+    <updated>2025-02-11T02:43:25.254Z</updated>
+    
+    <content type="html"><![CDATA[<p>KDE Plasma面板经常崩溃，然而killall plasmashell不管用。网上没有找到解决办法。</p><p>经实测，发现<code>killall -9 plasmashell</code>就行了。</p><p>这就类似windows explorer重启。</p><p>还有其他意想不到的效果：</p><p>本来KDE wayland和x11的鼠标指针大小不是同一个标准，如果电脑屏幕有150%缩放，则wayland的24号鼠标指针等于x11的36号。在x11里面修改鼠标指针大小只会对新打开的应用生效，然而桌面不会，很难受。现在我们知道了，包括桌面和panel全部都是plasmashell这个进程，我们把他杀掉他就会自动重启，鼠标指针大小正常了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;KDE Plasma面板经常崩溃，然而killall plasmashell不管用。网上没有找到解决办法。&lt;/p&gt;
+&lt;p&gt;经实测，发现&lt;code&gt;killall -9 plasmashell&lt;/code&gt;就行了。&lt;/p&gt;
+&lt;p&gt;这就类似windows explorer重启。</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="http://littlewalnutx.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>抽牌算二十四点有解的概率问题</title>

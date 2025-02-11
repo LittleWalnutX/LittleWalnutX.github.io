@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"littlewalnutx.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="walnut - Hexo">
-<meta property="og:url" content="http://littlewalnutx.github.io/archives/2024/02/index.html">
+  <meta name="description" content="项目地址：https:&#x2F;&#x2F;github.com&#x2F;LittleWalnutX&#x2F;Multiple_PDF_Printer 为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。 项目生成PDF文件然后再手动打印。以后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux打印工具开发">
+<meta property="og:url" content="http://littlewalnutx.github.io/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/index.html">
 <meta property="og:site_name" content="walnut - Hexo">
+<meta property="og:description" content="项目地址：https:&#x2F;&#x2F;github.com&#x2F;LittleWalnutX&#x2F;Multiple_PDF_Printer 为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。 项目生成PDF文件然后再手动打印。以后">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-11T02:45:10.000Z">
+<meta property="article:modified_time" content="2025-02-11T03:23:10.074Z">
 <meta property="article:author" content="walnut">
+<meta property="article:tag" content="技术">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://littlewalnutx.github.io/archives/2024/02/">
+<link rel="canonical" href="http://littlewalnutx.github.io/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/">
 
 
 <script id="page-configurations">
@@ -36,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | walnut - Hexo</title>
+  <title>linux打印工具开发 | walnut - Hexo</title>
   
 
 
@@ -146,50 +151,99 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 20 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="walnut">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walnut - Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          linux打印工具开发
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-02-11 10:45:10 / 修改时间：11:23:10" itemprop="dateCreated datePublished" datetime="2025-02-11T10:45:10+08:00">2025-02-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <p>项目地址：<code>https://github.com/LittleWalnutX/Multiple_PDF_Printer</code></p>
+<p>为了补足linux个人桌面在多样化的打印功能上的不足，写了这个项目，例如Windows可以使用Adobe Acrobat DC来打印小册子，而linux没有这样的软件；甚至大多数软件不能双面打印，需要手动选择先逆页序打印偶数页，再打印奇数页。</p>
+<p>项目生成PDF文件然后再手动打印。以后可能加入直接打印的方式。</p>
+<p>目前已经开发完成的功能有：</p>
+<pre><code>双面打印
+小册子打印
+</code></pre><p>下面介绍一下思路: 双面打印的思路比较简单，只需要先把偶数页逆序提取出来，然后再提取奇数页，最后手动进行打印就可以了</p>
+<p>小册子打印的思路比较复杂，其中的难点主要在于拼合PDF。几乎是直接引用了一个日本网站上的代码，然后修改了一下。</p>
+<p>小册子打印需要解决另外一个问题就是页码的排布问题。观察一本钉好的小册子，可以发现，以16页的小册子为例，它的页码排布分别是，16，1，2，15, 14, 3, 4, 13 …..。这也就是说，第一页是最后一页，然后从头取两页，从后面取两页。</p>
+<p>然后我们把它分成奇数页面和偶数页面，可以得到它的规律。详细的规律见代码。</p>
+<p>然后写一下图形界面工具。这是用AI写的，把代码搬过来，然后改一下bug，再把自己的功能填上去就可以了。</p>
+<p>这个地方还有一个问题，就是用tkinter写的代码，在linux的X11上，存在一个极大概率触发的问题，就是文件拖拽上去之后会直接闪退，并且报如下的错误：</p>
+<pre><code>X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  20 (X_GetProperty)
+  Resource id in failed request:  0x1417efd
+  Serial number of failed request:  1225
+  Current serial number in output stream:  1225
+</code></pre><p>排查了很长时间，我觉得这个问题不是我的问题，可能是因为AI写的代码里面用了tkinterdnd2库的问题。</p>
+<p>这个问题在wayland上不会出现。尽管如此，这个问题仍然难以接受，所以使用AI工具，把这个界面用pyside重写，然后就得到了pyside版的gui。也在项目里面。</p>
+<p>希望这么个项目可以对linux的桌面应用有一点微薄的帮助。以后如果有时间的话，可能再考虑尝试一下开发预览功能，以及直接打印而不是生成PDF的功能。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-02-12T18:03:09+08:00"
-              content="2024-02-12">
-          02-12
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/02/12/%E8%87%AA%E5%88%B6%E4%BA%91%E5%8E%9F%E7%A5%9E/" itemprop="url">
-            <span itemprop="name">自制云原神</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/02/01/KDEplasma%E9%9D%A2%E6%9D%BF%E5%B4%A9%E6%BA%83/" rel="prev" title="KDEplasma面板崩溃">
+      <i class="fa fa-chevron-left"></i> KDEplasma面板崩溃
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
