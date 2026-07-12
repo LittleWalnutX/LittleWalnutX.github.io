@@ -6,7 +6,7 @@
   <link href="http://littlewalnutx.github.io/atom.xml" rel="self"/>
   
   <link href="http://littlewalnutx.github.io/"/>
-  <updated>2025-02-11T03:23:10.074Z</updated>
+  <updated>2026-07-12T13:52:56.608Z</updated>
   <id>http://littlewalnutx.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux刻光盘：xorriso图形界面开发</title>
+    <link href="http://littlewalnutx.github.io/2026/07/12/Linux%E5%88%BB%E5%85%89%E7%9B%98%EF%BC%9Axorriso%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/"/>
+    <id>http://littlewalnutx.github.io/2026/07/12/Linux%E5%88%BB%E5%85%89%E7%9B%98%EF%BC%9Axorriso%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/</id>
+    <published>2026-07-12T12:22:13.000Z</published>
+    <updated>2026-07-12T13:52:56.608Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="编写项目的背景"><a href="#编写项目的背景" class="headerlink" title="编写项目的背景"></a>编写项目的背景</h2><p>众所周知，Linux 系统一直缺乏一个好用的刻录光盘的软件。Brasero 软件的功能比较简单，而 k3b 是比较好用的软件，但是他采用的后端既不支持使用 UDF 的蓝光光盘续刻，也不支持使用iso9660的蓝光光盘进行续刻。也就是说在Linux系统下, 无法对蓝光光盘进行续刻 (Muliti-sessioning)。也就是说蓝光光盘必须一次性先准备好所有的文件进行刻录，之后没办法再追加了。这是对光盘存储空间的极大浪费。</p><p>k3b 软件并没有明确标明不支持蓝光光盘的续刻，而是在实际上刻录完第一次之后想要续刻的时候，提示介质不支持续刻了（具体的提示我已经忘记）。这样的一个问题曾经困扰我很久，之后我在互联网上找到一篇英文的帖子 <a href="https://forums.linuxmint.com/viewtopic.php?t=428014">https://forums.linuxmint.com/viewtopic.php?t=428014</a> ，讨论了这个问题。下面的人提出：k3b使用的后端均不支持蓝光光盘的UDF续刻，然而好在iso9660实际上并没有2GB的文件大小限制，所以我们可以仍旧使用iso9660。xorriso软件默认就打开最大级别的iso9660文件大小限制，所以我们可以用xorriso来刻录多分段的光盘。例如这篇帖子中回答者提供的示例代码：</p><pre><code class="bash"># To address your DVD or Blu-ray dive as target device do:iso=/dev/sr1# But before using slow optical media, try with an image file on fast disk.# (Make sure this file does not exist yet.)iso=/...some.large.filesystem.../test.iso# Choose some large test filesfile1=/.../some_large_filefile2=/.../some_other_large_file# Write first sessionxorriso -outdev &quot;$iso&quot; -map &quot;$file1&quot; /file1# Write second sessionxorriso -dev &quot;$iso&quot; -map &quot;$file2&quot; /file2# Mount on a GNU/Linux systemmount_point=/mnt/isosudo mount &quot;$iso&quot; &quot;$mount_point&quot;ls -l &quot;$mount_point&quot;</code></pre><p>这个工具只有命令行程序。虽然有对话模式可以在里面进行编辑，但是这些命令并不是和外面的bash完全兼容的，敲起来也不太习惯，学习成本比较高。因此我为这个工具开发了一个图形界面。</p><p>界面的主要操作逻辑就是左边是硬盘的文件系统，右边是光盘的文件系统。左右拖拽可以进行提取、刻录等计划，点击执行会最终执行。</p><p><img src="/2026/07/12/Linux%E5%88%BB%E5%85%89%E7%9B%98%EF%BC%9Axorriso%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/1.png" alt="截图"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;编写项目的背景&quot;&gt;&lt;a href=&quot;#编写项目的背景&quot; class=&quot;headerlink&quot; title=&quot;编写项目的背景&quot;&gt;&lt;/a&gt;编写项目的背景&lt;/h2&gt;&lt;p&gt;众所周知，Linux 系统一直缺乏一个好用的刻录光盘的软件。Brasero 软件的功能比较简单，而 </summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="http://littlewalnutx.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>USTC相关资料与工具</title>
+    <link href="http://littlewalnutx.github.io/2026/07/12/USTC%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/"/>
+    <id>http://littlewalnutx.github.io/2026/07/12/USTC%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/</id>
+    <published>2026-07-12T12:21:42.000Z</published>
+    <updated>2026-07-12T13:33:45.308Z</updated>
+    
+    <content type="html"><![CDATA[<p>算起来也是将近要有一年半的时间没有发博客了。可能是因为事情比较繁忙，或者是也没有什么东西好发的。到最近这段时间，有东西想要发了，然而旧的电脑长期关机懒得掏出来，博客的源代码在旧的电脑上，于是鸽了很久没发。现在掏出来要拿它当做MC的服务器了，于是顺便把博客的目录迁移到新电脑上。</p><p>受益于学校发的免费大模型api token, 很多事情都可以自动操作了。于是我制作了很多资料，还编写了项目。</p><p>这篇blog主要介绍一下USTC大一需要用到的一些我自制的资料。</p><h2 id="历年转专业数据可视化"><a href="#历年转专业数据可视化" class="headerlink" title="历年转专业数据可视化"></a>历年转专业数据可视化</h2><p>USTC 转专业比较自由不过还是需要竞争，不然的话就去个性化。</p><p>这个项目显示了除了管理学院以外的各学院，申请转入的人数以及拟接收人数、比例等数据的可视化，供转专业时候决策参考。</p><p><strong>项目位置：<a href="https://github.com/LittleWalnutX/USTC_Change_Major_data">https://github.com/LittleWalnutX/USTC_Change_Major_data</a></strong><br><strong>访问网页：<a href="https://littlewalnutx.github.io/USTC_Change_Major_data/">https://littlewalnutx.github.io/USTC_Change_Major_data/</a></strong></p><h2 id="《中国近现代史纲要》机考题库提纲"><a href="#《中国近现代史纲要》机考题库提纲" class="headerlink" title="《中国近现代史纲要》机考题库提纲"></a>《中国近现代史纲要》机考题库提纲</h2><p>USTC《中国近现代史纲要》课程有上机考试，很多道选择题都需要背诵。为了能够在刷题之前先对内容有一个纵览，以及更好的复习，我用AI将这题库中的七百多道题目制作成一个复习资料，包含了七百多道题目的所有考点，并且不考的内容都没写进去。所以这是一个USTC专属的史纲复习资料。</p><p><strong>项目位置：<a href="https://github.com/LittleWalnutX/USTC_History_Computer_Test">https://github.com/LittleWalnutX/USTC_History_Computer_Test</a></strong></p><h2 id="《大学物理-II》课程板书数字化整理及资料"><a href="#《大学物理-II》课程板书数字化整理及资料" class="headerlink" title="《大学物理 II》课程板书数字化整理及资料"></a>《大学物理 II》课程板书数字化整理及资料</h2><p>《大学物理》系列课程是中科大开给管院同学的通识类物理课程，难度低于《力学》《热学》《电磁学》《光学》《原子物理》系列课程。涂涛老师的《大学物理 II》风评超好，为了期末复习我们将板书数字化了。</p><p>感谢ALXR提供的板书截图、Daniel用AI将其数字化。</p><p><strong>项目位置：<a href="https://github.com/LittleWalnutX/USTC_university_phisics_II_Tu-Tao_blackboard">https://github.com/LittleWalnutX/USTC_university_phisics_II_Tu-Tao_blackboard</a></strong></p><p>可以查看all.pdf。</p><h2 id="USTC-LLM-API-校外访问"><a href="#USTC-LLM-API-校外访问" class="headerlink" title="USTC LLM API 校外访问"></a>USTC LLM API 校外访问</h2><p>USTC为学生提供了每日100元（实测使用Deepseek v4 pro按照较高的缓存命中率一天大概能使用2亿token）的LLM api调用服务，包括deepseek v4 pro、qwen3.6、glm-5.2等模型。但是这个模型服务仅限校内访问，网络通的微批嗯服务仅向教师开放，网络信息中心刚购买的新的VPN服务不支持linux。而学校提供的vlab虚拟机可以在学校教育网以外的环境访问。因此我在vlab上面部署服务，使用vlab作为跳板机转发，使得暑假放假回家的同学也有机会使用学校提供的LLM服务，召唤AI干活。</p><p><strong>项目位置：github.com&#x2F;LittleWalnutX&#x2F;apiproxy</strong></p><p>如果你想使用我提供的服务，你可以先访问<a href="https://frp-six.com:50766/crt%E4%B8%8B%E8%BD%BD%E8%AF%81%E4%B9%A6%EF%BC%8C%E7%84%B6%E5%90%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD%EF%BC%8C%E7%84%B6%E5%90%8E%E9%85%8D%E7%BD%AEopencode%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9D%80%EF%BC%88%E6%97%A0%E9%9C%80%E4%BF%AE%E6%94%B9%E5%8E%9F%E5%85%88%E7%9A%84api">https://frp-six.com:50766/crt下载证书，然后安装到系统中，然后配置opencode使用这一个地址（无需修改原先的api</a> key）</p><p>具体操作步骤可以查看项目中的<code>README.md</code>。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;算起来也是将近要有一年半的时间没有发博客了。可能是因为事情比较繁忙，或者是也没有什么东西好发的。到最近这段时间，有东西想要发了，然而旧的电脑长期关机懒得掏出来，博客的源代码在旧的电脑上，于是鸽了很久没发。现在掏出来要拿它当做MC的服务器了，于是顺便把博客的目录迁移到新电脑上</summary>
+      
+    
+    
+    
+    
+    <category term="技术" scheme="http://littlewalnutx.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="考功名" scheme="http://littlewalnutx.github.io/tags/%E8%80%83%E5%8A%9F%E5%90%8D/"/>
+    
+    <category term="学习" scheme="http://littlewalnutx.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>linux打印工具开发</title>
@@ -439,26 +487,6 @@ msglist = []
     
     
     <category term="考功名" scheme="http://littlewalnutx.github.io/tags/%E8%80%83%E5%8A%9F%E5%90%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo - Hello World</title>
-    <link href="http://littlewalnutx.github.io/2023/03/10/hello-world/"/>
-    <id>http://littlewalnutx.github.io/2023/03/10/hello-world/</id>
-    <published>2023-03-10T02:10:00.000Z</published>
-    <updated>2023-06-23T03:08:53.177Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p><img src="https://pic4.zhimg.com/80/v2-7a009fc65fe4c46a7bb2fccd656c91ee.jpg" alt="hello"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
     
   </entry>
   

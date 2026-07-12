@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"littlewalnutx.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="算起来也是将近要有一年半的时间没有发博客了。可能是因为事情比较繁忙，或者是也没有什么东西好发的。到最近这段时间，有东西想要发了，然而旧的电脑长期关机懒得掏出来，博客的源代码在旧的电脑上，于是鸽了很久没发。现在掏出来要拿它当做MC的服务器了，于是顺便把博客的目录迁移到新电脑上。 受益于学校发的免费大模型api token, 很多事情都可以自动操作了。于是我制作了很多资料，还编写了项目。 这篇blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="USTC相关资料与工具">
+<meta property="og:url" content="http://littlewalnutx.github.io/2026/07/12/USTC%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/index.html">
+<meta property="og:site_name" content="walnut - Hexo">
+<meta property="og:description" content="算起来也是将近要有一年半的时间没有发博客了。可能是因为事情比较繁忙，或者是也没有什么东西好发的。到最近这段时间，有东西想要发了，然而旧的电脑长期关机懒得掏出来，博客的源代码在旧的电脑上，于是鸽了很久没发。现在掏出来要拿它当做MC的服务器了，于是顺便把博客的目录迁移到新电脑上。 受益于学校发的免费大模型api token, 很多事情都可以自动操作了。于是我制作了很多资料，还编写了项目。 这篇blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-12T12:21:42.000Z">
+<meta property="article:modified_time" content="2026-07-12T13:33:45.308Z">
+<meta property="article:author" content="walnut">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="考功名">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://littlewalnutx.github.io/2026/07/12/USTC%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>USTC相关资料与工具 | walnut - Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="walnut - Hexo" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">walnut - Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">My Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://littlewalnutx.github.io/2026/07/12/USTC%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="walnut">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="walnut - Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          USTC相关资料与工具
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-07-12 20:21:42 / 修改时间：21:33:45" itemprop="dateCreated datePublished" datetime="2026-07-12T20:21:42+08:00">2026-07-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>算起来也是将近要有一年半的时间没有发博客了。可能是因为事情比较繁忙，或者是也没有什么东西好发的。到最近这段时间，有东西想要发了，然而旧的电脑长期关机懒得掏出来，博客的源代码在旧的电脑上，于是鸽了很久没发。现在掏出来要拿它当做MC的服务器了，于是顺便把博客的目录迁移到新电脑上。</p>
+<p>受益于学校发的免费大模型api token, 很多事情都可以自动操作了。于是我制作了很多资料，还编写了项目。</p>
+<p>这篇blog主要介绍一下USTC大一需要用到的一些我自制的资料。</p>
+<h2 id="历年转专业数据可视化"><a href="#历年转专业数据可视化" class="headerlink" title="历年转专业数据可视化"></a>历年转专业数据可视化</h2><p>USTC 转专业比较自由不过还是需要竞争，不然的话就去个性化。</p>
+<p>这个项目显示了除了管理学院以外的各学院，申请转入的人数以及拟接收人数、比例等数据的可视化，供转专业时候决策参考。</p>
+<p><strong>项目位置：<a target="_blank" rel="noopener" href="https://github.com/LittleWalnutX/USTC_Change_Major_data">https://github.com/LittleWalnutX/USTC_Change_Major_data</a></strong><br><strong>访问网页：<a href="https://littlewalnutx.github.io/USTC_Change_Major_data/">https://littlewalnutx.github.io/USTC_Change_Major_data/</a></strong></p>
+<h2 id="《中国近现代史纲要》机考题库提纲"><a href="#《中国近现代史纲要》机考题库提纲" class="headerlink" title="《中国近现代史纲要》机考题库提纲"></a>《中国近现代史纲要》机考题库提纲</h2><p>USTC《中国近现代史纲要》课程有上机考试，很多道选择题都需要背诵。为了能够在刷题之前先对内容有一个纵览，以及更好的复习，我用AI将这题库中的七百多道题目制作成一个复习资料，包含了七百多道题目的所有考点，并且不考的内容都没写进去。所以这是一个USTC专属的史纲复习资料。</p>
+<p><strong>项目位置：<a target="_blank" rel="noopener" href="https://github.com/LittleWalnutX/USTC_History_Computer_Test">https://github.com/LittleWalnutX/USTC_History_Computer_Test</a></strong></p>
+<h2 id="《大学物理-II》课程板书数字化整理及资料"><a href="#《大学物理-II》课程板书数字化整理及资料" class="headerlink" title="《大学物理 II》课程板书数字化整理及资料"></a>《大学物理 II》课程板书数字化整理及资料</h2><p>《大学物理》系列课程是中科大开给管院同学的通识类物理课程，难度低于《力学》《热学》《电磁学》《光学》《原子物理》系列课程。涂涛老师的《大学物理 II》风评超好，为了期末复习我们将板书数字化了。</p>
+<p>感谢ALXR提供的板书截图、Daniel用AI将其数字化。</p>
+<p><strong>项目位置：<a target="_blank" rel="noopener" href="https://github.com/LittleWalnutX/USTC_university_phisics_II_Tu-Tao_blackboard">https://github.com/LittleWalnutX/USTC_university_phisics_II_Tu-Tao_blackboard</a></strong></p>
+<p>可以查看all.pdf。</p>
+<h2 id="USTC-LLM-API-校外访问"><a href="#USTC-LLM-API-校外访问" class="headerlink" title="USTC LLM API 校外访问"></a>USTC LLM API 校外访问</h2><p>USTC为学生提供了每日100元（实测使用Deepseek v4 pro按照较高的缓存命中率一天大概能使用2亿token）的LLM api调用服务，包括deepseek v4 pro、qwen3.6、glm-5.2等模型。但是这个模型服务仅限校内访问，网络通的微批嗯服务仅向教师开放，网络信息中心刚购买的新的VPN服务不支持linux。而学校提供的vlab虚拟机可以在学校教育网以外的环境访问。因此我在vlab上面部署服务，使用vlab作为跳板机转发，使得暑假放假回家的同学也有机会使用学校提供的LLM服务，召唤AI干活。</p>
+<p><strong>项目位置：github.com&#x2F;LittleWalnutX&#x2F;apiproxy</strong></p>
+<p>如果你想使用我提供的服务，你可以先访问<a target="_blank" rel="noopener" href="https://frp-six.com:50766/crt%E4%B8%8B%E8%BD%BD%E8%AF%81%E4%B9%A6%EF%BC%8C%E7%84%B6%E5%90%8E%E5%AE%89%E8%A3%85%E5%88%B0%E7%B3%BB%E7%BB%9F%E4%B8%AD%EF%BC%8C%E7%84%B6%E5%90%8E%E9%85%8D%E7%BD%AEopencode%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9D%80%EF%BC%88%E6%97%A0%E9%9C%80%E4%BF%AE%E6%94%B9%E5%8E%9F%E5%85%88%E7%9A%84api">https://frp-six.com:50766/crt下载证书，然后安装到系统中，然后配置opencode使用这一个地址（无需修改原先的api</a> key）</p>
+<p>具体操作步骤可以查看项目中的<code>README.md</code>。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+              <a href="/tags/%E8%80%83%E5%8A%9F%E5%90%8D/" rel="tag"># 考功名</a>
+              <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"># 学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2025/02/11/linux%E6%89%93%E5%8D%B0%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/" rel="prev" title="linux打印工具开发">
+      <i class="fa fa-chevron-left"></i> linux打印工具开发
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/07/12/Linux%E5%88%BB%E5%85%89%E7%9B%98%EF%BC%9Axorriso%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91/" rel="next" title="Linux刻光盘：xorriso图形界面开发">
+      Linux刻光盘：xorriso图形界面开发 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%86%E5%B9%B4%E8%BD%AC%E4%B8%93%E4%B8%9A%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">1.</span> <span class="nav-text">历年转专业数据可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E4%B8%AD%E5%9B%BD%E8%BF%91%E7%8E%B0%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81%E3%80%8B%E6%9C%BA%E8%80%83%E9%A2%98%E5%BA%93%E6%8F%90%E7%BA%B2"><span class="nav-number">2.</span> <span class="nav-text">《中国近现代史纲要》机考题库提纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E3%80%8A%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86-II%E3%80%8B%E8%AF%BE%E7%A8%8B%E6%9D%BF%E4%B9%A6%E6%95%B0%E5%AD%97%E5%8C%96%E6%95%B4%E7%90%86%E5%8F%8A%E8%B5%84%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">《大学物理 II》课程板书数字化整理及资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#USTC-LLM-API-%E6%A0%A1%E5%A4%96%E8%AE%BF%E9%97%AE"><span class="nav-number">4.</span> <span class="nav-text">USTC LLM API 校外访问</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">walnut</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<a href="https://icp.gov.moe/?keyword=20232037" target="_blank">萌ICP备20232037号</a>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">walnut</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
