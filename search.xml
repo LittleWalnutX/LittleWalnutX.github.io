@@ -1797,7 +1797,7 @@ python3 example.py --audio_path=&quot;$pwd1/$1&quot; --output_midi_path=&quot;$p
 <p>这篇blog主要介绍一下USTC大一需要用到的一些我自制的资料。</p>
 <h2 id="历年转专业数据可视化"><a href="#历年转专业数据可视化" class="headerlink" title="历年转专业数据可视化"></a>历年转专业数据可视化</h2><p>USTC 转专业比较自由不过还是需要竞争，不然的话就去个性化。</p>
 <p>这个项目显示了除了管理学院以外的各学院，申请转入的人数以及拟接收人数、比例等数据的可视化，供转专业时候决策参考。</p>
-<p><strong>项目位置：<a href="https://github.com/misumiio/USTC_Change_Major_data">https://github.com/misumiio/USTC_Change_Major_data</a></strong><br><strong>访问网页：<a href="https://littlewalnutx.github.io/USTC_Change_Major_data/">https://littlewalnutx.github.io/USTC_Change_Major_data/</a></strong></p>
+<p><strong>项目位置：<a href="https://github.com/misumiio/USTC_Change_Major_data">https://github.com/misumiio/USTC_Change_Major_data</a></strong><br><strong>访问网页：<a href="https://misumiio.github.io/USTC_Change_Major_data/">https://misumiio.github.io/USTC_Change_Major_data/</a></strong></p>
 <h2 id="《中国近现代史纲要》机考题库提纲"><a href="#《中国近现代史纲要》机考题库提纲" class="headerlink" title="《中国近现代史纲要》机考题库提纲"></a>《中国近现代史纲要》机考题库提纲</h2><p>USTC《中国近现代史纲要》课程有上机考试，很多道选择题都需要背诵。为了能够在刷题之前先对内容有一个纵览，以及更好的复习，我用AI将这题库中的七百多道题目制作成一个复习资料，包含了七百多道题目的所有考点，并且不考的内容都没写进去。所以这是一个USTC专属的史纲复习资料。</p>
 <p><strong>项目位置：<a href="https://github.com/misumiio/USTC_History_Computer_Test">https://github.com/misumiio/USTC_History_Computer_Test</a></strong></p>
 <h2 id="《大学物理-II》课程板书数字化整理及资料"><a href="#《大学物理-II》课程板书数字化整理及资料" class="headerlink" title="《大学物理 II》课程板书数字化整理及资料"></a>《大学物理 II》课程板书数字化整理及资料</h2><p>《大学物理》系列课程是中科大开给管院同学的通识类物理课程，难度低于《力学》《热学》《电磁学》《光学》《原子物理》系列课程。涂涛老师的《大学物理 II》风评超好，为了期末复习我们将板书数字化了。</p>
