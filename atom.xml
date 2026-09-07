@@ -6,7 +6,7 @@
   <link href="http://littlewalnutx.github.io/atom.xml" rel="self"/>
   
   <link href="http://littlewalnutx.github.io/"/>
-  <updated>2026-09-07T17:49:52.703Z</updated>
+  <updated>2026-09-07T17:54:55.755Z</updated>
   <id>http://littlewalnutx.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://littlewalnutx.github.io/2026/09/08/USO%E4%B9%90%E8%B0%B1%E6%8B%BC%E8%B4%B4%E5%B7%A5%E5%85%B7/"/>
     <id>http://littlewalnutx.github.io/2026/09/08/USO%E4%B9%90%E8%B0%B1%E6%8B%BC%E8%B4%B4%E5%B7%A5%E5%85%B7/</id>
     <published>2026-09-07T17:46:57.000Z</published>
-    <updated>2026-09-07T17:49:52.703Z</updated>
+    <updated>2026-09-07T17:54:55.755Z</updated>
     
-    <content type="html"><![CDATA[<p>USO管弦乐团谱务小组时有不需要转调、只需要从总谱中摘取对应乐器的谱行并进行拼贴的工作，为了简化流程制作这个工具：</p><p>工具代码仓库地址：<a href="https://github.com/misumiio/pdfscorecut">https://github.com/misumiio/pdfscorecut</a></p><p>在线使用：<a href="https://misumiio.github.io/pdfscorecut/">https://misumiio.github.io/pdfscorecut/</a></p>]]></content>
+    <content type="html"><![CDATA[<p>USO管弦乐团谱务小组时有不需要转调、只需要从总谱中摘取对应乐器的谱行并进行拼贴的工作，为了简化流程制作这个工具：</p><p><img src="/2026/09/08/USO%E4%B9%90%E8%B0%B1%E6%8B%BC%E8%B4%B4%E5%B7%A5%E5%85%B7/1.png" alt="图"></p><p><img src="/2026/09/08/USO%E4%B9%90%E8%B0%B1%E6%8B%BC%E8%B4%B4%E5%B7%A5%E5%85%B7/2.png" alt="图"></p><p>工具代码仓库地址：<a href="https://github.com/misumiio/pdfscorecut">https://github.com/misumiio/pdfscorecut</a></p><p>在线使用：<a href="https://misumiio.github.io/pdfscorecut/">https://misumiio.github.io/pdfscorecut/</a></p><p>操作方法是只需要用鼠标纵向拖动选中需要的谱行，即可生成分谱预览，并可以下载分谱PDF。行间距和页边距等参数可以调整。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;USO管弦乐团谱务小组时有不需要转调、只需要从总谱中摘取对应乐器的谱行并进行拼贴的工作，为了简化流程制作这个工具：&lt;/p&gt;
-&lt;p&gt;工具代码仓库地址：&lt;a href=&quot;https://github.com/misumiio/pdfscorecut&quot;&gt;https://githu</summary>
+&lt;p&gt;&lt;img src=&quot;/2026/09/08/USO%E4%B9%90%E8%B0%B1%E6%8B%BC%E8%B4%B4%E5%B7%A5%E</summary>
       
     
     
